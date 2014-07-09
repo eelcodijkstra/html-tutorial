@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial</title>
+    <!-- this stylesheet provides default styles for tutorials -->
+    <link href="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.css" rel="stylesheet">
+    <!-- these scripts turn your make into a tutorial
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ -->
+    <script src="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.js"></script>
+    <script>
+      jQuery(document).ready(function($){
+        $('body').tutorial();
+      });
+    </script>
+  </head>
+  <body>
+    <!--
+      enclose each tutorial step in its own section tags
+      you can include any sort of markup, including images
+      you can also add more sections
+
+      if you want to attach this tutorial to another make,
+      first publish this make
+      then tag the other make with prefix "tutorial-" followed by the url for this make
+    -->
+
+    <section>
+      <h1>Pagina-opmaak: positioneren van elementen</h1>
+      <p>Eén van de lastige onderdelen van html/css is het <em>positioneren</em>
+        van de elementen. Dit in onder andere zo lastig omdat het onder allerlei
+        verschillende omstandigheden goed moet werken: voor verschillende apparaten,
+        en voor verschillende venster-afmetingen.
+      </p>
+      <p>
+        Voor het positioneren kunnen we de volgende middelen gebruiken:
+      </p>
+      <ul>
+        <li> <code>width, height</code> - grootte van de box;</li>
+        <li> <code>display</code> - manier van weergeven <br>
+          <code>block</code>, <code>inline</code>, <code>hidden</code> </li>
+        <li> <code>float</code> - "drijvend" naar een bepaalde kant <br>
+          <code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code>
+        </li>
+        <li> <code>clear</code> - "geen elementen ernaast" <br>
+          <code>left</code>, <code>right</code>, <code>both</code>
+        </li>
+      </ul>
+      <p>De combinatie van deze aspecten en de eigenschappen van het venster bepaalt
+        het gedrag. Soms moet je meerdere van deze aspecten tegelijk veranderen om
+        het gewenste gedrag te krijgen.
+      </p>
+      <hr>
+      <p><em>Opdracht(en)</em></p>
+      <ol>
+        <li> Centreer de tekst in het onderste &lt;p>-element.
+        </li>
+        <li> Probeer de andere mogelijkheden uit, met de verschillende teksten.
+          Wat gebeurt er als een tekst over meerdere regels loopt?
+        </li>
+        <li> ?
+        </li>
+      </ol>
+
+    </section>
+
+    <section>
+      <h1>Plaatsen van tekst</h1>
+        <p>We kunnen tekst op verschillende manieren in een omvattend element plaatsen: </p>
+        <ul>
+
+          <li> <code>text-align: left;</code> - links aangesloten; </li>
+          <li> <code>text-align: center;</code> - gecentreerd; </li>
+          <li> <code>text-align: center;</code> - rechts aangesloten. </li>
+        </ul>
+        <p>?
+        </p>
+      <hr>
+      <p><em>Opdracht(en)</em></p>
+      <ol>
+        <li> Centreer de tekst in het onderste &lt;p>-element.
+        </li>
+        <li> Probeer de andere mogelijkheden uit, met de verschillende teksten.
+          Wat gebeurt er als een tekst over meerdere regels loopt?
+        </li>
+        <li> ?
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Van blok-level naar inline (v.v.)</h1>
+      <p>Je kunt een block-level element weergeven als een inline-element (of omgekeerd):
+      </p>
+      <ul>
+        <li><code>display: inline;</code> - geef element inline weer.</li>
+        <li><code>display: block;</code> - geef element als block-level element weer. <br>
+            Dit is de default-waarde voor block-level elementen zoals een &lt;p>-element.
+        </li>
+        <li><code>display: none;</code> - geef het element niet weer.
+        </li>
+      </ul>
+      <p>Deze style-regels veranderen niets aan de html-regels: deze laatste bepalen
+        welke elementen je binnen een ander element kunt plaatsen. Een &lt;p>-element
+        blijft voor html een block-level element.
+      </p>
+      <hr>
+      <ul>
+        <li>Voeg binnen de style-waarde van de binnenste &lt;p>-elementen toe:
+          <code>display: inline;</code>. <br> Wat is hiervan het effect?
+        </li>
+        <li>Waarom zou je een element niet weer willen geven? <br> (Hint: je kunt een
+          dergelijke eigenschap besturen door middel van Javascript in de betreffende
+          pagina.)
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Groottes</h1>
+      <p>Je kunt de groottes in CSS op verschillende manieren aangeven:
+      </p>
+        <ul>
+          <li>in pixels (<code>20px</code>) - vooral display-gerelateerd;</li>
+          <li>in em (<code>12em</code>) - gerelateerd aan huidige lettergrootte; <br>
+            Dit is de grootte van de letter "m" in het huidige lettertype.
+        </li>
+        <li>in procenten (<code>80%</code>) - gerelateerd aan omvattende box.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Positionering</h1>
+      <p>Bij de vormgeving van een pagina wil je ook kunnen bepalen
+        waar de verschillende elementen geplaatst worden.
+      </p>
+    </section>
+
+    <section>
+
+    </section>
+
+
+  </body>
+</html>
+
