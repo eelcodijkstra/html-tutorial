@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Tutorial</title>
-    <!-- this stylesheet provides default styles for tutorials
+    <!-- this stylesheet provides default styles for tutorials -->
     <link href="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.css" rel="stylesheet">
--->
     <!-- these scripts turn your make into a tutorial -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.js"></script>
     <script>
       jQuery(document).ready(function($){
         $('body').tutorial();
@@ -26,15 +26,184 @@
     -->
 
     <section>
+      <h1>Lijsten</h1>
+      <p>Met behulp van het ul-element (<em>unordered list</em>) kun je een opsomming maken.
+        Een item van zo'n  opsomming geef je aan als li-element (list item).
+      </p>
+      <p>Voor een geordende lijst gebruik je het ol-element, met daarin een
+        aantal li-elementen.
+      </p>
+      <p>Een li-element kun je alleen gebruiken als onderdeel van een opsomming
+        of van een geordende lijst.
+      </p>
+      <p>Je kunt ook een opsomming binnen een opsomming plaatsen. Alle combinaties van
+        geordende en ongeordende lijsten zijn mogelijk.
+      </p>
+      <p>Het resultaat van een ul-element begint op een nieuwe regel - net als bij
+        een p-element of een h1-element. Zo'n element noemen we ook
+        wel een <em>block-level element</em>.
+      </p>
+      <p>Een opsomming kun je niet gebruiken binnen een p-element: het &lt;ol&gt;-haakje
+        sluit het p-element af, ook als je geen &lt;/p&gt;-sluithaakje gebruikt.
+      </p>
+
+      <hr>
+
+      <ol>
+        <li>Verander het ul-element in het voorbeeld in een ul-element. NB: je moet dan
+          het open- en het sluithaakje aanpassen.
+        </li>
+        <li>Maak als onderdeel van het item "Tekenen" een opsomming van een aantal
+          verschillende soorten, bijvoorbeeld: portrettekenen, manga's,
+          cartoons.
+        </li>
+        <li>Probeer een ol-element binnen een p-element te plaatsen. Wat gebeurt er?
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Elementen zonder inhoud</h1>
+      <p>Een horizontale lijn geef je aan met het hr-element. Dit is een bijzonder
+        element: het heeft geen inhoud, en daarom ook geen sluithaakje.
+      </p>
+      <p>Een hr-element kun je niet gebruiken binnen een p-element of binnen een
+        ul-element. Een horirizontale lijn geeft altijd een overgang naar een nieuwe regel
+        aan.
+      </p>
+      <p>Een ander element zonder inhoud is het br-element. Dit gebruik je om de overgang
+        op een nieuwe regel aan te geven. Dit is één van de manieren om de witruimte in
+        het resultaat te sturen.
+      </p>
+      <hr>
+      <ol>
+        <li>Voeg één of meer hr-elementen toe aan de voorbeeld-pagina.
+        </li>
+        <li>Voeg één of meer br-elementen toe aan de voorbeeld-pagina. Geef enkele
+          voorbeelden waarin je dit element zinvol kunt gebruiken.
+        </li>
+        <li>Een hr-element kun je niet gebruiken binnen een p-element, of een ul-element.
+          Ga na wat er gebeurt als je dat toch probeert. Controleer dit zowel met een
+          browser als met de W3C-validator.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Nog meer elementen</h1>
+      <p>Er zijn nog veel meer elementen - teveel om hier te behandelen. Je hoeft die
+        elementen ook niet allemaal uit je hoofd te kennen: soms is het voldoende als
+        je ze kunt ze opzoeken als je ze nodig hebt.
+      </p>
+      <p>Een leesbare beschrijving van de verschillende elementen vind je via MDN (het
+        Mozilla Developers Network):
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">
+          HTML Element reference
+        </a>.
+      </p>
+      <p>Via de website <a href="http://devdocs.io">devdocs.io</a> kun je eenvoudig
+        zoeken in verschillende soorten documentatie, onder andere MDN en de officiële
+        standaard (W3C).
+      </p>
+      <hr>
+       <ol>
+        <li>Zoek op wat de betekenis is van het q-element en van het blockquote-element.
+          Geef van elk van deze twee een voorbeeld (in de voorbeeld-pagina).
+        </li>
+        <li>Zoek op wat de betekenis is van het dl-element. Geef een voorbeeld hiervan
+          in de voorbeeld-pagina.
+        </li>
+        <li>Zoek een ander element dat je zou kunnen gebruiken, en pas dit toe in
+          de voorbeeld-pagina.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Bijzondere tekens</h1>
+      <p>In deze handleiding zie je soms zoiets: "&lt;p&gt;-element". Hoe kun je
+        een zo'n tekst maken zonder dat de browser in de war komt? Hoe kun je
+        voorkomen dat de browser dit als een openingshaakje ziet?
+      </p>
+      <p>Als je een bijzonder teken als "&lt;" in het resultaat wilt hebben, dan
+        gebruik je daarvoor een aparte notatie: &amp;lt; (lt staat voor "less than",
+        het wiskundige teken dat hier gebruikt wordt).
+      </p>
+      <p>Enkele andere tekens die je op zo'n manier noteert:</p>
+      <ul>
+        <li>&amp; - <code>&ampamp;</code></li>
+        <li>&copy; - <code>&amp;copy;</code></li>
+        <li>&para; - <code>&amp;para;</code></li>
+        <li>&nbsp; - <code>&amp;nbsp;</code> - non-breaking space</li>
+      </ul>
+      <p>In HTML-terminologie heten dit <em>named character references</em>;
+        soms noemen we dit ook <em>character entities</em>.
+        Voor een overzicht zie bijvoorbeeld:
+        <a href="http://dev.w3.org/html5/html-author/charref">character references</a>.
+      </p>
+      <p>Deze is een voorbeeld van een <em>escape-notatie</em>: je gebruikt speciale
+        tekens, in dit geval de <code>&amp;</code> om aan te geven dat wat volgt niet
+        op de normale manier verwerkt moet worden.
+      </p>
+      <hr>
+       <ul>
+        <li>Hoe kun je de tekst "&amp;lt;" in het resultaat krijgen?</li>
+         <li>Gebruik <em>nooit</em> een enkelvoudige &amp; in je HTML-code.
+           Als in het resultaat, of in een URL, een &amp; nodig is,
+           gebruik dan <em><strong>altijd</strong></em> de vorm <code>&amp;amp;</code>.
+           Hoe schrijf je dan de URL:
+          <code>http://infvo.com/lab/index.php?title=Hoofdpagina&amp;action=history</code>?
+         </li>
+         <li>Geef een voorbeeld van het gebruik van een <em>non-breaking space</em>.
+         </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Commentaar</h1>
+      <p>Je schijft HTML-code niet alleen om deze door een browser te laten verwerken.
+        Je collega's (en docenten, assistenten) moeten deze code ook kunnen lezen en
+        begrijpen. En waarschijnlijk moet je zelf later ook nog weten hoe het in elkaar
+        zit, en waarom.
+      </p>
+      <p>Je kunt de HTML-code leesbaar maken door te zorgen voor een nette opmaak: het
+        gebruik van <em>white space</em> in de code: regelovergangen, spaties,
+        inspringen.
+      </p>
+      <p>Soms is er extra informatie nodig om te begrijpen waarom de code zo geschreven
+        is. Daarvoor gebruik je, net als in andere programmeertalen, <em>commentaar</em>.
+        Commentaar begint met de openingshaak <code>&lt;!--</code> en eindigt met de
+        sluithaak <code>--&gt;</code>.
+      </p>
+      <p>Let op: in beide gevallen gaat het om twee opeenvolgende <code>--</code>tekens.
+        In de tekst in het commentaar zelf mag je geen <code>--</code> gebruiken. Daar
+        moet je vooral om denken als je een stuk HTML-code tussen commentaar-haken
+        plaatst.
+      </p>
+      <hr>
+      <ol>
+        <li>Voeg op een zinvolle plaats commentaar toe aan de voorbeeld-pagina.
+        </li>
+        <li>Ga na wat er gebeurt:
+          <ol>
+            <li>als je commentaar binnen commentaar plaatst.</li>
+            <li>als je de tekens <code>--</code> binnen commentaar plaatst.</li>
+          </ol>
+          Controleer dit zowel met een browser, als met de W3C-validator.
+        </li>
+      </ol>
+    </section>
+
+    <section>
       <h1>Links en URLs</h1>
       <p>In dit voorbeeld zie je het gebruik van een <em>hyperlink</em>, of gewoon
         <em>link</em>. Een link bestaat uit de volgende delen:
       </p>
       <ul>
-        <li> een <code>&lt;a&gt;</code>-tag,</li>
+        <li> een <code>&lt;a></code>-tag,</li>
         <li> met als <em>attribuut</em>: <code>href="...een URL...";</code> </li>
         <li> de tekst (of figuur) die op het scherm de link voorstelt; </li>
-        <li> het afsluitende <code>&lt;/a&gt;</code>-haakje. </li>
+        <li> het afsluitende <code>&lt;/a></code>-haakje. </li>
       </ul>
       <p>
         Op het scherm zie je de link als een tekst in een speciale kleur, of soms onderstreept.
@@ -51,7 +220,6 @@
         <li> Bezoek een van deze links door middel van CTRL-click (OS X): selecteer
           "open in nieuw venster" of "open in nieuw tabblad".
           Wat gebeurt er met de kleur van de link?
-        </li>
       </ul>
     </section>
 
@@ -87,7 +255,7 @@
 
     <section>
       <h1>Attributen</h1>
-      <p>Een &lt;a&gt;-element heeft een href-attribuut, met de URL als waarde.
+      <p>Een &lt;a>-element heeft een href-attribuut, met de URL als waarde.
         Elk HTML-element kan attributen hebben. Deze noteer je binnen het openingshaakje,
         na de naam van de tag. Een attribuut noteer je als <code>naam="waarde"</code>,
         bijvoorbeeld: <code>href="http://infvo.nl"</code>.
@@ -108,7 +276,7 @@
       <hr>
       <p>Opdrachten:</p>
       <ol>
-        <li> breid een &lt;a&gt;-tag in je voorbeeld uit met een target-attribuut, om
+        <li> breid een &lt;a>-tag in je voorbeeld uit met een target-attribuut, om
           de pagina in een nieuw venster te openen. Controleer of dit werkt.
         </li>
         <li> </li>
@@ -120,17 +288,17 @@
       <p>Op het scherm is de tekst van de link het enige wat je ziet.
         Deze tekst hoeft helemaal niet te kloppen met de URL die in de link gebruikt wordt.
         Als gebruiker kun je zo misleid worden, bijvoorbeeld: <br>
-        <code>&lt;a href="https://nepbank.com"&gt;Login bij ING &lt;/a&gt;</code> <br>
+        <code>&lt;a href="https://nepbank.com">Login bij ING &lt/a></code> <br>
         Dit geeft op het scherm: <a href="https://nepbank.com">Login bij ING </a>
       </p>
       <p>
         Het kan zelfs nog geniepiger: <br>
-        <code>&lt;a href="https://nepbank.com"&gt;https://mijn.ing.nl&lt;/a&gt;</code> <br>
+        <code>&lt;a href="https://nepbank.com">https://mijn.ing.nl&lt/a></code> <br>
         met op het scherm: <a href="https://nepbank.com">https://mijn.ing.nl</a>
         </p>
         <p> Controleer daarom altijd de URL in het URL-venster van de browser, als je
           een belangrijke website bezoekt.
-        </p>
+        <p>
       <hr>
       <p><em>Opdrachten</em></p>
       <ol>
