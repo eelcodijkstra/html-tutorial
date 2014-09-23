@@ -13,6 +13,9 @@ Werkende versies:
 * [tutorial-1](https://eelcodijkstra.makes.org/thimble/LTMyMjUwMjY1Ng==/tutorial-html-vb1)
 * [html-vb2 oefenbestand](https://eelcodijkstra.makes.org/thimble/MTU0MDAzMDQ2NA==/html-vb2)
 * [tutorial-2](https://eelcodijkstra.makes.org/thimble/MTU1NjgwNzY4MA==/tutorial-html-vb2)
+* 
+
+Je kunt je eigen versie maken door middel van de "remix" knop (rechts boven).
 
 ## Gebruik in Thimble
 
