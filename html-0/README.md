@@ -9,8 +9,10 @@ Het is de bedoeling om het oefenbestand aan te passen via de aanwijzingen en opd
 
 Werkende versies:
 
-* [html-0 oefenbestand](https://eelcodijkstra.makes.org/thimble/LTI4ODk0ODIyNA==/html-vb1)
-* [html-0 tutorial](https://eelcodijkstra.makes.org/thimble/LTMyMjUwMjY1Ng==/tutorial-html-vb1)
+* [html-vb1 oefenbestand](https://eelcodijkstra.makes.org/thimble/LTI4ODk0ODIyNA==/html-vb1)
+* [tutorial-1](https://eelcodijkstra.makes.org/thimble/LTMyMjUwMjY1Ng==/tutorial-html-vb1)
+* [html-vb2 oefenbestand](https://eelcodijkstra.makes.org/thimble/MTU0MDAzMDQ2NA==/html-vb2)
+* [tutorial-2](https://eelcodijkstra.makes.org/thimble/MTU1NjgwNzY4MA==/tutorial-html-vb2)
 
 ## Gebruik in Thimble
 
