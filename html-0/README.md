@@ -15,3 +15,13 @@ Werkende versies:
 ## Gebruik in Thimble
 
 Voor het gebruik van de tutorials in Thimble moet het tutorial-script ingeschakeld zijn. In deze bestanden is het soms uitgeschakeld door de betreffende regel tussen html-commentaar te plaatsen. In Thimble moeten deze commentaarhaken dan verwijderd worden.
+
+Volgens de Thimble instructies:
+
+> enclose each tutorial step in its own section tags
+you can include any sort of markup, including images
+you can also add more sections
+
+> if you want to attach this tutorial to another make,
+first publish this make
+then tag the other make with prefix "tutorial-" followed by the url for this make
