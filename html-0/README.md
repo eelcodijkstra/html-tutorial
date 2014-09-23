@@ -12,3 +12,6 @@ Werkende versies:
 * [html-0 oefenbestand](https://eelcodijkstra.makes.org/thimble/LTI4ODk0ODIyNA==/html-vb1)
 * [html-0 tutorial](https://eelcodijkstra.makes.org/thimble/LTMyMjUwMjY1Ng==/tutorial-html-vb1)
 
+## Gebruik in Thimble
+
+Voor het gebruik van de tutorials in Thimble moet het tutorial-script ingeschakeld zijn. In deze bestanden is het soms uitgeschakeld door de betreffende regel tussen html-commentaar te plaatsen. In Thimble moeten deze commentaarhaken dan verwijderd worden.
