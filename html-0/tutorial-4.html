@@ -28,9 +28,43 @@
     -->
 
     <section>
-      <h1>Opmaak van tekst en pagina</h1>
-      <p>Met behulp van het <code>style</code>-attribuut kun je de opmaak sturen.
-        Je kunt bijvoorbeeld het lettertype aangeven, of de positie van een element.
+      <h1>Opmaak: tekst en pagina</h1>
+      <p>Tot nu toe gebruiken we de "saaie" opmaak die de browser geeft voor
+        kale html. We gaan nu aanwijzingen voor de opmaak toevoegen.
+      </p>
+      <p>We kunnen
+        de <em>tekst</em> opmaken, bijvoorbeeld door het kiezen van een kleur
+        of van een lettertype. We kunnen de <em>pagina</em> opmaken, door de
+        verschillende elementen een andere kleur of positie te geven.
+      </p>
+      <p>We plaatsen de aanwijzingen voor de opmaak eerst bij de elementen zelf:
+        daarvoor gebruiken we het <code>style</code>-attribuut. Op deze manier
+        kun je heel direct zien wat het resultaat is van een aanpassing.
+      </p>
+      <p>Deze directe aanpak heeft ook nadelen: het wordt al snel
+        onoverzichtelijk, en als je alleen de opmaak wilt veranderen, moet je
+        het hele html-bestand doorwerken.
+      </p>
+      <p>Een betere manier is om de html-inhoud en de opmaak te scheiden.
+        Je kunt de opmaak in de vorm van CSS-declaraties in de
+        html-<code>head</code> plaatsen. Nog beter is het om deze CSS-code in
+        een apart CSS-bestand te zetten.
+      </p>
+      <hr>
+    </section>
+
+    <section>
+      <h1>Opmaak met style-attribuut</h1>
+      <p>Met behulp van het <code>style</code>-attribuut kun je de opmaak van
+        een element sturen. Je kunt bijvoorbeeld het lettertype aangeven, of
+        de positie van het element. Je noteert dit als<br>
+        <code>&lt;tag ... style="css-declaraties" ... &gt;</code>
+      </p>
+      <p>De waarde van een style-attribuut bestaat uit een reeks
+        <em>css-declaraties</em> van de
+        vorm:<br>
+        <code>css-property: value;</code> <br>
+        Deze declaraties vormen samen één string (tussen &quot;...&quot;).
       </p>
       <p>
         In dit voorbeeld geven we het lettertype en de kleur van een titel aan:
@@ -41,19 +75,17 @@
           <em>schreefloos</em> lettertype.
         </li>
       </ul>
-      <p>Een style-attribuut bestaat uit een reeks <em>declaraties</em> van de vorm:
-        <code>css-property: value;</code> <br>
-        Deze declaraties vormen samen één string (tussen &quot;...&quot;).
-      </p>
+
       <p>Een schreefloze letter heeft geen streepjes aan de uiteinden. Zie
         bijvoorbeeld <a href="http://nl.wikipedia.org/wiki/Schreefloos"
                         target="_blank">Wikipedia: schreefloos</a>
       </p>
       <hr>
-      <p> <em>Opdracht(en)</em>
+      <p> <em>Opdrachten</em>
       </p>
       <ol>
-        <li> Verander het lettertype en/of de kleur van de tekst van een ander element.
+        <li> Verander het lettertype en/of de kleur van de tekst van een
+          ander element.
         </li>
       </ol>
 
@@ -74,55 +106,74 @@
       </ul>
       <p>Voor de details hiervan, zie het achtergrondmateriaal en de referenties.</p>
       <hr>
-      <p><em>Opdracht(en)</em></p>
+      <p><em>Opdrachten</em></p>
       <ol>
         <li> Zoek op het web naar een tekst-vormgeving die je aanspreekt.
-          Probeer te achterhalen welke lettertypes en andere eigenschappen daarvoor
-          gebruikt zijn.
+          Probeer te achterhalen welke lettertypes en andere eigenschappen
+          daarvoor gebruikt zijn.
         </li>
-        <li> Pas met behulp van bovenstaande mogelijkheden een deel van de tekst van
-          het voorbeeld aan.</li>
+        <li> Pas met behulp van bovenstaande mogelijkheden een deel van de tekst
+          van het voorbeeld aan.</li>
         <li> Met behulp van de font-style en font-weight kunnen we tekst cursief
-          maken (italic), of vet (bold), of zelfs beide; waarom zou je dan nog een
-          &lt;em&gt;-element willen hebben?
+          maken (italic), of vet (bold), of zelfs beide; waarom zou je dan nog
+          een &lt;em&gt;-element willen hebben?
         </li>
       </ol>
     </section>
 
     <section>
       <h1> Het &lt;span&gt;-element </h1>
-      <p> Om de opmaak van een <em>deel van een tekst</em> te kunnen sturen, heb je
-        een tag nodig dat dit deel omvat.
+      <p> Om de opmaak van een <em>deel van een tekst</em> te kunnen sturen,
+        moet je hiervan een omvattend element kunnen maken.
       </p>
-      <p>
-        Hiervoor kun je de &lt;span&gt;-tag gebruiken. Daarmee kun je tekst
-        (-elementen) groeperen en van een tag-handvat voorzien. Daar kun je de opmaak
-        aan koppelen. Zie het voorbeeld.
+      <p>Hiervoor kun je het &lt;span&gt;-element gebruiken. Daarmee kun je tekst
+        (-elementen) groeperen en van een handvat voorzien. Je koppelt dan de
+        opmaak aan het omvattende span-element. Zie het voorbeeld.
       </p>
+      <p>De html-elementen moeten wel netjes in elkaar geplaatst blijven:
+        je kunt met een span-element niet halverwege het ene element beginnen
+        en halverwege het andere element eindigen.
+      </p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Gebruik het span-element om een groter deel van de tekst van
+          een speciale opmaak te voorzien (cursief, onderstrepen, enz.)
+        </li>
+        <li> Wat gebeurt er als je een span-element niet netjes plaatst,
+          bijvoorbeeld beginnen halverwege een h1-element  en eindigen
+          in het volgende p-element eindigen?
+        </li>
+      </ol>
     </section>
 
     <section>
       <h1>Opmaak van de pagina</h1>
-      <p>Je kunt ook de opmaak van de pagina en van de omgeving rond de tekst sturen.
-        Enkele voorbeelden daarvan:
-
+      <p>Je kunt ook de opmaak van de pagina en van de omgeving rond de tekst
+        sturen. Enkele voorbeelden daarvan:
       </p>
       <ul>
         <li> rand (border) rond een element, <br>
           bijv. <code>border: solid blue 1px; </code>
         </li>
-        <li> achtergrondkleur van een elemenent <br>
+        <li> achtergrondkleur van een element <br>
           bijv. <code>background-color: lightblue; </code>
         </li>
       </ul>
       <p>De rand is in dit voorbeeld "solid": een doorgetrokken lijn;
         in de kleur: blauw; en 1 pixel dik.
       </p>
-      <p>
-        In de volgende les gaan we verder in op de pagina-opmaak.
+      <p> In de volgende les gaan we verder in op de pagina-opmaak. We zullen
+        ook de opmaak scheiden van de elementen zelf.
       </p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Pas de eigenschappen van het gekleurde element in het voorbeeld
+          aan.
+        </li>
+      </ol>
     </section>
-
 
   </body>
 </html>
