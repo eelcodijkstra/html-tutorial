@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial</title>
+    <!-- this stylesheet provides default styles for tutorials -->
+    <link href="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.css" rel="stylesheet">
+    <!-- these scripts turn your make into a tutorial -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.js"></script>
+<!--
+    <script>
+      jQuery(document).ready(function($){
+        $('body').tutorial();
+      });
+    </script>
+-->
+  </head>
+  <body>
+    <section>
+      <h1>Scheiden van html-elementen en opmaak</h1>
+      <p>Het is niet handig om de opmaak (css-declaraties) bij de
+        elementen zelf te plaatsen.
+        Je kunt deze beter apart houden, in het <code>head</code>-gedeelte,
+        of, nog beter, in een apart bestand.
+      </p>
+      <p>We zullen hier zien hoe je de
+        css-declaraties kunt scheiden van de elementen. We plaatsen deze
+        declaraties hier in het head-gedeelte. In een latere module
+        zullen we deze in aparte bestanden onderbrengen.
+      </p>
+      <p>Om de css-declaraties te kunnen koppelen aan de elementen waar deze
+        bij horen, gebruiken we <em>css-selectoren</em>. We zullen hier een
+        paar voorbeelden zien. In een latere module behandelen we deze
+        uitgebreider.
+      </p>
+    </section>
+
+    <section>
+      <h1>CSS-selectoren: tag</h1>
+      <p>Soms wil je alle elementen van een bepaald type eenzelfde
+        opmaak-eigenschap geven. Bijvoorbeeld: alle kopjes (h1) van eenzelfde
+        lettertype en eenzelfde kleur.
+      </p>
+      <p>Dit kun je doen door de <em>tag</em>-name als css-selector te gebruiken.
+        Voorbeeld:
+      </p>
+      <pre>
+        h1 {
+          font-family: sans-serif;
+          color: lightblue;
+        }
+      </pre>
+      <p>De notatie hier is: <code> css-selector { css-declaraties }</code>
+      </p>
+      <p>Merk op hoe in het eerste deel van het voorbeeld de html-code en
+        de opmaak gescheiden zijn. Dit verbetert de leesbaarheid, en je kunt
+        de vormgeving eenvoudig aanpassen: alles staat bij elkaar.
+      </p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Voeg aan het style-gedeelte in het head-deel css-declaraties toe
+          om (i) alle p-elementen in een bepaald soort lettertype te zetten;
+          (ii) alle em-elementen te onderstrepen.
+        </li>
+        <li> Als je voor meerdere soorten elementen eenzelfde stijl wilt
+          gebruiken, dan kun je de verschillende tags opsommen gescheiden
+          door een comma. Bijvoorbeeld: <code>h1, h2 {...}</code>.<br>
+          Pas het voorbeeld aan zodat de stijl van h1 ook voor h2 en h3 geldt.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Groepering: het div-element en css id-selector</h1>
+      <p>We hebben eerder gezien hoe je elementen in lopende tekst kunt
+        groeperen met het <code>span</code>-element. Met het
+        <code>div</code>-element kun je andere elementen groeperen.
+      </p>
+      <p>Dit groeperen is vooral handig als je de stijl (opmaak) van een
+        groep elementen wilt aangeven: je groepeert dan de elementen in
+        een div-element, en geeft de stijl aan voor dit div-element.
+      </p>
+      <p>Je kunt een stijl aan een bepaald element koppelen door dit element
+        een naam te geven. Voorbeeld: <code>&lt;div id="mydivname"&gt; ...
+        </code>. Een dergelijke naam moet uniek zijn: je mag eenzelfde naam
+        niet voor meerdere elementen gebruiken.
+      </p>
+      <p>De bijbehorende css-selector voor het id-attribuut is in dit
+        voorbeeld: <code>#mydiv</code>.
+      </p>
+      <hr>
+       <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Bekijk in het voorbeeld hoe de css-declaraties van een
+          div-element in het head-deel geplaatst kunnen worden, door dit
+          element een unieke naam (id-attribuut) te geven. Doe dit ook voor
+          de andere elementen, zodat alle css-declaraties in het head-deel
+          komen te staan.
+        </li>
+        <li> Als je voor meerdere soorten elementen eenzelfde stijl wilt
+          gebruiken, dan kun je de verschillende tags opsommen gescheiden
+          door een comma. Bijvoorbeeld: <code>h1, h2 {...}</code>.<br>
+          Pas het voorbeeld aan zodat de stijl van h1 ook voor h2 en h3 geldt.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Pagina-opmaak: het box-model</h1>
+      <p>De box die een element omvat, bestaat (van buiten naar binnen) uit: </p>
+      <ul>
+        <li> <em>margin</em> (marge) </li>
+        <li> <em>border</em> (rand) </li>
+        <li> <em>padding</em> (opvulling) </li>
+        <li> de eigenlijke inhoud </li>
+      </ul>
+      <p>Door deze elementen(??) aan te passen, kun je de directe omgeving
+        van de inhoud vormgeven.
+      </p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Verander van de eerste (blauwe) div-box de verschillende waarden
+          voor margin, border, en padding, en bekijk het resultaat.
+        </li>
+        <li> Je kunt de afstand tussen de blauwe div-box en de rode div-box
+          daarbinnen aanpassen door (i) de padding van de blauwe box te vergroten;
+          (ii) de margin van de rode box te vergroten. Maakt dit verschil?
+        </li>
+        <li> Experimenteer met de padding waarden voor de rode box,
+          om iets te kunnen zeggen over de margin van de p-boxen. Wat is je conclusie?
+        </li>
+      </ol>
+
+    </section>
+
+    <section>
+      <h1>Margin en padding</h1>
+        <p>We kunnen nog meer eigenschappen van een box aanpassen: </p>
+        <ul>
+          <li> <code>background-color</code> - de achtergrondkleur <em>binnen de box</em>.
+            De margin en de border vallen hierbuiten. De achtergrond van de margin
+            wordt bepaald door de achtergrond van de omvattende box.
+          </li>
+        </ul>
+        <p>Wat is het verschil tussen de padding van de omliggende box, en de margin van
+          de box daarbinnen?
+        </p>
+      <hr>
+      <p> <em>Opdracht(en)</em> </p>
+      <ul>
+        <li> Geef de blauwe box de achtergrondkleur <code>lightblue</code>, de rode box
+          de kleur <code>lightpink</code>, en de eerste p-box de kleur
+          <code>lightyellow.</code>
+        </li>
+        <li> Wat kun je zeggen over de kleur van de margin van een box? </li>
+        <li> Wat kun je zeggen over de boxen waarvan je de kleur niet opgegeven hebt?
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Van blok-level naar inline (v.v.)</h1>
+      <p>Je kunt een block-level element weergeven als een inline-element (of omgekeerd):
+      </p>
+      <ul>
+        <li><code>display: inline;</code> - geef element inline weer.</li>
+        <li><code>display: block;</code> - geef element als block-level element weer. <br>
+       Dit is de default-waarde voor block-level elementen zoals een
+          &lt;p&gt;-element.
+        </li>
+        <li><code>display: none;</code> - geef het element niet weer.
+        </li>
+      </ul>
+      <p>Deze style-regels veranderen niets aan de html-regels: deze laatste bepalen
+        welke elementen je binnen een ander element kunt plaatsen. Een &lt;p&gt;-element
+        blijft voor html een block-level element.
+      </p>
+      <hr>
+      <ul>
+        <li>Voeg binnen de style-waarde van de binnenste &lt;p&gt;-elementen toe:
+          <code>display: inline;</code>. <br> Wat is hiervan het effect?
+        </li>
+        <li>Waarom zou je een element niet weer willen geven? <br>
+          (Hint: je kunt een dergelijke eigenschap besturen door middel van
+          Javascript in de betreffende pagina.)
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Overgangseffecten</h1>
+      <p>Je kunt ook opgeven hoe een element
+      </p>
+    </section>
+
+    <section>
+      <h1>Positionering</h1>
+      <p>Bij de vormgeving van een pagina wil je ook kunnen bepalen
+        waar de verschillende elementen geplaatst worden.
+      </p>
+    </section>
+
+    <section>
+      <h1>...</h1>
+
+    </section>
+
+
+  </body>
+</html>
