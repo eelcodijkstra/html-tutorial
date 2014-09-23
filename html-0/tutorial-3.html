@@ -26,32 +26,52 @@
     -->
 
     <section>
+      <h1>Hypertekst, plaatjes, iframes</h1>
+      <p>Een html-document staat nooit alleen: het bevat links naar andere
+        documenten (hyperlinks), plaatjes (images), audio, video, of omvat
+        een andere webpagina (iframe).</p>
+      <p>Voor de verwijzingen naar een andere pagina, naar een plaatje, video,
+        of audio, gebruik je een URL (Uniform Resource Locator). Dit is
+        eenzelfde URL als je gebruikt in de browser, om aan te geven welke
+        webpagina je wilt bekijken.
+      </p>
+      <p>Een URL in een verwijzing zie je niet direct in het resultaat.
+        Deze is geen onderdeel van de inhoud van een element, maar is een
+        <em>attribuut</em>. Zo'n attribuut is onderdeel van het
+        openingshaakje van het element.
+      </p>
+    </section>
+
+    <section>
       <h1>Links en URLs</h1>
       <p>In dit voorbeeld zie je het gebruik van een <em>hyperlink</em>, of gewoon
         <em>link</em>. Een link bestaat uit de volgende delen:
       </p>
       <ul>
-        <li> een <code>&lt;a></code>-tag,</li>
+        <li> een <code>&lt;a&gt;</code>-tag,</li>
         <li> met als <em>attribuut</em>: <code>href="...een URL...";</code> </li>
         <li> de tekst (of figuur) die op het scherm de link voorstelt; </li>
-        <li> het afsluitende <code>&lt;/a></code>-haakje. </li>
+        <li> het afsluitende <code>&lt;/a&gt;</code>-haakje. </li>
       </ul>
       <p>
-        Op het scherm zie je de link als een tekst in een speciale kleur, of soms onderstreept.
+        Op het scherm zie je de link als een tekst in een speciale kleur,
+        of soms onderstreept.
         <br>
         De kleur verandert als je de link al een keer bezocht hebt.
         (We komen daarop terug bij de CSS-<em>pseudo-classes</em>.)
       </p>
       <hr>
-      <p> Opdrachten:
+      <p><em>Opdrachten</em>
       </p>
-      <ul>
-        <li> Voeg een link toe aan dit voorbeeld, bijvoorbeeld bij één van de genoemde hobbies.
+      <ol>
+        <li> Voeg een link toe aan dit voorbeeld, bijvoorbeeld bij één van
+          de genoemde hobbies.
         </li>
-        <li> Bezoek een van deze links door middel van CTRL-click (OS X): selecteer
-          "open in nieuw venster" of "open in nieuw tabblad".
+        <li> Bezoek een van deze links door middel van CTRL-click (OS X):
+          selecteer "open in nieuw venster" of "open in nieuw tabblad".
           Wat gebeurt er met de kleur van de link?
-      </ul>
+        </li>
+      </ol>
     </section>
 
     <section>
@@ -80,14 +100,21 @@
       <hr>
       <p><em>Opdrachten</em></p>
       <ol>
-        <li>  </li>
+        <li>Als protocol kun je ook <code>mailto:</code>gebruiken, met
+          daarachter een mail-adres. Voeg een link toe zodat bezoekers
+          van de voorbeeld-website je e-mail kunnen sturen.
+        </li>
+        <li>Je kunt extra gegevens toevoegen aan zo'n URL. In
+          het geval van e-mail bijvoorbeeld: <code>?Subject=Hi%20there</code>.
+          Breid je e-mail link op die manier uit.
+        </li>
       </ol>
     </section>
 
     <section>
       <h1>Attributen</h1>
-      <p>Een &lt;a>-element heeft een href-attribuut, met de URL als waarde.
-        Elk HTML-element kan attributen hebben. Deze noteer je binnen het openingshaakje,
+      <p>Een &lt;a&gt;-element heeft een href-attribuut, met de URL als waarde.
+        Elk HTML-element kan attributen hebben. Deze vind je binnen het openingshaakje,
         na de naam van de tag. Een attribuut noteer je als <code>naam="waarde"</code>,
         bijvoorbeeld: <code>href="http://infvo.nl"</code>.
       </p>
@@ -105,12 +132,11 @@
         </li>
       </ul>
       <hr>
-      <p>Opdrachten:</p>
+      <p><em>Opdrachten</em></p>
       <ol>
-        <li> breid een &lt;a>-tag in je voorbeeld uit met een target-attribuut, om
+        <li> breid een &lt;a&gt;-tag in je voorbeeld uit met een target-attribuut, om
           de pagina in een nieuw venster te openen. Controleer of dit werkt.
         </li>
-        <li> </li>
       </ol>
     </section>
 
@@ -119,17 +145,21 @@
       <p>Op het scherm is de tekst van de link het enige wat je ziet.
         Deze tekst hoeft helemaal niet te kloppen met de URL die in de link gebruikt wordt.
         Als gebruiker kun je zo misleid worden, bijvoorbeeld: <br>
-        <code>&lt;a href="https://nepbank.com">Login bij ING &lt/a></code> <br>
-        Dit geeft op het scherm: <a href="https://nepbank.com">Login bij ING </a>
+        <code>&lt;a href="https://nepbank.com"&gt;Login bij ING &lt;/a&gt;</code>
+        <br>
+        Dit geeft op het scherm: &lt;a href="https://nepbank.com"&gt;
+        Login bij ING &lt;/a&gt;
       </p>
       <p>
         Het kan zelfs nog geniepiger: <br>
-        <code>&lt;a href="https://nepbank.com">https://mijn.ing.nl&lt/a></code> <br>
-        met op het scherm: <a href="https://nepbank.com">https://mijn.ing.nl</a>
+        <code>&lt;a href="https://nepbank.com"&gt;
+          https://mijn.ing.nl&lt;/a&gt;</code> <br>
+        met op het scherm: &lt;a href="https://nepbank.com"&gt;
+        https://mijn.ing.nl&lt;/a&gt;
         </p>
         <p> Controleer daarom altijd de URL in het URL-venster van de browser, als je
           een belangrijke website bezoekt.
-        <p>
+        </p>
       <hr>
       <p><em>Opdrachten</em></p>
       <ol>
@@ -145,12 +175,41 @@
     </section>
 
     <section>
-      <h1>Volgende stappen</h1>
+      <h1>Plaatjes</h1>
+      <p>Met het &lt;img&gt;-element kun je een plaatje opnemen in een
+        html-pagina. De link (URL) naar het plaatje geef je aan in het
+        <code>src</code> attribuut. Een img-element heeft alleen attributen,
+        geen inhoud. Er is dus geen sluithaakje.
+      </p>
+      <p>Je kunt extra informatie opgeven met de attributen:
+      </p>
       <ul>
-        <li></li>
-        <li>
-        </li>
+        <li><code>alt</code> - <em>verplicht:</em> alternatieve tekst</li>
+        <li><code>height</code> - hoogte, in <code>px</code> (pixels) </li>
+        <li><code>width</code> - breedte, idem</li>
       </ul>
+      <p>Voor het positioneren van een plaatje gebruiken we CSS. Daar komen
+        we later op terug.
+      </p>
+      <p>Voorbeeld:<br>
+        <code>&lt;img src="http://en.wikipedia.org/wiki/File:Paris_Night.jpg"
+          alt="Paris by night" height="100px"&gt;
+        </code>
+      </p>
+      <p></p>
+       <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Voeg een plaatje toe aan de voorbeeld-website. Gebruik hiervoor
+          een plaatje dat al ergens op het web staat (bijvoorbeeld van
+          Wikipedia).
+        </li>
+        <li> Als je het plaatje hierboven gebruikt, zie je dat het om een
+          klein plaatje gaat, maar dat het laden soms vrij lang duurt.
+          Hoe komt dat? (Hint: bekijk het plaatje rechtstreeks in de browser.)
+        </li>
+      </ol>
     </section>
+
   </body>
 </html>
