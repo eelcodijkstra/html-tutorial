@@ -9,6 +9,6 @@ Het is de bedoeling om het oefenbestand aan te passen via de aanwijzingen en opd
 
 Werkende versies:
 
-* [html-0 oefenbestand](https://thimble.webmaker.org/project/51182/edit)
+* [html-0 oefenbestand](https://eelcodijkstra.makes.org/thimble/LTI4ODk0ODIyNA==/html-vb1)
 * [html-0 tutorial](https://eelcodijkstra.makes.org/thimble/LTMyMjUwMjY1Ng==/tutorial-html-vb1)
 
