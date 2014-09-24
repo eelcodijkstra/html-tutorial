@@ -18,6 +18,7 @@ Werkende versies:
 * [html-vb4](https://eelcodijkstra.makes.org/thimble/LTE1MTM0MjI4NDg=/html-vb4)
 * [tutorial-4](https://eelcodijkstra.makes.org/thimble/LTE1MzAyMDAwNjQ=/tutorial-html-vb4)
 * [html-vb5](https://eelcodijkstra.makes.org/thimble/LTIwMDY3Nzc2MDA=/html-vb5)
+* https://eelcodijkstra.makes.org/thimble/LTIwMDY3Nzc2MDA=/html-vb5
 * [tutorial-5](https://eelcodijkstra.makes.org/thimble/LTE2OTc4NDExNTI=/tutorial-html-vb5-org)
 
 Je maakt je eigen versie door middel van de "remix" knop (rechts boven). Dan wordt ook het bijbehorende tutorial geopend (als dat er is).
