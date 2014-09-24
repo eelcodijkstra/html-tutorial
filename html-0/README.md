@@ -35,3 +35,9 @@ you can also add more sections
 > if you want to attach this tutorial to another make,
 first publish this make
 then tag the other make with prefix "tutorial-" followed by the url for this make
+
+## Originelen in Thimble
+
+* [html-5](https://thimble.webmaker.org/project/52338/edit)
+* [tutorial-5](https://thimble.webmaker.org/project/91015/edit)
+* 
