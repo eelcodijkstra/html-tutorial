@@ -13,9 +13,14 @@ Werkende versies:
 * [tutorial-1](https://eelcodijkstra.makes.org/thimble/LTMyMjUwMjY1Ng==/tutorial-html-vb1)
 * [html-vb2 oefenbestand](https://eelcodijkstra.makes.org/thimble/MTU0MDAzMDQ2NA==/html-vb2)
 * [tutorial-2](https://eelcodijkstra.makes.org/thimble/MTU1NjgwNzY4MA==/tutorial-html-vb2)
-* 
+* [html-vb3](https://eelcodijkstra.makes.org/thimble/LTI5NTU2NzEwNA==/html-vb3)
+* [tutorial-3](https://eelcodijkstra.makes.org/thimble/LTI3ODc4OTg4OA==/tutorial-html-vb3)
+* [html-vb4](https://eelcodijkstra.makes.org/thimble/LTE1MTM0MjI4NDg=/html-vb4)
+* [tutorial-4](https://eelcodijkstra.makes.org/thimble/LTE1MzAyMDAwNjQ=/tutorial-html-vb4)
+* [html-vb5](https://eelcodijkstra.makes.org/thimble/LTIwMDY3Nzc2MDA=/html-vb5)
+* [tutorial-5](https://eelcodijkstra.makes.org/thimble/LTE2OTc4NDExNTI=/tutorial-html-vb5-org)
 
-Je kunt je eigen versie maken door middel van de "remix" knop (rechts boven).
+Je maakt je eigen versie door middel van de "remix" knop (rechts boven). Dan wordt ook het bijbehorende tutorial geopend (als dat er is).
 
 ## Gebruik in Thimble
 
