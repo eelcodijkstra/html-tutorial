@@ -7,18 +7,13 @@ Deze tutorials zijn in eerste instantie bedoeld voor gebruik in Thimble, de oefe
 
 Het is de bedoeling om het oefenbestand aan te passen via de aanwijzingen en opdrachten in het tutorial. In Thimble kan het tutorial in hetzelfde webvenster getoond worden. In een andere omgeving, bijvoorbeeld JSBin, is daarvoor een apart web-venster nodig.
 
-Werkende versies:
+Werkende versies (oefenbestanden):
 
-* [html-vb1 oefenbestand](https://eelcodijkstra.makes.org/thimble/LTI4ODk0ODIyNA==/html-vb1)
-* [tutorial-1](https://eelcodijkstra.makes.org/thimble/LTMyMjUwMjY1Ng==/tutorial-html-vb1)
-* [html-vb2 oefenbestand](https://eelcodijkstra.makes.org/thimble/MTU0MDAzMDQ2NA==/html-vb2)
-* [tutorial-2](https://eelcodijkstra.makes.org/thimble/MTU1NjgwNzY4MA==/tutorial-html-vb2)
+* [html-vb1](https://eelcodijkstra.makes.org/thimble/LTI4ODk0ODIyNA==/html-vb1)
+* [html-vb2](https://eelcodijkstra.makes.org/thimble/MTU0MDAzMDQ2NA==/html-vb2)
 * [html-vb3](https://eelcodijkstra.makes.org/thimble/LTI5NTU2NzEwNA==/html-vb3)
-* [tutorial-3](https://eelcodijkstra.makes.org/thimble/LTI3ODc4OTg4OA==/tutorial-html-vb3)
 * [html-vb4](https://eelcodijkstra.makes.org/thimble/LTE1MTM0MjI4NDg=/html-vb4)
-* [tutorial-4](https://eelcodijkstra.makes.org/thimble/LTE1MzAyMDAwNjQ=/tutorial-html-vb4)
 * [html-vb5](https://eelcodijkstra.makes.org/thimble/LTIwMDY3Nzc2MDA=/html-vb5)
-* [tutorial-5](https://eelcodijkstra.makes.org/thimble/LTIwMjM1NTQ4MTY=/tutorial-5)
 
 Je maakt je eigen versie door middel van de "remix" knop (rechts boven). Dan wordt ook het bijbehorende tutorial geopend (als dat er is).
 
@@ -40,12 +35,17 @@ then tag the other make with prefix "tutorial-" followed by the url for this mak
 
 * [html-vb1](https://thimble.webmaker.org/project/51182/edit)
 * [tutorial-1](https://thimble.webmaker.org/project/51180/edit)
+    * [tutorial-1](https://eelcodijkstra.makes.org/thimble/LTMyMjUwMjY1Ng==/tutorial-html-vb1) 
 * [html-vb2](https://thimble.webmaker.org/project/52059/edit)
 * [tutorial-2](https://thimble.webmaker.org/project/52060/edit)
+    * [tutorial-2](https://eelcodijkstra.makes.org/thimble/MTU1NjgwNzY4MA==/tutorial-html-vb2)
 * [html-vb3](https://thimble.webmaker.org/project/90862/edit)
 * [tutorial-3](https://thimble.webmaker.org/project/90863/edit)
+    * [tutorial-3](https://eelcodijkstra.makes.org/thimble/LTI3ODc4OTg4OA==/tutorial-html-vb3)
 * [html-vb4](https://thimble.webmaker.org/project/52338/edit)
 * [tutorial4](https://thimble.webmaker.org/project/52132/edit)
+    * [tutorial-4](https://eelcodijkstra.makes.org/thimble/LTE1MzAyMDAwNjQ=/tutorial-html-vb4)
 * [html-5](https://thimble.webmaker.org/nl/project/91016/edit)
 * [tutorial-5](https://thimble.webmaker.org/project/91015/edit)
-* 
+    * [tutorial-5](https://eelcodijkstra.makes.org/thimble/LTIwMjM1NTQ4MTY=/tutorial-5)
+
