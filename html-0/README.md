@@ -48,4 +48,5 @@ then tag the other make with prefix "tutorial-" followed by the url for this mak
 * [html-5](https://thimble.webmaker.org/nl/project/91016/edit)
 * [tutorial-5](https://thimble.webmaker.org/project/91015/edit)
     * [remix tutorial-5](https://eelcodijkstra.makes.org/thimble/LTIwMjM1NTQ4MTY=/tutorial-5)
-
+* [html-vb6](https://thimble.webmaker.org/project/91149/edit)
+* [tutorial-6](https://thimble.webmaker.org/project/91148/edit)
