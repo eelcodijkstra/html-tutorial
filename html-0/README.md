@@ -38,7 +38,10 @@ then tag the other make with prefix "tutorial-" followed by the url for this mak
 
 ## Originelen in Thimble
 
-* [html-4](https://thimble.webmaker.org/project/52338/edit)
+* [html-vb3](https://thimble.webmaker.org/project/90862/edit)
+* [tutorial-3](https://thimble.webmaker.org/project/90862/edit)
+* [html-vb4](https://thimble.webmaker.org/project/52338/edit)
+* [tutorial4](https://thimble.webmaker.org/project/52132/edit)
 * [html-5](https://thimble.webmaker.org/nl/project/91016/edit)
 * [tutorial-5](https://thimble.webmaker.org/project/91015/edit)
 * 
