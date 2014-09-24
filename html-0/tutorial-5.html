@@ -37,7 +37,7 @@
     </section>
 
     <section>
-      <h1>CSS-selectoren: tag</h1>
+      <h1>CSS-selectoren: type</h1>
       <p>Soms wil je alle elementen van een bepaald type eenzelfde
         opmaak-eigenschap geven. Bijvoorbeeld: alle kopjes (h1) van eenzelfde
         lettertype en eenzelfde kleur.
@@ -54,7 +54,7 @@
       <p>De notatie is: <code> css-selector { css-declaraties }</code>
       </p>
       <p>In het eerste deel van het voorbeeld zijn de html-code en
-        de opmaak gescheiden zijn. Dit verbetert de leesbaarheid, en je kunt
+        de opmaak gescheiden. Dit verbetert de leesbaarheid, en je kunt
         de vormgeving eenvoudig aanpassen: alles staat bij elkaar.
       </p>
       <hr>
@@ -108,55 +108,65 @@
 
     <section>
       <h1>Pagina-opmaak: het box-model</h1>
-      <p>De box die een element omvat, bestaat (van buiten naar binnen) uit: </p>
+      <p>Voor de opmaak rond een element gebruikt CSS het <em>box-model</em>.
+        De box die een element omvat, bestaat van buiten naar binnen uit: </p>
       <ul>
-        <li> <em>margin</em> (marge) </li>
-        <li> <em>border</em> (rand) </li>
-        <li> <em>padding</em> (opvulling) </li>
+        <li> <em>margin</em> (marge - buiten de box) </li>
+        <li> <em>border</em> (rand - grens tussen binnen en buiten de box) </li>
+        <li> <em>padding</em> (opvulling - binnen de box) </li>
         <li> de eigenlijke inhoud </li>
       </ul>
-      <p>Door deze elementen(??) aan te passen, kun je de directe omgeving
-        van de inhoud vormgeven.
+      <p>Van de <em>margin, border en padding</em> kun je de grootte
+        aanpassen, eventueel per kant.
+        De kleur of achtergrond van de box of de rand kun je ook bepalen.
+        Hiermee kun je de directe omgeving van de inhoud van een element
+        vormgeven.
       </p>
       <hr>
       <p><em>Opdrachten</em></p>
       <ol>
-        <li> Verander van de eerste (blauwe) div-box de verschillende waarden
-          voor margin, border, en padding, en bekijk het resultaat.
+        <li> Verander van het div-element <code>mydiv1</code> de verschillende
+          waarden voor margin, border, en padding, en bekijk het resultaat.
         </li>
         <li> Je kunt de afstand tussen de blauwe div-box en de rode div-box
-          daarbinnen aanpassen door (i) de padding van de blauwe box te vergroten;
+          daarbinnen aanpassen door (i) de padding van de blauwe box te
+          vergroten;
           (ii) de margin van de rode box te vergroten. Maakt dit verschil?
         </li>
         <li> Experimenteer met de padding waarden voor de rode box,
-          om iets te kunnen zeggen over de margin van de p-boxen. Wat is je conclusie?
+          om iets te kunnen zeggen over de margin van de p-boxen.
+          Wat is je conclusie?
         </li>
       </ol>
-
     </section>
 
     <section>
-      <h1>Margin en padding</h1>
+      <h1>Kleur en achtergrond</h1>
         <p>We kunnen nog meer eigenschappen van een box aanpassen: </p>
         <ul>
-          <li> <code>background-color</code> - de achtergrondkleur <em>binnen de box</em>.
-            De margin en de border vallen hierbuiten. De achtergrond van de margin
-            wordt bepaald door de achtergrond van de omvattende box.
+          <li> <code> border </code> - hiervan kun je de vorm en de kleur
+            aangeven, bijvoorbeeld <code>solid blue</code> of
+            <code>"gestippeld rood"</code>.
+          </li>
+          <li> <code>background-color</code> - de achtergrondkleur <em>binnen
+            de box</em>.
+            De margin en de border vallen hierbuiten. De achtergrond van de
+            margin wordt bepaald door de achtergrond van de omvattende box.
           </li>
         </ul>
-        <p>Wat is het verschil tussen de padding van de omliggende box, en de margin van
-          de box daarbinnen?
-        </p>
       <hr>
       <p> <em>Opdracht(en)</em> </p>
       <ul>
-        <li> Geef de blauwe box de achtergrondkleur <code>lightblue</code>, de rode box
-          de kleur <code>lightpink</code>, en de eerste p-box de kleur
-          <code>lightyellow.</code>
+        <li> Geef het element <code>mydiv1</code> de achtergrondkleur
+          <code>lightblue</code>.
+          Wat kun je zeggen over de achtergrondkleur van de elementen waarvan
+          je de kleur niet opgegeven hebt?
         </li>
-        <li> Wat kun je zeggen over de kleur van de margin van een box? </li>
-        <li> Wat kun je zeggen over de boxen waarvan je de kleur niet opgegeven hebt?
-        </li>
+        <li> Geef het div-element met de rode rand de achtergrondkleur
+          <code>lightpink</code>, en het eerste p-element daarin de
+          achtergrondkleur <code>lightyellow.</code>
+          Wat kun je zeggen over de achtergrondkleur van de margin van
+          een element? </li>
       </ul>
     </section>
 
@@ -173,14 +183,15 @@
         <li><code>display: none;</code> - geef het element niet weer.
         </li>
       </ul>
-      <p>Deze style-regels veranderen niets aan de html-regels: deze laatste bepalen
-        welke elementen je binnen een ander element kunt plaatsen. Een &lt;p&gt;-element
-        blijft voor html een block-level element.
+      <p>Deze opmaak-regels veranderen niets aan de html-regels: deze laatste
+        bepalen welke elementen je binnen een ander element kunt plaatsen.
+        Een &lt;p&gt;-element blijft voor html een block-level element.
       </p>
       <hr>
       <ul>
-        <li>Voeg binnen de style-waarde van de binnenste &lt;p&gt;-elementen toe:
-          <code>display: inline;</code>. <br> Wat is hiervan het effect?
+        <li>Voeg aan de css-declaraties van de &lt;p&gt;-elementen binnen de
+          div-elementen toe:
+          <code>display: inline;</code>. Wat is hiervan het effect?
         </li>
         <li>Waarom zou je een element niet weer willen geven? <br>
           (Hint: je kunt een dergelijke eigenschap besturen door middel van
@@ -190,23 +201,11 @@
     </section>
 
     <section>
-      <h1>Overgangseffecten</h1>
-      <p>Je kunt ook opgeven hoe een element
-      </p>
-    </section>
-
-    <section>
-      <h1>Positionering</h1>
+      <h1>Positioneren</h1>
       <p>Bij de vormgeving van een pagina wil je ook kunnen bepalen
-        waar de verschillende elementen geplaatst worden.
+        waar de verschillende elementen geplaatst worden. Dit is het onderwerp
+        voor de volgende les.
       </p>
     </section>
-
-    <section>
-      <h1>...</h1>
-
-    </section>
-
-
   </body>
 </html>
