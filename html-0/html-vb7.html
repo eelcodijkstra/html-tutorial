@@ -5,20 +5,20 @@
     <title>JS voor interactie</title>
   </head>
   <body>
-    <p id="p1" style="color: blue;">Maak iets <em>fantastisch</em> met het web</p>
-    <button id="button1">Push me</button>
-    <button id="button2">Me too</button>
-    <button id="button3">And me</button>
+    <p id="p1">Maak iets <em>fantastisch</em> met het web</p>
+    <button id="button1">Set color</button>
+    <button id="button2">Set background</button>
+    <button id="button3">Reset</button>
     <hr>
     <input id="inputA" type="text" value="hi" size="60"><br><br>
-    <button id="button4">Push me</button>
-    <button id="button5">Me too</button>
-    <button id="button6">And me</button>
+    <button id="button4">Get html</button>
+    <button id="button5">Set html</button>
+    <button id="button6">Reset</button>
     <hr>
     <p id="p2">Maak iets <span id="spanX">heel</span> interactief.</p>
-    <button id="button7">Push me</button>
-    <button id="button8">Me too</button>
-    <button id="button9">And me</button>
+    <button id="button7">Hide</button>
+    <button id="button8">Show block</button>
+    <button id="button9">Show  inline</button>
     <script>
       // setting style and changing HTML (via DOM)
 
@@ -27,12 +27,11 @@
       }
 
       function alert2 () {
-        document.getElementById("p1").style.color = "blue";
+        document.getElementById("p1").style.backgroundColor = "lightblue";
       }
 
       function alert3 () {
-        document.getElementById("p1").innerHTML =
-          "Make something <em>nice</em> with the web";
+        document.getElementById("p1").style = "";
       }
 
       document.getElementById("button1").onclick = alert1;
@@ -42,7 +41,8 @@
       // input element
 
       function alert4 () {
-        alert(document.getElementById("inputA").value);
+        document.getElementById("inputA").value =
+            document.getElementById("p1").innerHTML;
       }
 
       function alert5 () {
@@ -51,8 +51,8 @@
       }
 
       function alert6 () {
-        document.getElementById("inputA").value =
-            document.getElementById("p1").innerHTML;
+        document.getElementById("p1").innerHTML =
+          "Maak iets <em>fantastisch</em> met het web";
       }
 
       document.getElementById("button4").onclick = alert4;
@@ -66,11 +66,11 @@
       }
 
       function alert8 () {
-        document.getElementById("spanX").style.display = "inline";
+        document.getElementById("spanX").style.display = "block";
       }
 
       function alert9 () {
-        document.getElementById("spanX").style.display = "block";
+        document.getElementById("spanX").style.display = "inline";
       }
 
       document.getElementById("spanX").onclick = alert7;
