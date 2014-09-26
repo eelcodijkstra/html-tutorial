@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <title>JS voor interactie</title>
+  </head>
+  <body>
+    <p id="p1" style="color: blue;">Maak iets <em>fantastisch</em> met het web</p>
+    <button id="button1">Push me</button>
+    <button id="button2">Me too</button>
+    <button id="button3">And me</button>
+    <hr>
+    <input id="inputA" type="text" value="hi" size="60"><br><br>
+    <button id="button4">Push me</button>
+    <button id="button5">Me too</button>
+    <button id="button6">And me</button>
+    <hr>
+    <p id="p2">Maak iets <span id="spanX">heel</span> interactief.</p>
+    <button id="button7">Push me</button>
+    <button id="button8">Me too</button>
+    <button id="button9">And me</button>
+    <script>
+      // setting style and changing HTML (via DOM)
+
+      function alert1 () {
+        document.getElementById("p1").style.color = "red";
+      }
+
+      function alert2 () {
+        document.getElementById("p1").style.color = "blue";
+      }
+
+      function alert3 () {
+        document.getElementById("p1").innerHTML =
+          "Make something <em>nice</em> with the web";
+      }
+
+      document.getElementById("button1").onclick = alert1;
+      document.getElementById("button2").onclick = alert2;
+      document.getElementById("button3").onclick = alert3;
+
+      // input element
+
+      function alert4 () {
+        alert(document.getElementById("inputA").value);
+      }
+
+      function alert5 () {
+        document.getElementById("p1").innerHTML =
+            document.getElementById("inputA").value;
+      }
+
+      function alert6 () {
+        document.getElementById("inputA").value =
+            document.getElementById("p1").innerHTML;
+      }
+
+      document.getElementById("button4").onclick = alert4;
+      document.getElementById("button5").onclick = alert5;
+      document.getElementById("button6").onclick = alert6;
+
+      // setting style-display attribute
+
+      function alert7 () {
+        document.getElementById("spanX").style.display = "none";
+      }
+
+      function alert8 () {
+        document.getElementById("spanX").style.display = "inline";
+      }
+
+      function alert9 () {
+        document.getElementById("spanX").style.display = "block";
+      }
+
+      document.getElementById("spanX").onclick = alert7;
+      document.getElementById("button7").onclick = alert7;
+      document.getElementById("button8").onclick = alert8;
+      document.getElementById("button9").onclick = alert9;
+    </script>
+  </body>
+</html>

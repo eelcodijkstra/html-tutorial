@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial 7</title>
+    <!-- this stylesheet provides default styles for tutorials -->
+    <link href="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.css" rel="stylesheet">
+    <!-- these scripts turn your make into a tutorial -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.js"></script>
+<!--
+    <script>
+      jQuery(document).ready(function($){
+        $('body').tutorial();
+      });
+    </script>
+-->
+  </head>
+  <body>
+
+    <section>
+      <h1>JavaScript voor interactie</h1>
+      <p>In dit tutorial maken we kennis met Javascript, om interactie toe te voegen aan
+        een webpagina.
+      </p>
+      <p>In dit eenvoudige voorbeeld plaatsen we de Javascript-code direct in het
+        HTML-bestand. Later zullen we zien dat het vaak handiger is om deze code in een
+        apart bestand te plaatsen.
+      </p>
+      <p>We kunnen JavaScript gebruiken voor de <em>interactie met de gebruiker</em>. We
+        koppelen bijvoorbeeld een actie aan een knop. In dit tutorial gevel we meer
+        voorbeelden.
+      </p>
+      <p>We kunnen Javascript ook gebruiken voor de interactie met de eigen server, of met
+        een andere webserver. Dit behandelen we in de module JS-0.
+      </p>
+      <p>In die module leggen we veel meer uit over JavaScript. In dit tutorial is het
+        voldoende als je kleine experimenten met de code kunt doen. Je hoeft niet alles
+        helemaal te begrijpen.
+      </p>
+      <hr>
+    </section>
+
+    <section>
+      <h1>Definitie van een functie</h1>
+      <p>Een <em>functie</em> (function) is een beschrijving van een reeks acties of
+       berekeningen. De definitie van een functie in JavaScript heeft de vorm:
+      </p>
+      <pre>
+        function fname (p1, p2, p3) {
+          ... acties of berekening met p1, p2 en p3 ...
+        }
+      </pre>
+      <p>De <em>naam</em> van de functie, hier <code>fname</code>, gebruiken we om in
+        de rest van programma naar deze functie te kunnen verwijzen.
+      </p>
+      <p>De <em>parameters</em> van de functie, hier <code>p1, p2, p3</code>, gebruiken
+        we in de acties of berekeningen. Deze bepalen mede het uiteindelijke resultaat.
+      </p>
+      <p>De lijst met parameters kan leeg zijn, in dat geval schrijven we alleen de
+        haakjes <code>()</code>.
+      </p>
+      <p>Het gedeelte tussen accolades <code>{...}</code> noemen we de <em>body</em>
+        van de functie.
+      </p>
+      <p>Een functie is alleen een <em>beschrijving</em> van acties of berekeningen:
+        deze acties of berekeningen worden nog niet uitgevoerd. Je kunt het vergelijken
+        met een recept: pas als de kok eraan begint, gebeurt er iets.
+      </p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li>Bekijk de definitie van de functie <code>alert1</code>. Hoeveel
+          parameters heeft deze functie? Wat betekent de actie in de body?
+          (Hint: zoek op het web naar "javascript alert".)
+        </li>
+        <li>Definieer naar analogie van de functie <code>alert1</code> een tweede
+          functie, <code>alert2</code>. Pas de tekst in de body aan, en zorg ervoor
+          dat deze duidelijk verschilt (niet alleen in een enkel cijfer).
+          <br><br>
+          <strong>Let op!</strong> Als je een fout maakt in de notatie, zal Thimble
+          je daar niet op wijzen (anders dan in de HTML-code).
+          Je krijgt geen foutmelding: het werkt alleen niet, of anders dan je denkt.
+          Later zullen we hulpmiddelen gebruiken die meer hulp bieden.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Definiëren van een handler</h1>
+      <p>We plaatsen de JavaScript-code aan het <em>eind van de body</em>. Dit zorgt ervoor
+        dat alle HTML-elementen die we willen gebruiken, daarvoor gedefinieerd zijn. We
+        plaatsen deze code tussen de haken <code>&lt;script&gt; ... &lt;/script&gt;</code>
+      </p>
+      <p>We willen een actie koppelen aan een knop (button-element). We definiëren deze
+        button in de body, voor het script-element. We geven deze button een naam
+        (<code>id</code>), zodat we in de Javascript hiernaar kunnen verwijzen.
+        (Vgl. het gebruik van id's voor CSS.)
+      </p>
+      <p>
+        We moeten het HTML-element toegankelijk maken in Javascript. Dit doen we via de
+        functie-aanroep: <code>document.getElementById("button1")</code>. Het resultaat
+        daarvan kennen we toe aan de variabele <code>myButton</code>.
+      </p>
+      <hr>
+    </section>
+
+    <section>
+      <h1>titel</h1>
+      <p>
+      </p>
+      <p>
+      </p>
+      <blockquote>
+      </blockquote>
+      <p>
+
+      </p>
+      <p>
+
+      </p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Commentaar in JavaScript</h1>
+      <p>Ook voor JavaScript geldt: je schrijft de code niet alleen voor de browser
+        om uit te voeren. Ook mensen moeten je code kunnen lezen en begrijpen. Het is daarom
+        belangrijk om je code netjes en overzichtelijk te houden, bijvoorbeeld door het
+        gebruik van witruimte (inspringen, regelovergangen).
+      </p>
+      <p>Soms moet je het hoe en waarom van de code uitleggen. Hiervoor maak je gebruik
+        van <em>commentaar</em>. In Javascript heb je twee vormen van commentaar:
+        (i) na de tekens <code>//</code> tot het eind van de regel;
+        (ii) tussen de tekens <code>/*</code> en <code>*/</code>. Dit gebruik je
+        voor commentaar dat over meerdere regels loopt.
+      </p>
+      <pre>
+        var pi = 3.1415926; // een benadering van pi
+             ...
+        /*
+          Dit is een langer commentaar.
+          Probeer het ook niet te lang te maken.
+        */
+      </pre>
+      <p> <strong>N.B.</strong> De commentaar-regels voor HTML, CSS en Javascript zijn
+        verschillend. Haal ze niet door elkaar!
+      </p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li>Pas beide vormen van commentaar toe in het Javascript-deel.
+        </li>
+        <li>Wat gebeurt er als je HTML-commentaar binnen het Javascript-deel gebruikt,
+          of Javascript-commentaar in het HTML-deel?
+        </li>
+      </ol>
+    </section>
+  </body>
+</html>
