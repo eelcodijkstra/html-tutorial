@@ -20,52 +20,95 @@
 
     <section>
       <h1>JavaScript voor interactie</h1>
-      <p>In dit tutorial maken we kennis met Javascript, om interactie toe te voegen aan
-        een webpagina.
+      <p>In dit tutorial maken we kennis met Javascript, om interactie toe te
+        voegen aan een webpagina.
       </p>
-      <p>In dit eenvoudige voorbeeld plaatsen we de Javascript-code direct in het
-        HTML-bestand. Later zullen we zien dat het vaak handiger is om deze code in een
-        apart bestand te plaatsen.
+      <p>In dit eenvoudige voorbeeld plaatsen we de Javascript-code direct in
+        het HTML-bestand. Later zullen we zien dat het vaak handiger is om
+        deze code in een apart bestand te plaatsen.
       </p>
-      <p>We kunnen JavaScript gebruiken voor de <em>interactie met de gebruiker</em>. We
-        koppelen bijvoorbeeld een actie aan een knop. In dit tutorial gevel we meer
-        voorbeelden.
+      <p>We kunnen JavaScript gebruiken voor de <em>interactie met de
+        gebruiker</em>. We koppelen bijvoorbeeld een actie aan een knop.
+        In dit tutorial gevel we meer voorbeelden.
       </p>
-      <p>We kunnen Javascript ook gebruiken voor de interactie met de eigen server, of met
-        een andere webserver. Dit behandelen we in de module JS-0.
+      <p>We kunnen Javascript ook gebruiken voor de interactie met de eigen
+        server, of met een andere webserver. Dit behandelen we in de module
+        JS-0.
       </p>
-      <p>In die module leggen we veel meer uit over JavaScript. In dit tutorial is het
-        voldoende als je kleine experimenten met de code kunt doen. Je hoeft niet alles
-        helemaal te begrijpen.
+      <p>In die module leggen we veel meer uit over JavaScript. In dit
+        tutorial is het voldoende als je kleine experimenten met de code kunt
+        doen. Je hoeft niet alles helemaal te begrijpen.
       </p>
       <hr>
     </section>
 
     <section>
+      <h1>DOM: HTML-elementen in Javascript</h1>
+      <p>Om de interactie tussen JavaScript en het HTML-document in de browser
+        mogelijk te maken, moet dit document zichtbaar zijn in de
+        JavaScript-omgeving.
+        Dit gebeurt in de vorm van de DOM: het <em>document object model</em>.
+        Om een element hierin te vinden, kunnen we onder andere de
+        <code>id</code> van dit element gebruiken (net als in CSS).
+      </p>
+      <p>
+        Het element met <code>id="myElt"</code> vinden we via:
+      </p>
+      <pre>
+        document.getElementById("myElt")
+      </pre>
+      <p>Het resultaat hiervan is een <em>JavaScript-object</em>. Een
+        HTML-attribuut met naam <code>attr</code> zien we dan als
+        JavaScript-<em>property</em> met diezelfde naam, bijvoorbeeld:
+        <code>elt.attr</code>.
+      </p>
+      <p>We kunnen de waarde van een attribuut via dit element opvragen of
+        veranderen. Dit laatste kan bijvoorbeeld via de toekenning:
+      </p>
+      <pre>
+document.getElementById("myElt").style = "";
+      </pre>
+      <p>We kunnen zo ook de CSS-properties aanpassen, bijvoorbeeld
+        <code>style.color</code> of <code>style.backgroundColor</code>.
+      </p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li>Probeer andere kleuren dan <code>"red"</code> en <code>
+          lightblue</code>in het programma in te vullen.
+          Vergeet de quotes (<code>"..."</code>) niet.
+        </li>
+      </ol>
+    </section>
+
+    <section>
       <h1>Definitie van een functie</h1>
-      <p>Een <em>functie</em> (function) is een beschrijving van een reeks acties of
-       berekeningen. De definitie van een functie in JavaScript heeft de vorm:
+      <p>Een <em>functie</em> (function) is een beschrijving van een reeks
+        acties of berekeningen. De definitie van een functie in JavaScript
+        heeft de vorm:
       </p>
       <pre>
         function fname (p1, p2, p3) {
           ... acties of berekening met p1, p2 en p3 ...
         }
       </pre>
-      <p>De <em>naam</em> van de functie, hier <code>fname</code>, gebruiken we om in
-        de rest van programma naar deze functie te kunnen verwijzen.
+      <p>De <em>naam</em> van de functie, hier <code>fname</code>, gebruiken
+        we om in de rest van programma naar deze functie te kunnen verwijzen.
       </p>
-      <p>De <em>parameters</em> van de functie, hier <code>p1, p2, p3</code>, gebruiken
-        we in de acties of berekeningen. Deze bepalen mede het uiteindelijke resultaat.
+      <p>De <em>parameters</em> van de functie, hier <code>p1, p2, p3</code>,
+        gebruiken we in de acties of berekeningen. Deze bepalen mede het
+        uiteindelijke resultaat.
       </p>
-      <p>De lijst met parameters kan leeg zijn, in dat geval schrijven we alleen de
-        haakjes <code>()</code>.
+      <p>De lijst met parameters kan leeg zijn, in dat geval schrijven we
+        alleen de haakjes <code>()</code>.
       </p>
-      <p>Het gedeelte tussen accolades <code>{...}</code> noemen we de <em>body</em>
-        van de functie.
+      <p>Het gedeelte tussen accolades <code>{...}</code> noemen we de
+        <em>body</em> van de functie.
       </p>
-      <p>Een functie is alleen een <em>beschrijving</em> van acties of berekeningen:
-        deze acties of berekeningen worden nog niet uitgevoerd. Je kunt het vergelijken
-        met een recept: pas als de kok eraan begint, gebeurt er iets.
+      <p>Een functie is alleen een <em>beschrijving</em> van acties of
+        berekeningen: deze acties of berekeningen worden nog niet uitgevoerd.
+        Je kunt het vergelijken met een recept: pas als de kok eraan begint,
+        gebeurt er iets.
       </p>
       <hr>
       <p><em>Opdrachten</em></p>
@@ -74,14 +117,15 @@
           parameters heeft deze functie? Wat betekent de actie in de body?
           (Hint: zoek op het web naar "javascript alert".)
         </li>
-        <li>Definieer naar analogie van de functie <code>alert1</code> een tweede
-          functie, <code>alert2</code>. Pas de tekst in de body aan, en zorg ervoor
-          dat deze duidelijk verschilt (niet alleen in een enkel cijfer).
+        <li>Definieer naar analogie van de functie <code>alert1</code> een
+          tweede functie, <code>alert2</code>. Pas de tekst in de body aan,
+          en zorg ervoor dat deze duidelijk verschilt (niet alleen in een
+          enkel cijfer).
           <br><br>
-          <strong>Let op!</strong> Als je een fout maakt in de notatie, zal Thimble
-          je daar niet op wijzen (anders dan in de HTML-code).
-          Je krijgt geen foutmelding: het werkt alleen niet, of anders dan je denkt.
-          Later zullen we hulpmiddelen gebruiken die meer hulp bieden.
+          <strong>Let op!</strong> Als je een fout maakt in de notatie, zal
+          Thimble je daar niet op wijzen (anders dan in de HTML-code).
+          Je krijgt geen foutmelding: het werkt alleen niet, of anders dan je
+          denkt. Later zullen we hulpmiddelen gebruiken die meer hulp bieden.
         </li>
       </ol>
     </section>
