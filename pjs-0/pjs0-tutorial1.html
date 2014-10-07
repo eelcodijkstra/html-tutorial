@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial 1</title>
+    <!-- this stylesheet provides default styles for tutorials -->
+    <link href="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.css" rel="stylesheet">
+    <!-- these scripts turn your make into a tutorial -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.js"></script>
+
+    <script>
+      jQuery(document).ready(function($){
+        $('body').tutorial();
+      });
+    </script>
+
+  </head>
+  <body>
+    <!--
+      enclose each tutorial step in its own section tags
+      you can include any sort of markup, including images
+      you can also add more sections
+
+      if you want to attach this tutorial to another make,
+      first publish this make
+      then tag the other make with prefix "tutorial-" followed by the url for this make
+    -->
+
+    <section>
+      <h1>Programmeren in JavaScript</h1>
+
+     <p> Dit is het eerste tutorial om te leren programmeren in Javascript.
+       Naast deze tutorials is er een uitleg via XXX.
+     </p>
+
+      <hr>
+      <p> Ga nu naar de volgende pagina. </p>
+    </section>
+    <section>
+      <h1>Een simpele webpagina</h1>
+      <p>Je ziet hier een voorbeeld van een heel eenvoudige webpagina.
+        Het kan het begin zijn van je eigen website.</p>
+
+      <p>Een html-pagina bestaat uit: </p>
+      <ol>
+        <li>Op regel 1: het document-type. Voor HTML5:
+          <code>&lt;!doctype html></code>
+        </li>
+        <li>De html-inhoud, tussen de haken: <br>
+            <code>&lt;html>...&lt;/html></code>
+        </li>
+        <li> Daarbinnen, eerst de header, tussen <br>
+          <code>&lt;head>...&lt;/head></code>
+        </li>
+        <li> en daarna de eigenlijke inhoud, tussen <br>
+          <code>&lt;body>...&lt;/body></code>
+        </li>
+      </ol>
+
+      <p>Voer de onderstaande opdrachten uit, en ga dan naar de volgende pagina.
+      </p>
+      <hr>
+      <p><em>Opdracht(en)</em></p>
+      <ul>
+        <li>Verander de tekst tussen de haakjes <code>&lt;h1>...&lt;/h1></code>.
+          Wat verandert er in het resultaat?
+        </li>
+        <li>Verander de haakjes <code>&lt;h1>...&lt;/h1></code>
+          in <code>&lt;h2>...&lt;/h2></code>.
+          Wat verandert er in het resultaat?
+        </li>
+        <li>Verander de tekst tussen de haakjes <code>&lt;title>...&lt;/title></code>.
+          Verandert er iets in het resultaat?
+        </li>
+      </ul>
+
+    </section>
+
+    <section>
+      <h1>Tags en elementen</h1>
+      <p>Html gebruikt speciale "haakjes": een openingshaakje
+        heeft de vorm <code>&lt;naam></code>, het bijbehorende sluithaakje
+        <code>&lt;/naam></code>. We noemen de naam in het haakje de "tag".
+      </p>
+      <p> Deze haakjes moeten altijd netjes gepaard zijn: elk openingshaakje
+        moet afgesloten worden met een sluithaakje. (Later zullen we losse tags
+        tegenkomen.)
+      </p>
+      <blockquote>
+        Als je een haakje niet goed afsluit, zal de Thimble-editor je hierop wijzen.
+      </blockquote>
+
+      <p>
+        De html-tekst met openingshaakje <code>&lt;p></code> tot en met
+        het bijbehorende sluithaakje noemen we
+        een <em>&lt;p>-element</em>, of kortweg p-element. Op dezelfde manier spreken we over
+        een &lt;h1>-element, of een &lt;em>-element.
+      </p>
+      <p>
+        De tekst tussen de twee haken van een element noemen we de <em>inhoud</em>
+        van dat element.
+      </p>
+      <hr>
+      <p><em>Opdracht(en)</em></p>
+      <ul>
+        <li>Zet het woord "fantastisch" tussen de haken  <code>&lt;em>...&lt;/em></code>.
+          Wat is het resultaat?
+        </li>
+        <li>Verander de haakjes <code>&lt;em>...&lt;/em></code>
+          in <code>&lt;strong>...&lt;/strong></code>.
+          Resultaat?
+        </li>
+        <li>Zet <em>om de haakjes</em> <code>&lt;strong>...&lt;/strong></code>
+          de haken <code>&lt;em>...&lt;/em></code>.
+          Resultaat?
+        </li>
+        <li>Voeg aan het eind een alinea toe (een &lt;p>-element).
+          Hoe reageert de editor als je al wel het openingshaakje, maar nog niet
+          het sluithaakje gegeven hebt?
+        </li>
+        <li>Wat gebeurt er als je een &lt;p>-element binnen een &lt;p>-element probeert
+          te definiëren?
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Witruimte</h1>
+      <p> Witruimte is de lege ruimte tussen en rond de tekst: spaties en regelovergangen.
+        Dit is een belangrijk onderdeel van de vormgeving.
+      </p>
+      <ul>
+        <li>De browser ziet spaties in de html-tekst alleen als scheidingsteken.
+        </li>
+        <li>
+          De hoeveelheid wit in het resultaat hangt niet af van het aantal
+          spaties in de html-tekst.
+        </li>
+        <li>We gebruiken spaties in de html-tekst om deze voor
+          mensen goed leesbaar te maken.
+        </li>
+      </ul>
+
+      <p>De haken en de tekst <em>springen in</em>, als deze binnen andere
+        haken geplaatst zijn. Hiermee maak je de tekst beter leesbaar.
+        Doe dit zelf ook zelf altijd.
+      </p>
+      <hr>
+      <p><em>Opdracht(en)</em></p>
+      <ul>
+        <li>Ga na dat meer of minder wit in de html-tekst geen gevolg heeft voor het
+          resultaat, door spaties en lege regels toe te voegen of te verwijderen.
+        </li>
+        <li>Wat is het resultaat de laatste (enige) spatie tussen twee woorden verwijdert?
+        </li>
+        <li>Hoe helpt de Thimble-editor je om de tekst tussen twee haken te
+          laten inspringen?
+        </li>
+        <li>Je kunt een regelovergang in het resultaat afdwingen door middel van
+          <code>&lt;br></code>. Dit is een element zonder sluithaak en zonder inhoud.
+          (Waarom heeft dit geen sluithaak?) <br>
+          Probeer dit uit.
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
