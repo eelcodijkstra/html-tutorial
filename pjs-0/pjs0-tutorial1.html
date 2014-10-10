@@ -38,91 +38,174 @@
       <p> Ga nu naar de volgende pagina. </p>
     </section>
     <section>
-      <h1>Een simpele webpagina</h1>
-      <p>Je ziet hier een voorbeeld van een heel eenvoudige webpagina.
-        Het kan het begin zijn van je eigen website.</p>
-
-      <p>Een html-pagina bestaat uit: </p>
+      <h1>Bestuur de Turtle</h1>
+      <p> Als eerste stap naar het programmeren gebruiken we een "tekenrobot".
+        Stel je dit voor als een robot-schildpad (<em>turtle</em>) met een pen.
+        Deze turtle kent de volgende opdrachten:
+      </p>
       <ol>
-        <li>Op regel 1: het document-type. Voor HTML5:
-          <code>&lt;!doctype html></code>
+        <li><code>forward(n)</code> - ga n stappen vooruit;</li>
+        <li><code>right(n)</code> - draai n graden naar rechts
         </li>
-        <li>De html-inhoud, tussen de haken: <br>
-            <code>&lt;html>...&lt;/html></code>
-        </li>
-        <li> Daarbinnen, eerst de header, tussen <br>
-          <code>&lt;head>...&lt;/head></code>
-        </li>
-        <li> en daarna de eigenlijke inhoud, tussen <br>
-          <code>&lt;body>...&lt;/body></code>
-        </li>
+        <li><code>penUp()</code> - haal de pen van het tekenvel;</li>
+        <li><code>penDown()</code> - zet de pen op het tekenvel.</li>
       </ol>
 
-      <p>Voer de onderstaande opdrachten uit, en ga dan naar de volgende pagina.
+      <p>360 graden is een hele draai; 90 graden is een kwartslag naar rechts;
+      -90 graden is een kwartslag naar links.
       </p>
+
+      <p>Je kunt de turtle <em>direct</em> besturen met de knoppen in het blauwe deelvenster.
+        (Later zullen we zien dat je de turtle ook kunt <em>programmeren</em>.)
+      </p>
+
       <hr>
-      <p><em>Opdracht(en)</em></p>
+      <p><em>Opdrachten:</em></p>
       <ul>
-        <li>Verander de tekst tussen de haakjes <code>&lt;h1>...&lt;/h1></code>.
-          Wat verandert er in het resultaat?
+        <li>Probeer met deze knoppen een vierkant te tekenen.
+          Denk erom dat je de turtle eerst de pen op het papier laat zetten
+          (anders zie je zo weinig). <br>
         </li>
-        <li>Verander de haakjes <code>&lt;h1>...&lt;/h1></code>
-          in <code>&lt;h2>...&lt;/h2></code>.
-          Wat verandert er in het resultaat?
-        </li>
-        <li>Verander de tekst tussen de haakjes <code>&lt;title>...&lt;/title></code>.
-          Verandert er iets in het resultaat?
+        <li>Je kunt de waarden in de witte invoer-vakjes veranderen.
+          Teken nu een groter vierkant.
         </li>
       </ul>
 
     </section>
 
     <section>
-      <h1>Tags en elementen</h1>
-      <p>Html gebruikt speciale "haakjes": een openingshaakje
-        heeft de vorm <code>&lt;naam></code>, het bijbehorende sluithaakje
-        <code>&lt;/naam></code>. We noemen de naam in het haakje de "tag".
-      </p>
-      <p> Deze haakjes moeten altijd netjes gepaard zijn: elk openingshaakje
-        moet afgesloten worden met een sluithaakje. (Later zullen we losse tags
-        tegenkomen.)
-      </p>
-      <blockquote>
-        Als je een haakje niet goed afsluit, zal de Thimble-editor je hierop wijzen.
-      </blockquote>
-
-      <p>
-        De html-tekst met openingshaakje <code>&lt;p></code> tot en met
-        het bijbehorende sluithaakje noemen we
-        een <em>&lt;p>-element</em>, of kortweg p-element. Op dezelfde manier spreken we over
-        een &lt;h1>-element, of een &lt;em>-element.
+      <h1>De toestand van de turtle</h1>
+      <p> De turtle staat altijd op een bepaalde plaats op het tekenvel (het <em>Canvas</em>),
+        met zijn hoofd in een bepaalde richting.
       </p>
       <p>
-        De tekst tussen de twee haken van een element noemen we de <em>inhoud</em>
-        van dat element.
+        De <em>plaats</em> geven we aan door de x-positie (horizontaal, neemt toe naar rechts)
+        en de y-positie (verticaal, neemt toe naar beneden). <br>
+        (0,0) is de linkerbovenhoek.
+      </p>
+      <p>
+        De <em>richting</em> (<code>dir)</code> geven we aan als hoek met de x-richting
+        (x-as), waarbij een draaiing  naar rechts een positieve hoek is.
+      </p>
+      <p>
+        De <em>pen</em> kan op het tekenvel staan (<code>down: true</code>), of
+        omhoog (<code>down: false</code>).
+      </p>
+      <p> De plaats, de richting, en de pen-positie vormen samen de
+        <em>toestand</em> of <em>state</em> van de turtle.
+        Deze zie je in het gele vlak.
       </p>
       <hr>
-      <p><em>Opdracht(en)</em></p>
-      <ul>
-        <li>Zet het woord "fantastisch" tussen de haken  <code>&lt;em>...&lt;/em></code>.
-          Wat is het resultaat?
+      <ol>
+        <li>Kijk hoe de toestand verandert door de opdrachten die je met de knoppen geeft.
         </li>
-        <li>Verander de haakjes <code>&lt;em>...&lt;/em></code>
-          in <code>&lt;strong>...&lt;/strong></code>.
-          Resultaat?
+        <li>Probeer de toestand te bereiken: <code>x: 30, y: 30, down: false</code>.
+          Kun je deze toestand bereiken zonder een spoor achter te laten?
         </li>
-        <li>Zet <em>om de haakjes</em> <code>&lt;strong>...&lt;/strong></code>
-          de haken <code>&lt;em>...&lt;/em></code>.
-          Resultaat?
+        <li>Wat gebeurt er als je een negatief getal invoert als parameter voor <code>right</code>?
         </li>
-        <li>Voeg aan het eind een alinea toe (een &lt;p>-element).
-          Hoe reageert de editor als je al wel het openingshaakje, maar nog niet
-          het sluithaakje gegeven hebt?
+        <li>Wat gebeurt er als je een negatief getal invoert als parameter voor
+          <code>forward</code>?
         </li>
-        <li>Wat gebeurt er als je een &lt;p>-element binnen een &lt;p>-element probeert
-          te definiëren?
+      </ol>
+    </section>
+
+    <section>
+      <h1>Console</h1>
+      <p>Je kunt voor de opdrachten voor de turtle ook het
+        <em>console</em> gebruiken. Dit is zichtbaar in een apart venster.
+        Hier kun je de opdrachten intoetsen zoals deze
+        bij de knoppen staan, bijvoorbeeld: <code>forward(30);</code> (RETURN) <br>
+        Je moet elke opdracht op het console afsluiten met de return-toets. <br>
+        Je kunt ook opeenvolgende opdrachten op één regel plaatsen, bijvoorbeeld:
+      </p>
+      <pre> forward(50); right(90); </pre>
+      <p> Let goed op de notatie:
+        je moet precies de goede naam gebruiken, de juiste haakjes en de juiste leestekens,
+        zoals de puntkomma.
+      </p>
+      <p> Als je een fout maakt in de notatie, krijg je soms een foutmelding, en soms gebeurt
+        er heel iets anders dan je bedoelt.
+      </p>
+      <p> Door bijv. <code>pos.x</code> of <code>down</code> in te voeren kun je de
+        toestand van de turtle opvragen.
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Probeer nu een vierkant te tekenen door opdrachten op het console.
         </li>
-      </ul>
+        <li> Vraag de toestand van de turtle op via het console.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Functies: aanroep</h1>
+      <p> Door middel van een programma kunnen je de turtle opdrachten uit laten voeren zonder
+        deze steeds zelf in te voeren.
+      </p>
+      <p> Een <em>functie</em> is een stukje programma dat we een naam geven.
+      </p>
+      <p> Het <em>gebruik</em> ofwel de <em>aanroep</em> van een
+        functie hebben we eerder gezien. Deze heeft de vorm:
+      </p>
+      <pre>functienaam(...parameters...)</pre>
+      <p>
+        Enkele voorbeelden:
+      </p>
+      <pre>
+        square50();
+        forward(50);
+        square50();</pre>
+      <p>We kunnen een functie ook koppelen aan een knop (button); een <code>click</code>
+        op die button zorgt dan voor een aanroep van die functie.
+      </p>
+      <hr>
+       <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> probeer enkele functies aan te roepen, zoals in het voorbeeld;
+        </li>
+        <li> wat gebeurt er als je <code>square50</code> invoert, dus zonder de <code>()</code>?
+          <br>
+          Of <code>penUp</code>?
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h1>Functies: definitie</h1>
+      <p>We gaan nu zelf een functie definiëren. We groeperen een
+        reeks opdrachten met behulp van accolades, en geven deze groep een naam, bijv.:
+      </p>
+      <pre>
+  function square50 () {
+    penDown();
+    forward(50); right(90);
+    forward(50); right(90);
+    forward(50); right(90);
+    forward(50); right(90);
+  }</pre>
+      <p>
+        Een aanroep van deze functie heeft de vorm:
+      </p>
+      <pre>square50();</pre>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li>Open het JavaScript-venster (met de tab),
+          en zoek de functie <code>square50</code>.
+        </li>
+        <li> Definieer onderaan in het Javascript-venster een
+          functie <code>sqFd50</code> die eerst <br>
+          (i) een vierkant met zijden van 50 pixels tekent, en daarna </br>
+          (ii) 50 pixels vooruit beweegt. <br>
+          <em>Hint:</em> gebruik de functie <code>square50</code>.
+        </li>
+        <li> Roep deze functie herhaaldelijk aan (in het console-venster).
+          Maak eventueel eerst het canvas leeg.
+          Met het pijltje omhoog haal je het vorige commando terug.
+        </li>
+      </ol>
     </section>
 
     <section>
@@ -147,7 +230,7 @@
         Doe dit zelf ook zelf altijd.
       </p>
       <hr>
-      <p><em>Opdracht(en)</em></p>
+      <p><em>Opdrachten:</em></p>
       <ul>
         <li>Ga na dat meer of minder wit in de html-tekst geen gevolg heeft voor het
           resultaat, door spaties en lege regels toe te voegen of te verwijderen.
