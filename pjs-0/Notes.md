@@ -13,6 +13,11 @@
     * this environment is under our own control.
 * alternative: using GitHub Pages?
 * the JSBin-parts are published using JSBin.
+* the JSBin-parts are derived from Gists on GitHub.
+
+It is possible to import a gist directly into JSBin; but, apparently, this does not work for the embedded representation of JSBin. (And, probably, this adds another layer of overhead to the system, and an extra risk factor.) Thus, we need the following way of working:
+
+* 
 
 ## Wishlist
 
