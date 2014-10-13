@@ -39,13 +39,14 @@
     <section>
       <h1>Functies met parameters</h1>
       <p> We hebben gezien hoe je in een functie-definitie een aantal opdrachten
-        kunt groeperen en een naam kunt geven. Nu gaan we een stap verder: we
-        definiëren functies met parameters.
+        kunt groeperen en een naam kunt geven.
+      </p>
+      <p>Nu gaan we een stap verder: we definiëren functies met parameters.
       </p>
       <p> We hebben steeds de functies <code>forward(n)</code> en <code>right(n)</code>
         gebruikt: door de parameters - het aantal stappen vooruit, of het aantal stappen
-        draaien - zijn deze functies veel algemener bruikbaar dan een functie die alleen
-        een vast aantal stappen vooruit gaat, of draait.
+        draaien - zijn deze functies handiger dan een functie die
+        een vast aantal stappen gebruikt.
       </p>
       <p>
       </p>
@@ -53,12 +54,9 @@
       <hr>
       <p><em>Opdrachten:</em></p>
       <ul>
-        <li>Probeer met deze knoppen een vierkant te tekenen.
-          Denk erom dat je de turtle eerst de pen op het papier laat zetten
-          (anders zie je zo weinig). <br>
+        <li> P.M.
         </li>
-        <li>Je kunt de waarden in de witte invoer-vakjes veranderen.
-          Teken nu een groter vierkant.
+        <li> idem
         </li>
       </ul>
 
@@ -66,8 +64,8 @@
 
     <section>
       <h1>Voorbeeld: vierkant</h1>
-      <p> Door een parameter te gebruiken, kunnen we een algemene functie maken voor het
-        tekenen van een vierkant:
+      <p> Door een parameter voor de grootte in te voeren, kunnen we een algemene
+        functie maken voor het tekenen van een vierkant:
       </p>
       <pre>
 function square (size) {
@@ -77,15 +75,14 @@ function square (size) {
   forward(size); right(90);
 }</pre>
       <p> We schrijven de parameter tussen de haken, na de naam van de functie.
-        <br>
-        We kunnen eventueel ook meerdere parameters gebruiken; deze scheiden we dan
-        door komma's, bijvoorbeeld
+      </p>
+      <p> We kunnen ook meerdere parameters invoeren in de definitie;
+        deze scheiden we dan door komma's, bijvoorbeeld:
       </p>
       <pre>
 function rectangle (width, height) {
   ...
-}
-      </pre>
+} </pre>
       <hr>
       <p><em>Opdrachten:</em></p>
       <ul>
@@ -95,11 +92,8 @@ function rectangle (width, height) {
         <li> Waarom gebruiken we voor de draaiing een vaste waarde (90 graden)?
         </li>
     </section>
-
-      <hr>
-    </section>
     <section>
-      <h1>Namen voor parameters/h1>
+      <h1>Namen voor parameters</h1>
       <p>
         We zijn vrij in de keuze van de naam, binnen zekere grenzen: (i) het moet een geldige
         Javascript-naam (identifier) zijn; (ii) als we meerdere parameters gebruiken, moeten
@@ -111,190 +105,81 @@ function rectangle (width, height) {
       <hr>
       <p><em>Opdrachten:</em></p>
       <ul>
-        <li>Probeer met deze knoppen een vierkant te tekenen.
-          Denk erom dat je de turtle eerst de pen op het papier laat zetten
-          (anders zie je zo weinig). <br>
+        <li>PM
         </li>
-        <li>Je kunt de waarden in de witte invoer-vakjes veranderen.
-          Teken nu een groter vierkant.
+        <li>PM
         </li>
       </ul>
-
     </section>
 
     <section>
-      <h1>De toestand van de turtle</h1>
-      <p> De turtle staat altijd op een bepaalde plaats op het tekenvel (het <em>Canvas</em>),
-        met zijn hoofd in een bepaalde richting.
+      <h1>Opstap naar herhaling</h1>
+      <p>We willen het hele Canvas vullen met vierkanten van dezelfde grootte.
+        Dit doen we door een basisfiguur steed te herhalen.
+        Hoe ziet deze basisfiguur eruit? Hebben we aan één basisfiguur
+        genoeg?
       </p>
-      <p>
-        De <em>plaats</em> geven we aan door de x-positie (horizontaal, neemt toe naar rechts)
-        en de y-positie (verticaal, neemt toe naar beneden). <br>
-        (0,0) is de linkerbovenhoek.
-      </p>
-      <p>
-        De <em>richting</em> (<code>dir)</code> geven we aan als hoek met de x-richting
-        (x-as), waarbij een draaiing  naar rechts een positieve hoek is.
-      </p>
-      <p>
-        De <em>pen</em> kan op het tekenvel staan (<code>down: true</code>), of
-        omhoog (<code>down: false</code>).
-      </p>
-      <p> De plaats, de richting, en de pen-positie vormen samen de
-        <em>toestand</em> of <em>state</em> van de turtle.
-        Deze zie je in het gele vlak.
-      </p>
-      <hr>
-      <ol>
-        <li>Kijk hoe de toestand verandert door de opdrachten die je met de knoppen geeft.
-        </li>
-        <li>Probeer de toestand te bereiken: <code>x: 30, y: 30, down: false</code>.
-          Kun je deze toestand bereiken zonder een spoor achter te laten?
-        </li>
-        <li>Wat gebeurt er als je een negatief getal invoert als parameter voor <code>right</code>?
-        </li>
-        <li>Wat gebeurt er als je een negatief getal invoert als parameter voor
-          <code>forward</code>?
-        </li>
-      </ol>
-    </section>
-
-    <section>
-      <h1>Console</h1>
-      <p>Je kunt voor de opdrachten voor de turtle ook het
-        <em>console</em> gebruiken. Dit is zichtbaar in een apart venster.
-        Hier kun je de opdrachten intoetsen zoals deze
-        bij de knoppen staan, bijvoorbeeld: <code>forward(30);</code> (RETURN) <br>
-        Je moet elke opdracht op het console afsluiten met de return-toets. <br>
-        Je kunt ook opeenvolgende opdrachten op één regel plaatsen, bijvoorbeeld:
-      </p>
-      <pre> forward(50); right(90); </pre>
-      <p> Let goed op de notatie:
-        je moet precies de goede naam gebruiken, de juiste haakjes en de juiste leestekens,
-        zoals de puntkomma.
-      </p>
-      <p> Als je een fout maakt in de notatie, krijg je soms een foutmelding, en soms gebeurt
-        er heel iets anders dan je bedoelt.
-      </p>
-      <p> Door bijv. <code>pos.x</code> of <code>down</code> in te voeren kun je de
-        toestand van de turtle opvragen.
-      </p>
-      <hr>
-      <p><em>Opdrachten:</em></p>
-      <ol>
-        <li> Probeer nu een vierkant te tekenen door opdrachten op het console.
-        </li>
-        <li> Vraag de toestand van de turtle op via het console.
-        </li>
-      </ol>
-    </section>
-
-    <section>
-      <h1>Functies: aanroep</h1>
-      <p> Door middel van een programma kunnen je de turtle opdrachten uit laten voeren zonder
-        deze steeds zelf in te voeren.
-      </p>
-      <p> Een <em>functie</em> is een stukje programma dat we een naam geven.
-      </p>
-      <p> Het <em>gebruik</em> ofwel de <em>aanroep</em> van een
-        functie hebben we eerder gezien. Deze heeft de vorm:
-      </p>
-      <pre>functienaam(...parameters...)</pre>
-      <p>
-        Enkele voorbeelden:
+      <p>De basisfiguur moet meer zijn dan alleen een vierkant. Immers, als we een vierkant
+        tekenen, komen we weer op het beginpunt uit. Als we daar weer een vierkant tekenen,
+        overlapt deze precies met de vorige: we komen niet verder.
       </p>
       <pre>
-        square50();
-        forward(50);
-        square50();</pre>
-      <p>We kunnen een functie ook koppelen aan een knop (button); een <code>click</code>
-        op die button zorgt dan voor een aanroep van die functie.
-      </p>
-      <hr>
-       <p><em>Opdrachten:</em></p>
-      <ol>
-        <li> probeer enkele functies aan te roepen, zoals in het voorbeeld;
-        </li>
-        <li> wat gebeurt er als je <code>square50</code> invoert, dus zonder de <code>()</code>?
-          <br>
-          Of <code>penUp</code>?
-        </li>
-      </ol>
-    </section>
-    <section>
-      <h1>Functies: definitie</h1>
-      <p>We gaan nu zelf een functie definiëren. We groeperen een
-        reeks opdrachten met behulp van accolades, en geven deze groep een naam, bijv.:
+function squareStep (size) {
+  square(size);
+  forward(size);</pre>
+      <p>We kunnen nu een rij vierkanten naast elkaar tekenen door deze functie te herhalen:
       </p>
       <pre>
-  function square50 () {
-    penDown();
-    forward(50); right(90);
-    forward(50); right(90);
-    forward(50); right(90);
-    forward(50); right(90);
-  }</pre>
-      <p>
-        Een aanroep van deze functie heeft de vorm:
-      </p>
-      <pre>square50();</pre>
-      <hr>
-      <p><em>Opdrachten:</em></p>
-      <ol>
-        <li>Open het JavaScript-venster (met de tab),
-          en zoek de functie <code>square50</code>.
-        </li>
-        <li> Definieer onderaan in het Javascript-venster een
-          functie <code>sqFd50</code> die eerst <br>
-          (i) een vierkant met zijden van 50 pixels tekent, en daarna </br>
-          (ii) 50 pixels vooruit beweegt. <br>
-          <em>Hint:</em> gebruik de functie <code>square50</code>.
-        </li>
-        <li> Roep deze functie herhaaldelijk aan (in het console-venster).
-          Maak eventueel eerst het canvas leeg.
-          Met het pijltje omhoog haal je het vorige commando terug.
-        </li>
-      </ol>
-    </section>
-
-    <section>
-      <h1>Witruimte</h1>
-      <p> Witruimte is de lege ruimte tussen en rond de tekst: spaties en regelovergangen.
-        Dit is een belangrijk onderdeel van de vormgeving.
-      </p>
-      <ul>
-        <li>De browser ziet spaties in de html-tekst alleen als scheidingsteken.
-        </li>
-        <li>
-          De hoeveelheid wit in het resultaat hangt niet af van het aantal
-          spaties in de html-tekst.
-        </li>
-        <li>We gebruiken spaties in de html-tekst om deze voor
-          mensen goed leesbaar te maken.
-        </li>
-      </ul>
-
-      <p>De haken en de tekst <em>springen in</em>, als deze binnen andere
-        haken geplaatst zijn. Hiermee maak je de tekst beter leesbaar.
-        Doe dit zelf ook zelf altijd.
-      </p>
+squareStep(10);
+squareStep(10);
+squareStep(10);
+squareStep(10);
+squareStep(10);</pre>
       <hr>
       <p><em>Opdrachten:</em></p>
       <ul>
-        <li>Ga na dat meer of minder wit in de html-tekst geen gevolg heeft voor het
-          resultaat, door spaties en lege regels toe te voegen of te verwijderen.
+        <li>Maak een vergelijkbare functie <code>squareStep1(size)</code> om een
+          kolom vierkanten te tekenen, dus onder elkaar.
         </li>
-        <li>Wat is het resultaat de laatste (enige) spatie tussen twee woorden verwijdert?
-        </li>
-        <li>Hoe helpt de Thimble-editor je om de tekst tussen twee haken te
-          laten inspringen?
-        </li>
-        <li>Je kunt een regelovergang in het resultaat afdwingen door middel van
-          <code>&lt;br></code>. Dit is een element zonder sluithaak en zonder inhoud.
-          (Waarom heeft dit geen sluithaak?) <br>
-          Probeer dit uit.
+        <li>PM
         </li>
       </ul>
     </section>
+    <section>
+      <h1>title</h1>
+       <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li>PM
+        </li>
+        <li>PM
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>title</h1>
+       <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li>PM
+        </li>
+        <li>PM
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>title</h1>
+       <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li>PM
+        </li>
+        <li>PM
+        </li>
+      </ul>
+    </section>
+
+
   </body>
 </html>
