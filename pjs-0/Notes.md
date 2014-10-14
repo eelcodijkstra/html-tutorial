@@ -36,6 +36,7 @@ It is possible to import a gist directly into JSBin; but, apparently, this does 
 * we may prevent this by the use of a condition;
     * alternatives: next action/drawing to the right, or below
 * this is a first step towards recursion...
+* the use of buttons for user-defined functions can be seen as a first step towards testing, and test-driven development. Can we exploit this still further?
 
 ## Notes
 
