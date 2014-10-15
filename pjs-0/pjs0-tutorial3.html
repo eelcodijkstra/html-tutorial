@@ -36,193 +36,129 @@
 
             <p> Ga nu naar de volgende pagina. </p>
     </section>
+
     <section>
-      <h1>Functies met parameters</h1>
-      <p> We hebben gezien hoe je in een functie-definitie een aantal opdrachten
-        kunt groeperen en een naam kunt geven.
+      <h1>Rekenen met waarden</h1>
+      <p> Tot nu toe kunnen we alleen verschillende getallen invullen als parameter.
+        De enige manier om 10 vierkanten te tekenen die steeds 10 stappen (pixels) groter zijn,
+        is om alles uit te schrijven. Met computers moet dat slimmer kunnen.
       </p>
-      <p>Nu gaan we een stap verder: we definiëren functies met parameters.
+        We willen kunnen rekenen met waarden, zodat we bijvoorbeeld kunnen schrijven: `size - 10`.
       </p>
-      <p> We hebben steeds de functies <code>forward(n)</code> en <code>right(n)</code>
-        gebruikt: door de parameters - het aantal stappen vooruit, of het aantal stappen
-        draaien - zijn deze functies handiger dan een functie die
-        een vast aantal stappen gebruikt.
-      </p>
+      <p> Hiervoor gebruiken we <em>expressies</em> (uitdrukkingen) voor in Javascript.</p>
+
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Rekenen met het console</h1>
       <p>
       </p>
-
+      <p>Selecteer de tab "Console", en maak eventueel ruimte door de andere tabs te sluiten.
+      <br>
+        In de opdrachten moet je steeds een regel invoeren in het console. Denk erom dat je
+        deze afsluit met een return (anders kun je lang wachten).
+      </p>
       <hr>
       <p><em>Opdrachten:</em></p>
       <ul>
-        <li> P.M.
+        <li> Probeer een aantal uitdrukkingen van de vorm <code>a # b</code>,
+          waarin <code>a</code> en <code>b</code> getallen zijn, en <code>#</code>`
+          een van de rekenkundige operatoren is: <code>+ - * /</code>.
         </li>
-        <li> idem
+        <li> Probeer een aantal uitdrukkingen van de vorm <code>a # b $ c</code>,
+          waarin <code>#</code> en <code>$</code> verschillende rekenkundige operatoren zijn.
+          Wat kun je zeggen over de prioriteit (rekenvolgorde) van de operatoren?
+        </li>
+        <li> Door haakjes te gebruiken, kun je de volgorde in de berekening veranderen,
+          bijvoorbeeld <code>(2 + 3) * 4</code>. Probeer dit uit.
         </li>
       </ul>
-
     </section>
 
     <section>
-      <h1>Voorbeeld: vierkant</h1>
-      <p> Door een parameter voor de grootte in te voeren, kunnen we een algemene
-        functie maken voor het tekenen van een vierkant:
+      <h1>Functies</h1>
+      <p> Zoals ook bij de andere elementen voor het bouwen van programma's, hebben we hier
+        te maken met:
       </p>
-      <pre>
-function square (size) {
-  forward(size); right(90);
-  forward(size); right(90);
-  forward(size); right(90);
-  forward(size); right(90);
-}</pre>
-      <p> We schrijven de parameter tussen de haakjes, na de naam van de functie.
+      <ol>
+        <li> elementaire bouwstenen (waarden, hier getallen; en operaties, zoals optellen);
+        </li>
+        <li> samenstellen van bouwstenen (hier: uitdrukkingen, eventueel met meerdere
+        waarden, operatoren, en haakjes);
+        </li>
+        <li> benoemen van een samenstelling, om deze tot een nieuwe bouwsteen te maken.
+        </li>
+      </ol>
+      <p>Voor deze benoemde expressies gebruiken we functies, zoals we deze tot nu toe
+        gezien hebben. Met één verschil: de functie levert een resultaat op waarmee
+        we in het programma verder kunnen rekenen.
       </p>
-      <p> We kunnen ook meerdere parameters invoeren in een definitie.
-        Deze scheiden we dan door komma's, bijvoorbeeld:
-      </p>
-      <pre>
-function rectangle (width, height) {
-  ...
-} </pre>
+      <p>Voorgedefinieerde functies: <code>Math.sqrt</code> enz.</p>
       <hr>
       <p><em>Opdrachten:</em></p>
       <ul>
-        <li> Definieer een functie <code>rectangle</code> zoals hierboven beschreven, voor
-          het tekenen van een rechthoek.
+        <li> PM
         </li>
-        <li> Waarom gebruiken we voor de draaiing een vaste waarde (90 graden)?
+        <li> PM
         </li>
       </ul>
     </section>
+
     <section>
-      <h1>Namen voor parameters</h1>
+      <h1>Voorbeelden</h1>
       <p>
-        We zijn vrij in de keuze van de naam, binnen zekere grenzen: (i) het moet een geldige
-        Javascript-naam (identifier) zijn; (ii) als we meerdere parameters gebruiken, moeten
-        de namen hiervan verschillen.
-        <br>
-        Een regel die niet tot de Javascript-spelregels hoort, maar wel tot de regels van
-        goed programmeer-gedrag: gebruik namen met een duidelijke betekenis.
-      </p>
-      <hr>
-      <p><em>Opdrachten:</em></p>
-      <ul>
-        <li>PM
-        </li>
-        <li>PM
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h1>Opstap naar herhaling</h1>
-      <p>We willen het hele Canvas vullen met vierkanten van dezelfde grootte.
-        Dit doen we door een basisfiguur steed te herhalen.
-        Hoe ziet deze basisfiguur eruit? Hebben we aan één basisfiguur
-        genoeg?
-      </p>
-      <p>De basisfiguur moet meer zijn dan alleen een vierkant. Immers, als we een vierkant
-        tekenen, komen we weer op het beginpunt uit. Als we daar weer een vierkant tekenen,
-        overlapt deze precies met de vorige: we komen niet verder.
-      </p>
+      </p> Enkele voorbeelden
       <pre>
-function squareStep (size) {
-  square(size);
-  forward(size);
-}</pre>
-      <p>We kunnen nu een rij vierkanten naast elkaar tekenen door deze functie te herhalen:
-      </p>
-      <pre>
-squareStep(10);
-squareStep(10);
-squareStep(10);</pre>
-      <hr>
-      <p><em>Opdrachten:</em></p>
-      <ul>
-        <li>Maak een vergelijkbare functie <code>squareStep1(size)</code> om een
-          kolom vierkanten te tekenen, dus onder elkaar.
-        </li>
-        <li>PM
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h1>title</h1>
-       <hr>
-      <p><em>Opdrachten:</em></p>
-      <ul>
-        <li>PM
-        </li>
-        <li>PM
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h1>Andere manieren (1) </h1>
-      <p>Er zijn verschillende manieren om een vlak te vullen met vierkantjes.
-        We hebben tot nu toe één manier gezien: van links naar rechts, en van
-        boven naar beneden - zoals je leest.
-      </p>
-      <p>Maar je kunt het ook anders doen. Probeer zelf een (of meer) andere
-        manieren te bedenken. <br>
-        <em>Hint:</em> hoe maai je een gazon?
-      </p>
-       <hr>
-      <p><em>Opdrachten:</em></p>
-      <ul>
-        <li>PM
-        </li>
-        <li>PM
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h1>Andere manieren (2)</h1>
-      <p>Een andere manier is om aan het eind van een rij, de rij eronder in de
-        andere richting te doorlopen (van rechts naar links).
-      </p>
-      <p>Nog een andere manier is om kolom voor kolom in te vullen, in plaats van rij
-        voor rij.
-      </p>
-      <p>Nog weer een andere manier is om het vlak van buiten naar binnen in te vullen.
-        Of, van binnen naar buiten, spiraalsgewijs.
-      </p>
-       <hr>
-      <p><em>Opdrachten:</em></p>
-      <ul>
-        <li>PM
-        </li>
-        <li>PM
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h1>Andere manieren (3)</h1>
-      <p> We hebben een functie <code>turnRight(size)</code> gedefinieerd om het tekenen
-        van de vierkanten in een andere richting voor te zetten:
-      </p>
-      <pre>
-function turnRight (size) {
-  right(90);
-  forward(size);
+function double (a) {
+  return 2 * a;
 }
-      </pre>
-       <hr>
+
+function square (num) {
+  return num * num;
+}</pre>
+      <p>Voorbeelden van het gebruik hiervan:
+      </p>
+      <pre>
+vierkant(double(4) + 2);
+vierkant(square(2+3));</pre>
+      <hr>
       <p><em>Opdrachten:</em></p>
       <ul>
-        <li> Hoe kun je met de twee functies <code>squareStep</code> en <code>turnRight</code>
-          een vierkante rand van vierkanten tekenen, bijv. van 4 x 4? (totaal 12 vierkanten).
+        <li> Definieer zelf een functie <code>triple</code> die het drievoud van de parameter
+          oplevert.
         </li>
-        <li>Hoe kun je met de twee functies <code>squareStep</code> en <code>turnRight</code>
-          een vierkant van 4 x 4 vierkanten tekenen? (totaal 16 vierkanten).
+        <li> Hoe kun je de functie <code>double</code> anders schrijven?
         </li>
-        <li>Definieer een functie <code>turnLeft(size)</code> om de richting naar links te
-          veranderen. <em>Hint:</em> zorg ervoor dat <br>
-          <code>turnRight(30); turnLeft(30);</code> <br>
-          weer op precies dezelfde positie uitkomt.
+        <li> Definieer een functie <code>rectangleSurface(width, height)</code> die
+          de oppervlakte van een rechthoek berekent.
+        </li>
+        <li> Hoe zou je de functie <code>double</code> kunnen testen?
+          En de functie <code>square</code>?
         </li>
       </ul>
     </section>
 
+        <section>
+      <h1>titel</h1>
+      <p>
+      </p>
+
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ul>
+    </section>
   </body>
 </html>
