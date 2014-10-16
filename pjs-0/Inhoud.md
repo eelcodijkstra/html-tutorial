@@ -82,7 +82,12 @@ aan te roepen.
     * het is niet eenvoudig om een functie te definiëren in het console-venster. Je loopt daar aan
     tegen de limiet van één regel.
 * subtiel: (i) de grootte is een absolute maat, zonder geheugen; (ii) de draaiing is een actie met een neveneffect. In herhalingen hoeven we voor de laatste geen parameter op te geven, en voor de eerste wel.
+* JSLint: http://javascript.crockford.com/code.html
+    * i.h.b. de spatie-regels, en de regels voor variabele-declaraties zijn wat "typisch".
 
+## Help
+
+* er gebeurt niets met de turtle -> is Auto-run JS geselecteerd? (in output-panel, rechts)
 
 
     
