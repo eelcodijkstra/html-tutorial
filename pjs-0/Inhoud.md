@@ -10,6 +10,14 @@
     * functie als script, voor een proces
     * resultaat van functie: afhankelijk van toestand
 
+TODO:
+
+* [ ] knoppen toevoegen voor functies `testA` etc.
+
+### Cheating
+
+* waarde van `pos.x` veranderen door een expliciete toekenning. (Een echte robot kun je niet verplaatsen door louter de GPS-coordinaten aan te passen.)
+
 ## Les 2 - functies met parameters
 
 * "testen" - hier met knoppen (buttons)
@@ -38,6 +46,10 @@ TODO:
     * elementaire operaties: `+ - * /`
     * samenstelling: expressie; haakjes
     * abstractie: functie (in eerste instantie: naam geven aan een expressie).
+* namen (vervolg); gebruik van namen in expressies
+* namen: de betekenis (het gedrag) van een functie verandert niet als je de naam van een parameter vervangt door een andere naam - zolang je geen naamconflicten hebt.
+
+NB: we hebben een naamconflict met `square` - ook voor het tekenen!
 
 TODO:
 
@@ -46,9 +58,31 @@ TODO:
 
 ## Les 4
 
-
+* Herhaling - door functie als parameter `repeat(n, f)`
+    * geven we evt. de index als par. mee? Hoe zit dat in JS - elders (foreach)
+* Functie als waarde (al eerder genoemd?)
+* Verschil tussen functie als waarde, aanroep, en resultaat
 
 ## Les 5
 
+* Keuze - bijv. als turtle tegen een grens aanloopt
+* Event - met daaraan gekoppelde actie
+    * verband tussen keuze en event
+    
 ## Les 6
 
+## Opmerkingen
+
+* Hoe kunnen we een begin maken met Test-Driven Development? Dit kan helpen om eerst op de gevraagde functionaliteit te concentreren, voordat je aan de implementatie begint.
+* is het naamconflict of naamsconflict?
+* animaties
+* redeneren over programma's, bijv. `forward(n); forward(m);` equivalent `forward(n+m)`. Analoog voor `right`. (totale draaiing kun je ook bepalen)
+* voor het testen (en voor de herhaling) is het eenvoudiger om te werken met functies zonder parameter. We kunnen een aantal functies `testA` `testB` `testC` definiëren, met knoppen om deze
+aan te roepen.
+    * het is niet eenvoudig om een functie te definiëren in het console-venster. Je loopt daar aan
+    tegen de limiet van één regel.
+* subtiel: (i) de grootte is een absolute maat, zonder geheugen; (ii) de draaiing is een actie met een neveneffect. In herhalingen hoeven we voor de laatste geen parameter op te geven, en voor de eerste wel.
+
+
+
+    

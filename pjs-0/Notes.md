@@ -37,6 +37,7 @@ It is possible to import a gist directly into JSBin; but, apparently, this does 
     * alternatives: next action/drawing to the right, or below
 * this is a first step towards recursion...
 * the use of buttons for user-defined functions can be seen as a first step towards testing, and test-driven development. Can we exploit this still further?
+* a suggestions from other context (a specific Math course): use mixed exercises, combining old with new stuff. This has three goals: (i) repeat the old stuff; (ii) use it as a base for new stuff; (iii) training the determination of problems/solution types. (I.e., you don't know from the context what the actual type of problem is.)
 
 ## Notes
 

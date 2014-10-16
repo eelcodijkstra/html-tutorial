@@ -43,7 +43,8 @@
         De enige manier om 10 vierkanten te tekenen die steeds 10 stappen (pixels) groter zijn,
         is om alles uit te schrijven. Met computers moet dat slimmer kunnen.
       </p>
-        We willen kunnen rekenen met waarden, zodat we bijvoorbeeld kunnen schrijven: `size - 10`.
+        We willen kunnen rekenen met waarden, zodat we bijvoorbeeld kunnen schrijven:
+        <code>size - 10</code>.
       </p>
       <p> Hiervoor gebruiken we <em>expressies</em> (uitdrukkingen) voor in Javascript.</p>
 
@@ -117,11 +118,11 @@
       <p>
       </p> Enkele voorbeelden
       <pre>
-function double (a) {
+function dubbel (a) {
   return 2 * a;
 }
 
-function square (num) {
+function kwadraat (num) {
   return num * num;
 }</pre>
       <p>Voorbeelden van het gebruik hiervan:
@@ -147,8 +148,15 @@ vierkant(square(2+3));</pre>
     </section>
 
         <section>
-      <h1>titel</h1>
-      <p>
+      <h1>Namen en naamsconflicten</h1>
+      <p> We hebben de functie hiervoor "kwadraat" genoemd - en niet "square"... waarom?
+        <br>
+        We hebben al een functie "square", namelijk voor het tekenen van een vierkant.
+        En we kunnen een naam maar één keer gebruiken. (Welke betekenis zou je anders bedoelen?)
+        <br>
+        Zoals je ziet geeft deze regel soms aanleiding tot vreemde namen. Dat is niet alleen
+        een gebrek aan fantasie. We zullen later zien welke hulpmiddelen we hebben om minder
+        last te hebben van dit soort problemen.
       </p>
 
       <hr>

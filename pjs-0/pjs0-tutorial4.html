@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial 1</title>
+    <!-- this stylesheet provides default styles for tutorials -->
+    <link href="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.css" rel="stylesheet">
+    <!-- these scripts turn your make into a tutorial -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.js"></script>
+
+    <script>
+      jQuery(document).ready(function($){
+        $('body').tutorial();
+      });
+    </script>
+
+  </head>
+  <body>
+    <!--
+      enclose each tutorial step in its own section tags
+      you can include any sort of markup, including images
+      you can also add more sections
+
+      if you want to attach this tutorial to another make,
+      first publish this make
+      then tag the other make with prefix "tutorial-" followed by the url for this make
+    -->
+
+    <section>
+      <h1>Programmeren in JavaScript - Les 4</h1>
+
+     <p> Dit is de vierde les in Programmeren in Javascript.
+       Naast deze tutorials is er een uitleg via XXX.
+     </p>
+
+            <p> Ga nu naar de volgende pagina. </p>
+    </section>
+
+    <section>
+      <h1>Herhaling</h1>
+      <p> In dit hoofdstuk maken we kennis met herhaling - en daarmee met de kracht
+        van computers. We beginnen met een eenvoudige vorm van herhaling: we geven
+        vooraf op hoe vaak een bepaalde actie uitgevoerd moet worden.
+      </p>
+      <p>Hiervoor maken we gebruik van de volgende functie:
+      </p>
+<pre>
+function repeat (n, f)
+</pre>
+      <p> De functie <code>repeat</code> voert de functie <code>f</code>
+        <code>n</code> maal uit. <br>
+        Voorbeeld: <code>repeat(3, sq)</code> komt overeen met <code>sq(); sq(); sq();</code>
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li> Wat betekent <code>repeat(0, vierkant)</code>?
+        </li>
+        <li> Wat voor betekenis zou <code>repeat(-1, vierkant)</code> kunnen hebben?
+        </li>
+      </ul>
+    </section>
+
+
+    <section>
+      <h1>Herhaling met index</h1>
+      <p> Bij herhaling is het soms handig om te weten om de hoeveelste stap het gaat.
+        Je wilt dit bijvoorbeeld gebruiken als parameter van de opdracht.
+      </p>
+      <p> De functie die je meegeeft aan <code>repeat</code> kun je voorzien van een
+        parameter: deze geeft de stap in de herhaling aan.
+      </p>
+      <p> De stappen zijn genummerd vanaf 0. </br>
+      Voorbeeld: <code>repeat(3, fz);</code> resulteert in <code>fz(0); fz(1); fz(2); </code>
+
+      </p>
+      <p>Het is gebruikelijk om in de Informatica vanaf 0 te tellen: dit geeft minder fouten,
+        en levert regelmatiger programma's op. Het is in het begin even wennen, later wil je
+        niets anders...
+      </p>
+
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li> Definieer een <code>function</code>
+        </li>
+        <li> PM
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Anonieme functies als parameter</h1>
+      <p>In de voorbeelden die we eerder gezien hebben definiëren we altijd eerst een functie
+        voor de actie die we willen herhalen. Deze functie geven we dan mee aan <code>
+        repeat</code>.
+      </p>
+      <p>We kunnen direct een functie meegeven als parameter van <code>repeat</code>: we
+        schrijven de definitie van de functie dan op de plaats van de parameter. In dit
+        geval laten we de naam van de functie weg. <br>
+        Voorbeeld:
+      </p>
+<pre>
+repeat(10, function (i) {
+  vierkant(i * 10);
+});
+</pre>
+      <p>Denk in dit geval om de afsluiting: <code>});</code></p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li> Maak een herhaling waarbij je een vierkant steeds 10 graden verder kantelt.
+        </li>
+        <li> PM
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Veelhoeken</h1>
+      <p> We kunnen de herhaling gebruiken om op een gemakkelijke manier andere figuren
+        te tekenen. We beginnen met veelhoeken.
+      </p>
+      <p> Een vierkant met zijde <code>sz</code> heeft 4 hoeken, en een omtrek van <code>
+        4 * sz</code>. De hoeken zijn samen 360 graden; elke hoek is 360 / 4 = 90 graden.
+      </p>
+      <p>
+        Een achthoek met zijde <code>sz</code> heeft 8 hoeken, en een omtrek van
+        <code>8 * sz</code>. De hoeken zijn samen 360 graden; elke hoek is 360 / 8 = 45 graden.
+      </p>
+      <p> Wat is het algemene patroon van een (regelmatige) n-hoek? </p>
+      <ul>
+        <li> de hoek is <code>360 /n</code> graden; </li>
+        <li> de zijde is <code>omtrek / n</code>.</li>
+      </ul>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Maak een functie voor het tekenen van een achthoek met zijde <code>sz</code>:
+<pre>
+function octagon (sz) { ... }
+</pre>
+        </li>
+        <li> Maak een functie voor het tekenen van een veelhoek met <code>n</code> hoeken en
+          met omtrek <code>c</code>.
+<pre>
+function polygon (n, c) { .... }
+</pre>
+        </li>
+        <li> Wat is het resultaat als het aantal hoeken erg groot wordt?
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>titel</h1>
+      <p>
+      </p>
+
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>titel</h1>
+      <p>
+      </p>
+
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>titel</h1>
+      <p>
+      </p>
+
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>titel</h1>
+      <p>
+      </p>
+
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>titel</h1>
+      <p>
+      </p>
+
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
