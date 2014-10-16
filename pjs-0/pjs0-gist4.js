@@ -1,4 +1,6 @@
 
+/*global alert: false, $: false, displayState: false, testA: false, testB: false, testC: false */
+
 var ctx; // the global context for the used Canvas element
 
 function initCanvas() {

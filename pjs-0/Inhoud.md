@@ -27,7 +27,7 @@ TODO:
 
 TODO:
 
-* [ ] button voor eigen functie toevoegen.
+* [ ] button voor eigen functies toevoegen (testA, testB, testC).
 * [ ] uitleg over DRY (en waarom) 
 
 ## Les 3 - functies met resultaat; waarden; expressies
@@ -88,6 +88,7 @@ aan te roepen.
 ## Help
 
 * er gebeurt niets met de turtle -> is Auto-run JS geselecteerd? (in output-panel, rechts)
+* er verschijnt niets in het Canvas -> is de pen "down"?
 
 
     

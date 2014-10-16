@@ -85,9 +85,10 @@ function repeat (n, f)
       <hr>
       <p><em>Opdrachten:</em></p>
       <ul>
-        <li> Definieer een <code>function</code>
+        <li> Definieer een <code>function sqStep(i)</code>, die een vierkant tekent met een zijde
+          <code>i * 10</code>
         </li>
-        <li> PM
+        <li> Maak een test voor een herhaling van deze functie (bijv. 15 maal).
         </li>
       </ul>
     </section>
@@ -156,9 +157,20 @@ function polygon (n, c) { .... }
     </section>
 
     <section>
-      <h1>titel</h1>
+      <h1>Voorbeeld</h1>
       <p>
       </p>
+<pre>
+function testC() {
+  penDown();
+  repeat(20, function (i) {
+    right(4);
+    forward(i * 10);
+    square(10);
+    forward(-i * 10);
+  });
+}
+</pre>
 
       <hr>
       <p><em>Opdrachten:</em></p>
