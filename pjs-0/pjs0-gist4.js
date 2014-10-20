@@ -1,6 +1,4 @@
 
-/*global alert: false, $: false, displayState: false, testA: false, testB: false, testC: false */
-
 var ctx; // the global context for the used Canvas element
 
 function initCanvas() {
@@ -101,7 +99,7 @@ $(document).ready(function () {
   });
 
   $("#squareStepButton").on("click", function () {
-    squareStep(30);
+    squareStep30();
     displayState();
   });
 
@@ -157,9 +155,9 @@ function rectangle(width, height) {
   alert("not yet defined");
 }
 
-function squareStep(size) {
-  square(size);
-  forward(size);
+function squareStep30() {
+  square(30);
+  forward(30);
 }
 
 function turnRight(size) {
@@ -171,19 +169,17 @@ function turnLeft(size) {
   alert("not yet defined");
 }
 
-function sq(i) {
+function sq() {
   right(10);
   square(50);
 }
 
 function testA() {
-  repeat(10, function (i) {
-    square(i * 10);
-  });
+  repeat(10, sq);
 }
 
 function testB() {
-  repeat(10, sq);
+  alert("testB not (yet) defined");
 }
 
 function testC() {

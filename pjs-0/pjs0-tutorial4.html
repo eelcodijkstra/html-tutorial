@@ -54,26 +54,26 @@ function repeat (n, f)
       </p>
       <hr>
       <p><em>Opdrachten:</em></p>
-      <ul>
+      <ol>
         <li> Maak een test voor een herhaling van de functie <code>squareStep30</code>.
         </li>
-        <li> Wat betekent <code>repeat(0, vierkant)</code>?
+        <li> Wat betekent <code>repeat(0, sq)</code>?
         </li>
-        <li> Wat voor betekenis zou <code>repeat(-1, vierkant)</code> kunnen hebben?
+        <li> Wat voor betekenis zou <code>repeat(-1, sq)</code> kunnen hebben?
         </li>
-      </ul>
+      </ol>
     </section>
 
 
     <section>
       <h1>Herhaling met index</h1>
       <p> Bij herhaling is het soms handig om te weten om de hoeveelste stap het gaat.
-        Je wilt dit bijvoorbeeld gebruiken als parameter van de opdracht.
+        Je kunt dit gebruiken als parameter van de opdracht.
       </p>
       <p> De functie die je meegeeft aan <code>repeat</code> kun je voorzien van een
         parameter: deze geeft de stap in de herhaling aan.
       </p>
-      <p> De stappen zijn genummerd vanaf 0. </br>
+      <p> De stappen zijn genummerd <em>vanaf 0</em>. </br>
       Voorbeeld: <code>repeat(3, fz);</code> resulteert in <code>fz(0); fz(1); fz(2); </code>
 
       </p>
@@ -84,13 +84,13 @@ function repeat (n, f)
 
       <hr>
       <p><em>Opdrachten:</em></p>
-      <ul>
+      <ol>
         <li> Definieer een <code>function sqStep(i)</code>, die een vierkant tekent met een zijde
           <code>i * 10</code>
         </li>
         <li> Maak een test voor een herhaling van deze functie (bijv. 15 maal).
         </li>
-      </ul>
+      </ol>
     </section>
 
     <section>
@@ -106,14 +106,14 @@ function repeat (n, f)
       </p>
 <pre>
 repeat(10, function (i) {
-  vierkant(i * 10);
+  square(i * 10);
 });
 </pre>
       <p>Denk in dit geval om de afsluiting: <code>});</code></p>
       <hr>
       <p><em>Opdrachten:</em></p>
       <ul>
-        <li> Maak een herhaling waarbij je een vierkant steeds 10 graden verder kantelt.
+        <li> Maak een test (bijv. <code>testB</code>) voor het voorbeeld hierboven.
         </li>
         <li> PM
         </li>
@@ -160,26 +160,15 @@ function polygon (n, c) { .... }
       <h1>Voorbeeld</h1>
       <p>
       </p>
-<pre>
-function testC() {
-  penDown();
-  repeat(20, function (i) {
-    right(4);
-    forward(i * 10);
-    square(10);
-    forward(-i * 10);
-  });
-}
-</pre>
 
       <hr>
       <p><em>Opdrachten:</em></p>
-      <ul>
+      <ol>
         <li> PM
         </li>
         <li> PM
         </li>
-      </ul>
+      </ol>
     </section>
 
     <section>
@@ -189,12 +178,12 @@ function testC() {
 
       <hr>
       <p><em>Opdrachten:</em></p>
-      <ul>
+      <ol>
         <li> PM
         </li>
         <li> PM
         </li>
-      </ul>
+      </ol>
     </section>
 
     <section>
@@ -204,12 +193,12 @@ function testC() {
 
       <hr>
       <p><em>Opdrachten:</em></p>
-      <ul>
+      <ol>
         <li> PM
         </li>
         <li> PM
         </li>
-      </ul>
+      </ol>
     </section>
 
     <section>
@@ -219,12 +208,12 @@ function testC() {
 
       <hr>
       <p><em>Opdrachten:</em></p>
-      <ul>
+      <ol>
         <li> PM
         </li>
         <li> PM
         </li>
-      </ul>
+      </ol>
     </section>
 
     <section>
@@ -234,12 +223,12 @@ function testC() {
 
       <hr>
       <p><em>Opdrachten:</em></p>
-      <ul>
+      <ol>
         <li> PM
         </li>
         <li> PM
         </li>
-      </ul>
+      </ol>
     </section>
   </body>
 </html>

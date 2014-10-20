@@ -68,8 +68,60 @@ TODO:
 * Keuze - bijv. als turtle tegen een grens aanloopt
 * Event - met daaraan gekoppelde actie
     * verband tussen keuze en event
+* Hoe kunnen we dit vormgeven? We willen bijvoorbeeld aan andere vorm van "forward", die binnen de wereld blijft.
+    * hiervoor hebben we wel redelijk wat wiskunde nodig; voor deze inleiding niet handig.
+    * gebruik van een soort "radar"?
+* Voorbeeld: strook voor strook, "bolvormig", opvullen van de ruimte.
+    * als y === 0 , naar rechts ipv. naar omhoog
+    * als 
+* Evt. combineren met random?    
     
 ## Les 6
+
+* Andere waarden: strings
+* Begrip typering; typering van waarden
+* Wat kunnen we met strings in het geval van turtle?
+* Conversies tussen waarden.
+* Notatie en interpretatie
+* Overloading van operatoren (in JS: `+`)
+
+
+## Les 7
+
+* Variabelen
+* Objecten; samenstelling
+* Toekenning
+* Toestand (gevormd door de variabelen)
+
+* Verschil met "variabelen" in Wiskunde.
+* Gebruik van zinvolle (betekenisvolle) namen
+* Begrip "invariant"? (Relaties tussen variabelen.)
+
+* Voorbeeld: totale afstand afgelegd door turtle
+
+## Les 8
+
+* Objecten
+* Samenstelling van data
+* Voorbeeld: meerdere turtles, elk met hun eigen toestand
+* 
+
+* Later: gebruik van keys op verschillende manieren
+
+## Les 9
+
+* Arrays (rijtjes; in principe van gelijksoortige waarden)
+* Samenstelling van data
+* indicering
+* foreach; map; reduce
+* herhaling is onlosmakelijke verbonden aan rijtjes gelijksoortige elementen.
+* Voorbeeld: array van meerdere turtles, waar je allemaal een bepaalde operatie op uitvoert.
+    * voorbeeld: animatie; uitvoeren van een stap? Collision detection?
+
+## Les 10
+
+
+
 
 ## Opmerkingen
 
@@ -84,6 +136,8 @@ aan te roepen.
 * subtiel: (i) de grootte is een absolute maat, zonder geheugen; (ii) de draaiing is een actie met een neveneffect. In herhalingen hoeven we voor de laatste geen parameter op te geven, en voor de eerste wel.
 * JSLint: http://javascript.crockford.com/code.html
     * i.h.b. de spatie-regels, en de regels voor variabele-declaraties zijn wat "typisch".
+* Turtle: relatieve versus absolute coördinaten: een voordeel van de relatieve (turtle-)coordinaten is dat je dezelfde figuur ook eenvoudig kunt schalen en draaien.
+* In de voorbeelden wil ik snel toe naar: recursie; tekenen van bomen; en animatie.
 
 ## Help
 
