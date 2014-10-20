@@ -124,16 +124,25 @@
       <p> Bij het delen van gehele getallen hebben we te maken met een rest na deling, en
         met een quotient.
         Voor de rest na deling heeft JavaScript de operator <code>%</code>.
-        Voor het quotient is er geen operator, maar je kunt dit op de volgende manier
-        berekenen:
       </p>
 <pre>
   125 % 5 === 0
   127 % 5 === 2
 </pre>
+      <p>
+        Voor het quotient is er geen operator, maar je kunt dit op de volgende manier
+        berekenen:
+      </p>
+<pre>
+  (127 - 127 % 5) / 5 === 25
+  127 % 5 === 2
+</pre>
       <p> Een getal <code>n</code> is deelbaar door 3 als de rest na deling 0 is:
         <code>(n % 3) === 0</code>.
         (We gebruiken hier haakjes voor de duidelijkheid; deze zijn hier niet echt nodig.)
+      </p>
+      <p>Als de deler of het deeltal een negatief getal is, moet je altijd opletten wat de
+        betekenis is. Deze is niet altijd "logisch".
       </p>
       <hr>
       <p><em>Opdrachten:</em></p>

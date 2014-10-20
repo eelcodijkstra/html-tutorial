@@ -43,7 +43,7 @@ TODO:
 * we willen kunnen rekenen - bijvoorbeeld om vierkanten van verschillende grootte te tekenen.
 * overeenkomst tussen operatoren en functies
 * ook hier weer: elementaire operaties, samenstelling, en abstractie
-    * elementaire operaties: `+ - * /`
+    * elementaire operaties: `+ - * /` en `%` (rest na deling)
     * samenstelling: expressie; haakjes
     * abstractie: functie (in eerste instantie: naam geven aan een expressie).
 * namen (vervolg); gebruik van namen in expressies
@@ -76,8 +76,15 @@ TODO:
 * Voorbeeld: strook voor strook, "bolvormig", opvullen van de ruimte.
     * als y === 0 , naar rechts ipv. naar omhoog
     * als 
-* Evt. combineren met random?    
-    
+* Evt. combineren met random?
+* Andere voorbeelden van IF:
+   * botsingen (collisions), onderling of met de rand
+   * actie afhankelijk van indrukken van een toets.
+   * max, min
+   * controleren op toestand bij het afhandelen van een event (bijv. knop ingedrukt).
+   * event-object als par. voor handler; bijv. `evt.altKey`
+* NB: een echte FizzBuzz: alleen rotatie bij deelbaar door 3 of 5, alleen forward bij rest.
+
 ## Les 6
 
 * Andere waarden: strings
@@ -94,6 +101,7 @@ TODO:
 * Objecten; samenstelling
 * Toekenning
 * Toestand (gevormd door de variabelen)
+    * toekenning aan pos, dir: verplaatsen van turtle.
 
 * Verschil met "variabelen" in Wiskunde.
 * Gebruik van zinvolle (betekenisvolle) namen
