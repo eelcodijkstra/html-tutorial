@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial 5</title>
+    <!-- this stylesheet provides default styles for tutorials -->
+    <link href="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.css" rel="stylesheet">
+    <!-- these scripts turn your make into a tutorial -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.js"></script>
+
+    <script>
+      jQuery(document).ready(function($){
+        $('body').tutorial();
+      });
+    </script>
+
+  </head>
+  <body>
+    <!--
+      enclose each tutorial step in its own section tags
+      you can include any sort of markup, including images
+      you can also add more sections
+
+      if you want to attach this tutorial to another make,
+      first publish this make
+      then tag the other make with prefix "tutorial-" followed by the url for this make
+    -->
+
+    <section>
+      <h1>Programmeren in JavaScript - Les 5</h1>
+
+     <p> Dit is de vijfde les in Programmeren in Javascript.
+       Naast deze tutorials is er een uitleg via XXX.
+     </p>
+
+            <p> Ga nu naar de volgende pagina. </p>
+    </section>
+
+
+
+    <section>
+      <h1>Keuze (if)</h1>
+      <p>
+      </p>
+
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>FizzBuzz (1)</h1>
+      <p> Een bekende programmeer-opdracht is FizzBuzz. We maken hiervan een turtle-variant:
+      </p>
+      <ul>
+        <li>doorloop alle getallen van 0 tot aan (en zonder) 50 - soms noteren we dit als
+          <code>[0..]50</code>
+        </li>
+        <li>als het huidige getal <code>n</code> deelbaar is door 3, draai dan 90 naar rechts,
+          en ga <code>n</code> stappen vooruit;
+        </li>
+        <li>als <code>n</code> deelbaar is door 5, draai dan 90 graden naar links, en ga
+          <code>n</code> stappen vooruit;
+        </li>
+        <li>als <code>n</code> deelbaar is door 3 en door 5, voer dan beide stappen uit
+          (in deze volgorde).
+        </li>
+      </ul>
+
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Probeer met de hand te schetsen wat het resultaat is voor de eerste 20 stappen.
+        </li>
+        <li> Wat is het resultaat voor <code>n</code> gelijk is aan 0?
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>FizzBuzz (2)</h1>
+      <p> We geven hier de functie fizzBuzz
+      </p>
+<pre>
+  function fizzBuzz(n) {
+    if ((n % 3) === 0) {
+      right(90);
+      forward(n);
+    }
+    if ((n % 5) === 0) {
+      left(90);
+      forward(n);
+    }
+  }
+</pre>
+<pre>
+  function testB() {
+    forward(100);  // go to (100, 100)
+    right(90);
+    forward(100);
+    right(-90);
+    penDown();
+    repeat(50, fizzBuzz);
+    }
+</pre>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Deling: rest en quotient</h1>
+      <p> Bij het delen van gehele getallen hebben we te maken met een rest na deling, en
+        met een quotient.
+        Voor de rest na deling heeft JavaScript de operator <code>%</code>.
+        Voor het quotient is er geen operator, maar je kunt dit op de volgende manier
+        berekenen:
+      </p>
+<pre>
+  125 % 5 === 0
+  127 % 5 === 2
+</pre>
+      <p> Een getal <code>n</code> is deelbaar door 3 als de rest na deling 0 is:
+        <code>(n % 3) === 0</code>.
+        (We gebruiken hier haakjes voor de duidelijkheid; deze zijn hier niet echt nodig.)
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Condities en vergelijkingen</h1>
+      <p>Een conditie bevat vaak een vergelijking van waarden.
+        De eenvoudigste vergelijkings-operatoren zijn "a gelijk aan b" - in Javascript,
+        <code>a === b</code>, en "a ongelijk aan b" , in Javascript
+        <code>a !== b</code>
+      </p>
+      <p><em>Opmerking:</em> er zijn ook vergelijkingsoperatoren met een = minder:
+        <code>a == b</code> en <code>a != b</code>. Deze kun je in het algemeen beter
+        niet gebruiken.
+      </p>
+
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Conditionele actie</h1>
+      <p>Soms wil je dat een opdracht alleen uitgevoerd wordt als aan een bepaalde
+        voorwaarde (condition) is voldaan.
+        Hiervoor heeft JavaScript het <em>if-statement</em>:
+      </p>
+<pre>
+  if (condition) {
+    ...command...;
+  }
+</pre>
+      <p>Je kunt ook een alternatieve opdracht aangeven voor het geval er niet aan de
+        voorwaarde is voldaan:
+      </p>
+<pre>
+  if (condition) {
+    ...command...;
+  } else {
+    ...alternative command...;
+  }
+</pre>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Een trapje</h1>
+      <p>We kunnen een trapje tekenen door afwisselend een horizontale en een verticale
+        lijn te tekenen. Bij de even stappen maken we een draai naar rechts, bij de oneven
+        stappen een draai naar links:
+      </p>
+<pre>
+function step(i) {
+  forward(10);
+  if ((i % 2) === 0) {
+    right(90);
+  } else {
+    right(-90);
+  }
+}
+</pre>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Andere vergelijkingen</h1>
+      <p>Voor getallen hebben we ook nog andere operatoren om waarden te vergelijken:
+      </p>
+      <ul>
+        <li><code>a &lt;  b</code> &nbsp; - a kleiner dan b</li>
+        <li><code>a &lt;= b</code> - a ten hoogste b</li>
+        <li><code>a &gt;  b</code> &nbsp; - a groter dan b</li>
+        <li><code>a &gt;= b</code> - a ten minste b</li>
+      </ul>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Titel</h1>
+      <p>
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Titel</h1>
+      <p>
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ol>
+    </section>
+  </body>
+</html>

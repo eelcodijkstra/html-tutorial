@@ -59,7 +59,9 @@ TODO:
 ## Les 4
 
 * Herhaling - door functie als parameter `repeat(n, f)`
-    * geven we evt. de index als par. mee? Hoe zit dat in JS - elders (foreach)
+    * we geven de index als extra (optionele) par. mee
+    * array.forEach: 3 args: element, index, array
+    * we gebruiken hier dat parameters in JS optioneel zijn
 * Functie als waarde (al eerder genoemd?)
 * Verschil tussen functie als waarde, aanroep, en resultaat
 

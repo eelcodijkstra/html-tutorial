@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" />
+    <meta name="description" content="Les 4" />
+	<title>Canvas 1</title>
+	<style type="text/css">
+      canvas {
+        border: 1px solid black;
+      }
+      #div1 {
+        max-width: 400px;
+        min-width:250px;
+      }
+      #div2, #div4 {
+        border: 1px solid blue;
+        background-color: lightblue;
+        padding: 5px;
+      }
+      #div3 {
+        border: 1px solid yellow;
+        background-color: lightyellow;
+        padding: 5px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+    </script>
+  </head>
+  <body>
+    <div id="div1">
+      <p>
+        Canvas: <br>
+        <canvas id="mycanvas" width="200" height="200"></canvas>
+        <button type="button" id="clearButton">Clear canvas</button>
+      </p>
+      <div id="div2">
+        Turtle commands: <br>
+        <button type="button" id="forwardButton"> forward(</button>
+        <input type="text" id="forwardCount" value="50" size="3">); <br>
+        <button type="button" id="rightButton"> right( </button>
+        <input type="text" id="rightCount" value="90" size="3">); <br>
+        <button type="button" id="upButton"> penUp (); </button> <br>
+        <button type="button" id="downButton"> penDown (); </button> <br>
+      </div>
+      <div id="div3">
+        Turtle state: <br>
+        x: <input type="text" id="xDisplay" readonly="readonly" size="5">
+        y: <input type="text" id="yDisplay" readonly="readonly" size="5">
+        dir: <input type="text" id="dirDisplay" readonly="readonly" size="5"> <br>
+        down: <input type="text" id="penDisplay" readonly="readonly" size="5"/>
+      </div>
+      <div id="div4">
+        User-defined commands: <br>
+        <button type="button" id="squareButton">
+          square(30);
+        </button> <br>
+       <button type="button" id="rectangleButton">
+          rectangle(30, 60);
+        </button> <br>
+        <button type="button" id="squareStepButton">
+          squareStep30();
+        </button> <br>
+        <button type="button" id="turnRightButton">
+          turnRight(30);
+        </button> <br>
+        <button type="button" id="turnLeftButton">
+          turnLeft(30);
+        </button> <br>
+        <button type="button" id="testAButton">
+          testA();
+        </button>
+        <button type="button" id="testBButton">
+          testB();
+        </button>
+         <button type="button" id="testCButton">
+          testC();
+        </button>
+      </div>
+    </div>
+
+  </body>
+</html>
