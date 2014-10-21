@@ -4,6 +4,7 @@
 
 * programma, processor, proces
 * directe besturing (knoppen) - vb: turtle
+    * vgl. afstandsbesturing
 * elementaire opdrachten
 * samenstellen: opeenvolging
 * samenstellen: groepering/naamgeving: functies
@@ -98,14 +99,16 @@ TODO:
 ## Les 7
 
 * Variabelen
-* Objecten; samenstelling
+* Objecten; samenstelling (later?)
 * Toekenning
+    * relatie tussen toekenning en binding
 * Toestand (gevormd door de variabelen)
-    * toekenning aan pos, dir: verplaatsen van turtle.
-
+    * toekenning aan pos, dir: verplaatsen van turtle. (teleportatie)
+    * NB: toestand kan ook door externe omstandigheden veranderen; waarnemen van toestand, input.
 * Verschil met "variabelen" in Wiskunde.
 * Gebruik van zinvolle (betekenisvolle) namen
 * Begrip "invariant"? (Relaties tussen variabelen.)
+* Model van computer-geheugen (ladenkast); namen, waarden, en "hokjes".
 
 * Voorbeeld: totale afstand afgelegd door turtle
 
