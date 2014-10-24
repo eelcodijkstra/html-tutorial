@@ -81,22 +81,24 @@
 </pre>
       <p> Een toekenning heeft de vorm: </p>
 <pre> variable = expression; </pre>
-      <p>Het teken <code>=</code> spreek je uit als: "wordt" ("becomes"). <br>
+      <p>Het teken <code>=</code> lees je uit als "wordt" ("becomes"). <br>
         Deze opdracht (i) rekent eerst de expressie uit; en (ii) kent het resultaat van
         deze berekening toe aan de variabele.
       </p>
-      <p><em>Het gebruik van <code>=</code> voor de toekenning kun je zien als een
+      <p><em>Het gebruik van <code>=</code> voor toekenning kun je zien als een
         ontwerpfout in Javascript - en in veel andere programmeertalen. Een notatie als
         <code>:=</code> of <code>&leftarrow;</code> geeft de bedoeling duidelijker weer.</em>
       </p>
       <hr>
       <p><em>Opdrachten - voer uit via het console:</em></p>
       <ol>
-        <li> Plaats de pen op het papier: <code>down = true;</code>
+        <li> Plaats de pen op het papier: <br>
+          <code>down = true;</code>
         </li>
-        <li> Plaats de turtle op (100,100): <code>x.pos = 100;</code> en
+        <li> Plaats de turtle op (100,100): <br>
+          <code>x.pos = 100;</code> en
           <code>y.pos = 100;</code> <br>
-          (Dit is een vorm van "teleportatie" van de turtle.)
+          (Dit is een vorm van "teleportatie".)
         </li>
         <li> Verplaats de turtle: <code>forward(50);</code>
         </li>
@@ -194,8 +196,20 @@ var varA = expr1, varB = expr2, ... ;
     </section>
 
     <section>
-      <h1>Titel</h1>
-      <p>
+      <h1>Absolute en relatieve beweging</h1>
+      <p>De turtle-opdrachten uit de eerste lessen zijn relatief - ten opzichte van de
+        huidige positie van de turtle. Dit betekent dat we eenvoudig een functie kunnen
+        maken die een figuur tekent. Als we de turtle op een bepaalde positie zetten,
+        met een bepaalde richting, wordt de figuur daar getekend.
+      </p>
+      <p>Door een toekenning aan de variabelen kunnen we de positie en de richting van
+        de turtle absoluut zetten - bijvoorbeeld <code>pos = {x: 100, y:100};</code>, en
+        <code>dir = 90;</code>. De nieuwe positie hangt nu niet af van de vorige positie.
+        <br>
+        Met dergelijke opdrachten kunnen we geen functies maken die een bepaalde figuur
+        op verschillende plaatsen kan tekenen. <br>
+        Een oplossing in dit geval is als we de positie en de richting van de turtle
+        meegeven als parameter aan de functie.
       </p>
       <hr>
       <p><em>Opdrachten:</em></p>
