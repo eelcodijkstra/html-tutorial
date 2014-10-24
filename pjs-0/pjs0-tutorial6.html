@@ -28,7 +28,7 @@
     -->
 
     <section>
-      <h1>Programmeren in JavaScript - Les 5</h1>
+      <h1>Programmeren in JavaScript - Les 6</h1>
 
      <p> Dit is de zesde les in Programmeren in Javascript.
        Naast deze tutorials is er een uitleg via XXX.
@@ -40,227 +40,153 @@
 
 
     <section>
-      <h1>Keuze (if)</h1>
-      <p>
-      </p>
-
-      <hr>
-      <p><em>Opdrachten:</em></p>
-      <ol>
-        <li> PM
-        </li>
-        <li> PM
-        </li>
-      </ol>
-    </section>
-
-    <section>
-      <h1>FizzBuzz (1)</h1>
-      <p> Een bekende programmeer-opdracht is FizzBuzz. We maken hiervan een turtle-variant:
-      </p>
+      <h1>Variabelen</h1>
+      <p> De toestand van de turtle vinden we in de <em>variabelen</em>:</p>
       <ul>
-        <li>doorloop alle getallen van 0 tot aan (en zonder) 50 - soms noteren we dit als
-          <code>[0..]50</code>
-        </li>
-        <li>als het huidige getal <code>n</code> deelbaar is door 3, draai dan 90 naar rechts,
-          en ga <code>n</code> stappen vooruit;
-        </li>
-        <li>als <code>n</code> deelbaar is door 5, draai dan 90 graden naar links, en ga
-          <code>n</code> stappen vooruit;
-        </li>
-        <li>als <code>n</code> deelbaar is door 3 en door 5, voer dan beide stappen uit
-          (in deze volgorde).
-        </li>
+        <li><code>pos.x</code> - x-coordinaat van de turtle</li>
+        <li><code>pos.y</code> - y-coordinaat van de turtle</li>
+        <li><code>dir</code> - richting van de turtle</li>
+        <li><code>down</code> - turtle-pen op papier?</li>
       </ul>
-
+      <p> Door opdrachten als <code>forward(30)</code>, <code>right(20)</code>, of
+        <code>penDown()</code>, besturen we de turtle. Daarmee verandert ook de
+        toestand: de <em>waarden</em> van deze variabelen veranderen.
+      </p>
+      <p> Je kunt (de naam van) een variabele gebruiken in een expressie: deze staat
+        dan voor de <em>waarde</em> van de variabele.
+      </p>
       <hr>
       <p><em>Opdrachten:</em></p>
       <ol>
-        <li> Probeer met de hand te schetsen wat het resultaat is voor de eerste 20 stappen.
+        <li> Bekijk in het console de waarden van deze variabelen, voor en nadat je
+          een turtle-opdracht geeft. (Je kunt een opdracht geven via het console, of
+          via de buttons.)
         </li>
-        <li> Wat is het resultaat voor <code>n</code> gelijk is aan 0?
+        <li> Gebruik een of meer van deze variabelen in een expressie met operatoren
+          als <code>+ * /</code>
+        </li>
+        <li> Je kunt de waarde van <code>pos</code> als geheel ook opvragen. Probeer dit. <br>
+          <code>pos</code> is een object - we zullen in een volgende les zien wat dat betekent.
         </li>
       </ol>
     </section>
 
     <section>
-      <h1>FizzBuzz (2)</h1>
-      <p> We geven hier de functie fizzBuzz
+      <h1>Toekenning</h1>
+      <p> We kunnen de waarde van een variabele veranderen, door middel van een
+        <em>toekenning</em> (assignment), bijvoorbeeld:
       </p>
 <pre>
-  function fizzBuzz(n) {
-    if ((n % 3) === 0) {
-      right(90);
-      forward(n);
-    }
-    if ((n % 5) === 0) {
-      left(90);
-      forward(n);
-    }
-  }
+  dir = 90;
 </pre>
-<pre>
-  function testB() {
-    forward(100);  // go to (100, 100)
-    right(90);
-    forward(100);
-    right(-90);
-    penDown();
-    repeat(50, fizzBuzz);
-    }
-</pre>
+      <p> Een toekenning heeft de vorm: </p>
+<pre> variable = expression; </pre>
+      <p>Het teken <code>=</code> spreek je uit als: "wordt" ("becomes"). <br>
+        Deze opdracht (i) rekent eerst de expressie uit; en (ii) kent het resultaat van
+        deze berekening toe aan de variabele.
+      </p>
+      <p><em>Het gebruik van <code>=</code> voor de toekenning kun je zien als een
+        ontwerpfout in Javascript - en in veel andere programmeertalen. Een notatie als
+        <code>:=</code> of <code>&leftarrow;</code> geeft de bedoeling duidelijker weer.</em>
+      </p>
       <hr>
-      <p><em>Opdrachten:</em></p>
+      <p><em>Opdrachten - voer uit via het console:</em></p>
       <ol>
-        <li> PM
+        <li> Plaats de pen op het papier: <code>down = true;</code>
         </li>
-        <li> PM
+        <li> Plaats de turtle op (100,100): <code>x.pos = 100;</code> en
+          <code>y.pos = 100;</code> <br>
+          (Dit is een vorm van "teleportatie" van de turtle.)
+        </li>
+        <li> Verplaats de turtle: <code>forward(50);</code>
+        </li>
+        <li> Bekijk de waarden van de variabelen die de toestand van de turtle
+          beschrijven.
         </li>
       </ol>
     </section>
 
     <section>
-      <h1>Deling: rest en quotient</h1>
-      <p> Bij het delen van gehele getallen hebben we te maken met een rest na deling, en
-        met een quotient.
-        Voor de rest na deling heeft JavaScript de operator <code>%</code>.
+      <h1>Variabele-declaratie</h1>
+      <p> Voordat we een variabele kunnen gebruiken, moeten we deze <em>declareren</em>.
+        Hiermee geven we twee dingen aan: <br>
+        (i) we voeren een nieuwe naam in, die we verderop in het programma als
+        variabele kunnen gebruiken. <br>
+        (ii) we reserveren ruimte in het geheugen om de waarde van de variabele op te slaan.
       </p>
-<pre>
-  125 % 5 === 0
-  127 % 5 === 2
-</pre>
       <p>
-        Voor het quotient is er geen operator, maar je kunt dit op de volgende manier
-        berekenen:
+        Een variabele-declaratie heeft de vorm:
       </p>
 <pre>
-  (127 - 127 % 5) / 5 === 25
-  127 % 5 === 2
+var varA = expr1, varB = expr2, ... ;
 </pre>
-      <p> Een getal <code>n</code> is deelbaar door 3 als de rest na deling 0 is:
-        <code>(n % 3) === 0</code>.
-        (We gebruiken hier haakjes voor de duidelijkheid; deze zijn hier niet echt nodig.)
-      </p>
-      <p>Als de deler of het deeltal een negatief getal is, moet je altijd opletten wat de
-        betekenis is. Deze is niet altijd "logisch".
+      <p>De toekenning met de beginwaarde kun je weglaten. In dat geval is de waarde <code>
+        undefined</code>.
       </p>
       <hr>
-      <p><em>Opdrachten:</em></p>
+      <p><em>Opdrachten (uitvoeren via het console):</em></p>
       <ol>
-        <li> PM
+        <li> Vraag de waarde op van de variabele <code>xx</code> (voordat je deze declareert).
+          Welke melding krijg je?
         </li>
-        <li> PM
+        <li> Declareer de variabele <code>xx</code> d.m.v.: <br>
+          <code>var xx = 25;</code>
+        </li>
+        <li> Vraag nogmaals de waarde van <code>xx</code> op.
+        </li>
+        <li> Declareer de variabele <code>yy</code> als: <br>
+          <code> var yy;</code> <br>
+          Wat krijg je nu als je de waarde opvraagt?
         </li>
       </ol>
     </section>
 
     <section>
-      <h1>Condities en vergelijkingen</h1>
-      <p>Een conditie bevat vaak een vergelijking van waarden.
-        De eenvoudigste vergelijkings-operatoren zijn "a gelijk aan b" - in Javascript,
-        <code>a === b</code>, en "a ongelijk aan b" , in Javascript
-        <code>a !== b</code>
+      <h1>Update</h1>
+      <p> In een programma kom je vaak een toekenning tegen van de vorm: </p>
+      <pre>x = x + 1;</pre>
+      <p>of</p>
+      <pre>z = z * 10 * y;</pre>
+      <p> Hoe moeten we deze vorm begrijpen?
       </p>
-      <p><em>Opmerking:</em> er zijn ook vergelijkingsoperatoren met een = minder:
-        <code>a == b</code> en <code>a != b</code>. Deze kun je in het algemeen beter
-        niet gebruiken.
-      </p>
-
-      <hr>
-      <p><em>Opdrachten:</em></p>
       <ol>
-        <li> PM
+        <li>reken eerst de expressie uit; als <code>x === 122</code>, dan is het resultaat
+          van <code>x + 1</code> gelijk aan <code>123</code></li>
+        <li>ken dit resultaat toe aan de variabele. Nu geldt: <code>x === 123</code>
         </li>
-        <li> PM
+      </ol>
+      <p> Dit noemen we ook wel een <em>update</em> van de variabele.</p>
+      <hr>
+      <p><em>Opdrachten (uitvoeren via het console):</em></p>
+      <ol>
+        <li>Declareer: <code>var z = 1, y = 2;</code> <br>
+          Vraag de waarden van deze variabelen op.
+        </li>
+        <li> Reken hiermee uit: <code> z * 10 + y </code>
+        </li>
+        <li>Voer uit: <code>z = z * 10 + y;</code> <br>
+          Vraag de waarden van deze variabelen op.
+        </li>
+        <li>Voer de vorige opdracht nog een keer uit.
         </li>
       </ol>
     </section>
 
     <section>
-      <h1>Conditionele actie</h1>
-      <p>Soms wil je dat een opdracht alleen uitgevoerd wordt als aan een bepaalde
-        voorwaarde (condition) is voldaan.
-        Hiervoor heeft JavaScript het <em>if-statement</em>:
-      </p>
-<pre>
-  if (condition) {
-    ...command...;
-  }
-</pre>
-      <p>Je kunt ook een alternatieve opdracht aangeven voor het geval er niet aan de
-        voorwaarde is voldaan:
-      </p>
-<pre>
-  if (condition) {
-    ...command...;
-  } else {
-    ...alternative command...;
-  }
-</pre>
-      <hr>
-      <p><em>Opdrachten:</em></p>
-      <ol>
-        <li> PM
-        </li>
-        <li> PM
-        </li>
-      </ol>
-    </section>
-
-    <section>
-      <h1>Een trapje</h1>
-      <p>We kunnen een trapje tekenen door afwisselend een horizontale en een verticale
-        lijn te tekenen. Bij de even stappen maken we een draai naar rechts, bij de oneven
-        stappen een draai naar links:
-      </p>
-<pre>
-function step(i) {
-  forward(10);
-  if ((i % 2) === 0) {
-    right(90);
-  } else {
-    right(-90);
-  }
-}
-</pre>
-      <hr>
-      <p><em>Opdrachten:</em></p>
-      <ol>
-        <li> PM
-        </li>
-        <li> PM
-        </li>
-      </ol>
-    </section>
-
-    <section>
-      <h1>Andere vergelijkingen</h1>
-      <p>Voor getallen hebben we ook nog andere operatoren om waarden te vergelijken:
-      </p>
-      <ul>
-        <li><code>a &lt;  b</code> &nbsp; - a kleiner dan b</li>
-        <li><code>a &lt;= b</code> - a ten hoogste b</li>
-        <li><code>a &gt;  b</code> &nbsp; - a groter dan b</li>
-        <li><code>a &gt;= b</code> - a ten minste b</li>
-      </ul>
-      <hr>
-      <p><em>Opdrachten:</em></p>
-      <ol>
-        <li> PM
-        </li>
-        <li> PM
-        </li>
-      </ol>
-    </section>
-
-    <section>
-      <h1>Titel</h1>
+      <h1>Update: turtle</h1>
       <p>
       </p>
       <hr>
       <p><em>Opdrachten:</em></p>
       <ol>
-        <li> PM
+        <li> Zorg ervoor dat de pen op het papier staat.</li>
+        <li> Verander de richting van de turtle door er 45 (graden) bij op te tellen,
+          en geef de turtle opdracht om 100 stappen vooruit te gaan.
+        </li>
+        <li> Bekijk via de JavaScript-tab de code voor de functies <code>right</code>
+          en <code>penDown</code> en <code>penUp</code>. <br>
+          Je krijgt deze code ook in het console-venster, door de naam van de functie op
+          te geven - zonder haakjes en parameters.
         </li>
         <li> PM
         </li>

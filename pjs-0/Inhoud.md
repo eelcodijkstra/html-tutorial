@@ -2,9 +2,9 @@
 
 ## Les 1
 
-* programma, processor, proces
+* programma, processor, proces, (invoer), resultaat/uitvoer
 * directe besturing (knoppen) - vb: turtle
-    * vgl. afstandsbesturing
+    * vgl. afstandsbesturing (radiografische auto, robot)
 * elementaire opdrachten
 * samenstellen: opeenvolging
 * samenstellen: groepering/naamgeving: functies
@@ -49,6 +49,7 @@ TODO:
     * abstractie: functie (in eerste instantie: naam geven aan een expressie).
 * namen (vervolg); gebruik van namen in expressies
 * namen: de betekenis (het gedrag) van een functie verandert niet als je de naam van een parameter vervangt door een andere naam - zolang je geen naamconflicten hebt.
+* console als rekenmachine?
 
 NB: we hebben een naamconflict met `square` - ook voor het tekenen!
 
@@ -88,18 +89,14 @@ TODO:
 
 ## Les 6
 
-* Andere waarden: strings
-* Begrip typering; typering van waarden
-* Wat kunnen we met strings in het geval van turtle?
-* Conversies tussen waarden.
-* Notatie en interpretatie
-* Overloading van operatoren (in JS: `+`)
-
-
-## Les 7
-
 * Variabelen
-* Objecten; samenstelling (later?)
+* Variabele representeert toestand van de turtle
+    * turtle verplaatsing -> verandering van toestand, verandering van variabelen
+* Direct manipuleren van toestand: "teleportatie"
+    * (niet mogelijk bij een echte robot)
+    * mogelijk voor virtuele tekenrobot (turtle)
+* (Consequenties van gebruik van absolute coördinaten.)
+* Model van variabele: "lade" met naam en waarde; object als "ladenkast"
 * Toekenning
     * relatie tussen toekenning en binding
 * Toestand (gevormd door de variabelen)
@@ -112,12 +109,29 @@ TODO:
 
 * Voorbeeld: totale afstand afgelegd door turtle
 
+* gebruik van variabelen in console
+* console als rekenmachine (vervolg)
+
+## Les 7
+
+* Andere waarden: strings
+* Begrip typering; typering van waarden
+* Wat kunnen we met strings in het geval van turtle?
+* Conversies tussen waarden.
+* Notatie en interpretatie
+* Overloading van operatoren (in JS: `+`)
+
+
 ## Les 8
 
 * Objecten
 * Samenstelling van data
 * Voorbeeld: meerdere turtles, elk met hun eigen toestand
-* 
+* Bijv. extra knop: selecteren van de turtle.
+* De opdrachten moeten dan ook aan de turtle gekoppeld zijn: 
+    * functies als onderdeel van het turtle-object - en 
+    * gebruik van `this`.
+* Ook: koppeling aan DOM? (is ook een object)
 
 * Later: gebruik van keys op verschillende manieren
 
@@ -130,6 +144,7 @@ TODO:
 * herhaling is onlosmakelijke verbonden aan rijtjes gelijksoortige elementen.
 * Voorbeeld: array van meerdere turtles, waar je allemaal een bepaalde operatie op uitvoert.
     * voorbeeld: animatie; uitvoeren van een stap? Collision detection?
+* van turtle naar slang (snake) - die zichzelf niet mag raken.
 
 ## Les 10
 
@@ -150,7 +165,12 @@ aan te roepen.
 * JSLint: http://javascript.crockford.com/code.html
     * i.h.b. de spatie-regels, en de regels voor variabele-declaraties zijn wat "typisch".
 * Turtle: relatieve versus absolute coördinaten: een voordeel van de relatieve (turtle-)coordinaten is dat je dezelfde figuur ook eenvoudig kunt schalen en draaien.
-* In de voorbeelden wil ik snel toe naar: recursie; tekenen van bomen; en animatie.
+* De programma's waar de leerlingen mee werken moeten interessant zijn.
+    * In de voorbeelden wil ik snel toe naar: recursie; tekenen van bomen; en animatie.
+* In sommige gevallen is het niet zo erg om wat op de feiten vooruit te lopen; het is belangrijker om het materiaal voor de leerlingen interessant te houden.
+* Opm: een van de manieren om een figuur voor te stellen, is door middel van een functie die die figuur tekent. (Een alternatief is om daarvoor een datastructuur op te bouwen, die je vervolgens moet interpreteren - maar dat is weer een extra interpretatie-slag.)
+    * we kunnen in JS later ook met een gemengde representatie werken.
+* de vormgeving is nu nog niet heel aantrekkelijk. Het is vrij eenvoudig voor leerlingen om daar zelf wat aan te doen (met verschillende kleuren, diktes, patronen).
 
 ## Help
 
