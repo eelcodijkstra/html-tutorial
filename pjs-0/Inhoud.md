@@ -25,6 +25,8 @@ TODO:
 * ook voor eigen functie
 * opstap naar herhaling
     * herhaling "met de hand"
+* eenvoudige figuren, ook samengesteld
+    * huisje als combinatie van rechthoek en vierkant.
 
 TODO:
 
