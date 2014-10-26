@@ -53,59 +53,64 @@ function circle(rad, deg) {
 }
 ```
 
+Sin and cos functions for degrees, i.s.o. radians
+
+```js
+function sin(d) {
+  return Math.sin(d * Math.PI / 180);
+}
+
+function cos(d) {
+  return Math.cos(d * Math.PI / 180);
+}
+```
 	
 ```js
 
 // turtle makes a turn over steps degrees, with a radius rad
 // dir changes with steps degrees.
 // neg. steps is left turn
-function circle (rad, steps) {
-  var start, end;
-  var newpos = {x: 0, y: 0};
-  var cx = Math.round(pos.x - rad * Math.sin(dir * Math.PI / 180));
-  var cy = Math.round(pos.y + rad * Math.cos(dir  * Math.PI / 180));
+function circleRight (rad, steps) {
+  var cx = Math.round(pos.x - rad * sin(dir)); // center of circle
+  var cy = Math.round(pos.y + rad * cos(dir));
   
-  var k = 2 * rad * Math.sin(steps / 2 * Math.PI / 180);
+  var k = 2 * rad * Math.sin(steps / 2 * Math.PI / 180); // koorde
   console.log("k=" + k);
-  var dx = k * Math.cos((steps / 2 + dir) * Math.PI / 180);
-  var dy = k * Math.sin((steps / 2 + dir) * Math.PI / 180);
+  var dx = k * cos(steps / 2 + dir);
+  var dy = k * sin(steps / 2 + dir);
   
-  start = (dir + 270) * Math.PI / 180;
-  end = (dir + steps + 270) * Math.PI / 180;
-  newpos.x = Math.round(pos.x + dx);
-  newpos.y = Math.round(pos.y + dy);
+  var start = (dir + 270) * Math.PI / 180;
+  var end = (dir + steps + 270) * Math.PI / 180;
+  var newx = Math.round(pos.x + dx);
+  var newy = Math.round(pos.y + dy);
   if (down) {
     ctx.beginPath();
     ctx.moveTo(pos.x, pos.y);
-    ctx.lineTo(newpos.x, newpos.y);
+    ctx.lineTo(newx, newy);
     ctx.moveTo(pos.x, pos.y);
     ctx.arc(cx, cy, rad,  start, end, false);
     ctx.stroke();
   } 
-  pos = newpos;
-  if (dir < 0) {dir += 360;}
+  pos.x newx;
+  pos.y = newy;
+  while (dir + steps < 0) {dir += 360;}
   dir = (dir + steps) % 360;
-//  var dx = Math.round(n*Math.cos(dir*Math.PI/180)); 
-  // from degrees to radians: *2pi/360
-//  var dy = Math.round(n*Math.sin(dir*Math.PI/180));
 }
 
 function circleLeft (rad, steps) {
-  var start, end;
-  var newpos = {x: 0, y: 0};
-  var cx = Math.round(pos.x + rad * Math.sin(dir * Math.PI / 180));
-  var cy = Math.round(pos.y - rad * Math.cos(dir  * Math.PI / 180));
+  var cx = Math.round(pos.x + rad * sin(dir));
+  var cy = Math.round(pos.y - rad * cos(dir));
     console.log("c= (" + cx + "," + cy + ")");
   
-  var k = 2 * rad * Math.sin(steps / 2 * Math.PI / 180);
+  var k = - 2 * rad * sin(steps / 2); // pos. length
   console.log("k=" + k);
-  var dx =  k * Math.cos((-steps / 2 + dir) * Math.PI / 180);
-  var dy =  k * Math.sin((-steps / 2 + dir) * Math.PI / 180);
+  var dx =  k * cos(-steps / 2 + dir);
+  var dy =  k * sin(-steps / 2 + dir);
   
-  start = (dir + 90) * Math.PI / 180;
-  end = (dir - steps + 90) * Math.PI / 180;
-  newpos.x = Math.round(pos.x + dx);
-  newpos.y = Math.round(pos.y + dy);
+  var start = (dir + 90) * Math.PI / 180;
+  var end = (dir - steps + 90) * Math.PI / 180;
+  var newx = Math.round(pos.x + dx);
+  var newy = Math.round(pos.y + dy);
   if (down) {
     ctx.beginPath();
     ctx.moveTo(pos.x, pos.y);
@@ -114,12 +119,10 @@ function circleLeft (rad, steps) {
     ctx.arc(cx, cy, rad,  start, end, true);
     ctx.stroke();
   } 
-  pos = newpos;
-  if (dir - steps < 0) {dir += 360;}
+  pos.x = newx;
+  pos.y = newy;
+  while (dir - steps < 0) {dir += 360;}
   dir = (dir - steps) % 360;
-//  var dx = Math.round(n*Math.cos(dir*Math.PI/180)); 
-  // from degrees to radians: *2pi/360
-//  var dy = Math.round(n*Math.sin(dir*Math.PI/180));
 }
 ```
   
