@@ -45,14 +45,6 @@ function right (n) {
   dir = (dir + n) % 360;
 }
 
-function square50 () {
-  penDown();
-  forward(50); right(90);
-  forward(50); right(90);
-  forward(50); right(90);
-  forward(50); right(90);
-}
-
 function square (n) {
   penDown ();
   for (var i=0; i<4; i++) {
@@ -64,7 +56,7 @@ function square (n) {
 function clearCanvas () {
   ctx.clearRect (0, 0, 200, 200);
   dir=0;
-  pos={x: 0, y: 0};
+  pos={x: 100, y: 100};
   down=false;
 }
 
@@ -95,6 +87,21 @@ $(document).ready( function() {
     displayState();
   });
 
+  $("#testAButton").on("click", function () {
+    testA();
+    displayState();
+  });
+
+  $("#testBButton").on("click", function () {
+    testB();
+    displayState();
+  });
+
+  $("#testCButton").on("click", function () {
+    testC();
+    displayState();
+  });
+
   function displayState () {
     $("#xDisplay").val(pos.x);
     $("#yDisplay").val(pos.y);
@@ -107,3 +114,27 @@ $(document).ready( function() {
   displayState();
 
 });
+
+//  ======== User-defined functions ============
+
+function square50() {
+  penDown();
+  forward(50); right(90);
+  forward(50); right(90);
+  forward(50); right(90);
+  forward(50); right(90);
+}
+
+// functions linked to buttons:
+
+function testA() {
+  square50();
+}
+
+function testB() {
+  alert("Hallo from testB");
+}
+
+function testC() {
+
+}

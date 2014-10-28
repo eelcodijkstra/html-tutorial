@@ -14,6 +14,8 @@
 TODO:
 
 * [ ] knoppen toevoegen voor functies `testA` etc.
+* [ ] initialisatie van turtle: (100, 100), down
+
 
 ### Cheating
 

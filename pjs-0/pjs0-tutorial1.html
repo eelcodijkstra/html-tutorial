@@ -99,7 +99,7 @@
       <ol>
         <li>Kijk hoe de toestand verandert door de opdrachten die je met de knoppen geeft.
         </li>
-        <li>Probeer de toestand te bereiken: <code>x: 30, y: 30, down: false</code>.
+        <li>Probeer de toestand te bereiken: <code>x: 130, y: 130, down: false</code>.
           Kun je deze toestand bereiken zonder een spoor achter te laten?
         </li>
         <li>Wat gebeurt er als je een negatief getal invoert als parameter voor <code>right</code>?
@@ -164,21 +164,53 @@
       <hr>
        <p><em>Opdrachten:</em></p>
       <ol>
-        <li> probeer enkele functies aan te roepen, zoals in het voorbeeld;
+        <li> probeer als console-opdracht een aantal voorbeelden van functie-aanroepen,
+          zoals in het voorbeeld;
         </li>
-        <li> wat gebeurt er als je <code>square50</code> invoert, dus zonder de <code>()</code>?
+        <li> wat gebeurt er als je op het console <code>square50</code> invoert,
+          dus zonder de <code>()</code>?
           <br>
           Of <code>penUp</code>?
         </li>
       </ol>
     </section>
+
+    <section>
+      <h1>Open en sluiten van vensters</h1>
+      <p>Enkele tips voor het werken met JSBin:</p>
+      <ul>
+        <li> Je kunt een deelvenster openen of sluiten door op de bijbehorende tab
+          (bovenaan) te klikken;
+        </li>
+        <li> Als er niets gebeurt, controleer dan of "Auto-run JS" geselcteerd is (in het
+          uitvoervenster, bovenin of onderin).
+        </li>
+      </ul>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Sluit het console-venster, en open het Javascript-venster. Scroll naar het
+          onderste deel van het venster, waar de "user defined functions" staan.
+        </li>
+        <li> De functies <code>testA</code>, <code>testB</code> en <code>testC</code>
+          zijn gekoppeld aan de knoppen (buttons) met dezelfde naam in het
+          "user defined commands" deelvenster.
+          Probeer deze knoppen uit.
+        </li>
+        <li>Sluit het Javascript-venster, open het Console-venster, en roep de
+          functie <code>testA</code> aan vanuit het console: <br>
+          <code>testA();</code>
+        </li>
+      </ol>
+    </section>
+
     <section>
       <h1>Functies: definitie</h1>
       <p>We gaan nu zelf een functie definiëren. We groeperen een
         reeks opdrachten met behulp van accolades, en geven deze groep een naam, bijv.:
       </p>
       <pre>
-  function square50 () {
+  function square50() {
     penDown();
     forward(50); right(90);
     forward(50); right(90);
@@ -195,14 +227,16 @@
         <li>Open het JavaScript-venster (met de tab),
           en zoek de functie <code>square50</code>.
         </li>
-        <li> Definieer onderaan in het Javascript-venster een
-          functie <code>sqFd50</code> die eerst <br>
-          (i) een vierkant met zijden van 50 pixels tekent, en daarna </br>
-          (ii) 50 pixels vooruit beweegt. <br>
-          <em>Hint:</em> gebruik de functie <code>square50</code>.
+        <li> Definieer onderaan in dit venster de functie
+          <code>testC</code> zo, dat deze eerst <br>
+          (i) een vierkant tekent met de functie <code>square50</code>, en daarna </br>
+          (ii) 10 graden rechts draait. <br>
         </li>
-        <li> Roep deze functie herhaaldelijk aan (in het console-venster).
-          Maak eventueel eerst het canvas leeg.
+        <li> Roep deze functie herhaaldelijk aan door op de knop <code>testC();</code>
+          te klikken. Maak eventueel eerst het canvas leeg.
+        </li>
+        <li> Roep deze functie herhaaldelijk aan door de opdracht <code>testC();</code>
+          in het console in te voeren.
           Met het pijltje omhoog haal je het vorige commando terug.
         </li>
       </ol>

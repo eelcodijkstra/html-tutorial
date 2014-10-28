@@ -19,6 +19,10 @@
         border: 1px solid yellow;
         background-color: lightyellow;
       }
+      #div4 {
+        border: 1px solid red;
+        background-color: mistyrose;
+      }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
     </script>
@@ -36,17 +40,29 @@
         <input type="text" id="forwardCount" value="50" size="3">); <br>
         <button type="button" id="rightButton"> right( </button>
         <input type="text" id="rightCount" value="90" size="3">); <br>
-        <button type="button" id="upButton"> penUp (); </button> <br>
-        <button type="button" id="downButton"> penDown (); </button> <br>
+        <button type="button" id="downButton"> penDown(); </button> &nbsp; &nbsp;
+        <button type="button" id="upButton"> penUp(); </button> <br>
       </div>
       <div id="div3">
         Turtle state: <br>
         x: <input type="text" id="xDisplay" readonly="readonly" size="5">
-        y: <input type="text" id="yDisplay" readonly="readonly" size="5">
+        y: <input type="text" id="yDisplay" readonly="readonly" size="5"> <br>
         dir: <input type="text" id="dirDisplay" readonly="readonly" size="5"> <br>
         down: <input type="text" id="penDisplay" readonly="readonly" size="5"/>
       </div>
-    </div>
+       <div id="div4">
+        User-defined commands: <br>
+        <button type="button" id="testAButton">
+          testA();
+        </button> <br>
+        <button type="button" id="testBButton">
+          testB();
+        </button> <br>
+         <button type="button" id="testCButton">
+          testC();
+        </button>
+      </div>
+     </div>
 
   </body>
 </html>
