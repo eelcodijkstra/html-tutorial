@@ -68,7 +68,7 @@
         functie maken voor het tekenen van een vierkant:
       </p>
       <pre>
-function square (size) {
+function square(size) {
   forward(size); right(90);
   forward(size); right(90);
   forward(size); right(90);
@@ -80,7 +80,7 @@ function square (size) {
         Deze scheiden we dan door komma's, bijvoorbeeld:
       </p>
       <pre>
-function rectangle (width, height) {
+function rectangle(width, height) {
   ...
 } </pre>
       <hr>
@@ -116,7 +116,7 @@ function rectangle (width, height) {
     <section>
       <h1>Opstap naar herhaling</h1>
       <p>We willen het hele Canvas vullen met vierkanten van dezelfde grootte.
-        Dit doen we door een basisfiguur steed te herhalen.
+        Dit doen we door een basisfiguur steeds te herhalen.
         Hoe ziet deze basisfiguur eruit? Hebben we aan één basisfiguur
         genoeg?
       </p>
@@ -125,7 +125,7 @@ function rectangle (width, height) {
         overlapt deze precies met de vorige: we komen niet verder.
       </p>
       <pre>
-function squareStep (size) {
+function squareStep(size) {
   square(size);
   forward(size);
 }</pre>
@@ -202,7 +202,7 @@ squareStep(10);</pre>
         van de vierkanten in een andere richting voor te zetten:
       </p>
       <pre>
-function turnRight (size) {
+function turnRight(size) {
   right(90);
   forward(size);
 }
