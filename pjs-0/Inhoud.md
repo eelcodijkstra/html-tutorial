@@ -34,6 +34,7 @@ TODO:
 
 * [x] button voor eigen functies toevoegen (testA, testB, testC).
 * [x] initialisatie van turtle: (100, 100)
+* [x] bochten
 * [ ] uitleg over DRY (en waarom) 
 
 ## Les 3 - functies met resultaat; waarden; expressies
