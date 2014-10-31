@@ -51,7 +51,7 @@ function penDown() {
 }
 
 function right(n) {
-  while (dir + n < 0) {dir += 360;}
+  while (dir<0) {dir += 360;}
   dir = (dir + n) % 360;
 }
 
@@ -105,6 +105,12 @@ $(document).ready( function() {
     displayState();
   });
 
+  $("#turnRightButton").on("click", function () {
+    turnRight(
+      parseInt($("#turnRightRadius").val()),
+      parseInt($("#turnRightCount").val()));
+    displayState();
+  });
   $("#upButton").on("click", function () {
     penUp();
     displayState();
