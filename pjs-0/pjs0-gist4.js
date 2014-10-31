@@ -11,47 +11,86 @@ function initCanvas() {
 }
 
 // turtle graphics variables
-var down = false;          // pen down
-var dir = 0;               // current drawing direction (360 degrees? )
+var down=false;          // pen down
+var dir=0;               // current drawing direction (360 degrees? )
 var pos = {x: 0, y: 0};  // current position
 
-function toPosition(x, y) {
-  pos.x = x;
-  pos.y = y;
+function toPosition (x, y) {
+  pos.x = x; pos.y = y;
+}
+
+// sin and cos in degrees
+
+function sin(d) {
+  return Math.sin(d * Math.PI / 180);
+}
+
+function cos(d) {
+  return Math.cos(d * Math.PI / 180);
 }
 
 function forward(n) {
-  var
-    dx = Math.round(n * Math.cos(dir * Math.PI / 180)), // from degrees to radians: *2pi/360
-    dy = Math.round(n * Math.sin(dir * Math.PI / 180)),
-    newpos = {x: pos.x + dx, y: pos.y + dy};
+  var dx = Math.round(n * cos(dir));
+  var dy = Math.round(n * sin(dir));
+  var newpos = {x: pos.x+dx, y: pos.y+dy};
   if (down) {
-    ctx.beginPath();
-    ctx.moveTo(pos.x, pos.y);
-    ctx.lineTo(newpos.x, newpos.y);
-    ctx.stroke();
+    ctx.beginPath ();
+    ctx.moveTo (pos.x, pos.y);
+    ctx.lineTo (newpos.x, newpos.y);
+    ctx.stroke ();
   }
   pos = newpos;
 }
 
 function penUp() {
-  down = false;
+  down=false;
 }
 
 function penDown() {
-  down = true;
+  down=true;
 }
 
 function right(n) {
-  if (dir < 0) { dir += 360; }
+  while (dir<0) {dir += 360;}
   dir = (dir + n) % 360;
 }
 
-function clearCanvas() {
-  ctx.clearRect(0, 0, 200, 200);
-  dir = 0;
-  pos = {x: 0, y: 0};
-  down = false;
+// take turn with circle segment of deg degrees
+// when deg < 0: left turn, deg > 0: right turn
+
+function turnRight(rad, deg) {
+  var sgn = (deg < 0) ? -1 : 1;
+  var corr = (deg < 0) ? 90 : 270;
+  var cx = Math.round(pos.x - sgn * rad * sin(dir));
+  var cy = Math.round(pos.y + sgn * rad * cos(dir));
+
+  var k = Math.abs(2 * rad * sin(deg / 2));
+  var dx =  k * cos(deg / 2 + dir);
+  var dy =  k * sin(deg / 2 + dir);
+
+  var start = (dir + corr) * Math.PI / 180;
+  var end = (dir + deg + corr) * Math.PI / 180;
+  var newx = Math.round(pos.x + dx);
+  var newy = Math.round(pos.y + dy);
+  if (down) {
+    ctx.beginPath();
+    ctx.moveTo(pos.x, pos.y);
+//    ctx.lineTo(newx, newy);
+//    ctx.moveTo(pos.x, pos.y);
+    ctx.arc(cx, cy, rad,  start, end, deg < 0);
+    ctx.stroke();
+  }
+  pos.x = newx;
+  pos.y = newy;
+  while (dir + deg < 0) {dir += 360;}
+  dir = (dir + deg) % 360;
+}
+
+function clearCanvas () {
+  ctx.clearRect (0, 0, 200, 200);
+  dir=0;
+  pos={x: 100, y: 100};
+  down=false;
 }
 
 function repeat(n, f) {
@@ -61,18 +100,24 @@ function repeat(n, f) {
   }
 }
 
-$(document).ready(function () {
+$(document).ready( function() {
 
   $("#forwardButton").on("click", function () {
-    forward(parseInt($("#forwardCount").val(), 10));
+    forward(parseInt($("#forwardCount").val()));
     displayState();
   });
 
   $("#rightButton").on("click", function () {
-    right(parseInt($("#rightCount").val(), 10));
+    right(parseInt($("#rightCount").val()));
     displayState();
   });
 
+  $("#turnRightButton").on("click", function () {
+    turnRight(
+      parseInt($("#turnRightRadius").val()),
+      parseInt($("#turnRightCount").val()));
+    displayState();
+  });
   $("#upButton").on("click", function () {
     penUp();
     displayState();
@@ -85,31 +130,6 @@ $(document).ready(function () {
 
   $("#clearButton").on("click", function () {
     clearCanvas();
-    displayState();
-  });
-
-  $("#squareButton").on("click", function () {
-    square(30);
-    displayState();
-  });
-
-  $("#rectangleButton").on("click", function () {
-    rectangle(30, 60);
-    displayState();
-  });
-
-  $("#squareStepButton").on("click", function () {
-    squareStep30();
-    displayState();
-  });
-
-  $("#turnRightButton").on("click", function () {
-    turnRight(30);
-    displayState();
-  });
-
-  $("#turnLeftButton").on("click", function () {
-    turnLeft(30);
     displayState();
   });
 
@@ -128,7 +148,7 @@ $(document).ready(function () {
     displayState();
   });
 
-  function displayState() {
+  function displayState () {
     $("#xDisplay").val(pos.x);
     $("#yDisplay").val(pos.y);
     $("#dirDisplay").val(dir);
@@ -141,7 +161,8 @@ $(document).ready(function () {
 
 });
 
-// user-defined functions:
+//  ======== User-defined functions ============
+
 
 function square(size) {
   penDown();
@@ -160,15 +181,6 @@ function squareStep30() {
   forward(30);
 }
 
-function turnRight(size) {
-  right(90);
-  forward(size);
-}
-
-function turnLeft(size) {
-  alert("not yet defined");
-}
-
 function sq() {
   right(10);
   square(50);
@@ -179,7 +191,11 @@ function testA() {
 }
 
 function testB() {
-  alert("testB not (yet) defined");
+  penDown();
+  repeat(30, function (i) {
+    right(i);
+    forward(i);
+  });
 }
 
 function testC() {

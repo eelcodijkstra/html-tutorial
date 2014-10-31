@@ -61,12 +61,12 @@ NB: we hebben een naamconflict met `square` - ook voor het tekenen!
 
 TODO:
 
-* [ ] kwart-cirkel toevoegen als tekenfunctie
+* [x] kwart-cirkel toevoegen als tekenfunctie
 * [ ] 
 
 ## Les 4
 
-* Herhaling - door functie als parameter `repeat(n, f)`
+* **Herhaling** - door functie als parameter `repeat(n, f)`
     * we geven de index als extra (optionele) par. mee
     * array.forEach: 3 args: element, index, array
     * we gebruiken hier dat parameters in JS optioneel zijn
@@ -177,6 +177,7 @@ aan te roepen.
 * Opm: een van de manieren om een figuur voor te stellen, is door middel van een functie die die figuur tekent. (Een alternatief is om daarvoor een datastructuur op te bouwen, die je vervolgens moet interpreteren - maar dat is weer een extra interpretatie-slag.)
     * we kunnen in JS later ook met een gemengde representatie werken.
 * de vormgeving is nu nog niet heel aantrekkelijk. Het is vrij eenvoudig voor leerlingen om daar zelf wat aan te doen (met verschillende kleuren, diktes, patronen).
+* kunnen we niet met hetzelfde JSBin framework volstaan, voor alle lessen? (Of, in elk geval meerdere lessen met hetzelfde framework. Of, met eenzelfde JS-turtle library.)
 
 ## Help
 

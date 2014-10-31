@@ -3,7 +3,6 @@
   <head>
 	<meta charset="utf-8" />
     <meta name="description" content="Les 4" />
-	<title>Canvas 1</title>
 	<style type="text/css">
       canvas {
         border: 1px solid black;
@@ -12,7 +11,7 @@
         max-width: 400px;
         min-width:250px;
       }
-      #div2, #div4 {
+      #div2 {
         border: 1px solid blue;
         background-color: lightblue;
         padding: 5px;
@@ -20,6 +19,11 @@
       #div3 {
         border: 1px solid yellow;
         background-color: lightyellow;
+        padding: 5px;
+      }
+      #div4 {
+        border: 1px solid red;
+        background-color: pink;
         padding: 5px;
       }
     </style>
@@ -39,44 +43,31 @@
         <input type="text" id="forwardCount" value="50" size="3">); <br>
         <button type="button" id="rightButton"> right( </button>
         <input type="text" id="rightCount" value="90" size="3">); <br>
+        <button type="button" id="turnRightButton"> turnRight( </button>
+        <input type="text" id="turnRightRadius" value="20" size="3">,
+        <input type="text" id="turnRightCount" value="90" size="3">); <br>
+        <button type="button" id="downButton"> penDown (); </button> &nbsp; &nbsp;
         <button type="button" id="upButton"> penUp (); </button> <br>
-        <button type="button" id="downButton"> penDown (); </button> <br>
       </div>
       <div id="div3">
         Turtle state: <br>
-        x: <input type="text" id="xDisplay" readonly="readonly" size="5">
-        y: <input type="text" id="yDisplay" readonly="readonly" size="5">
-        dir: <input type="text" id="dirDisplay" readonly="readonly" size="5"> <br>
+        pos.x: <input type="text" id="xDisplay" readonly="readonly" size="5">
+        pos.y: <input type="text" id="yDisplay" readonly="readonly" size="5"> <br>
+        dir: &nbsp; &nbsp; <input type="text" id="dirDisplay" readonly="readonly" size="5"> <br>
         down: <input type="text" id="penDisplay" readonly="readonly" size="5"/>
       </div>
       <div id="div4">
+        </button>
         User-defined commands: <br>
-        <button type="button" id="squareButton">
-          square(30);
-        </button> <br>
-       <button type="button" id="rectangleButton">
-          rectangle(30, 60);
-        </button> <br>
-        <button type="button" id="squareStepButton">
-          squareStep30();
-        </button> <br>
-        <button type="button" id="turnRightButton">
-          turnRight(30);
-        </button> <br>
-        <button type="button" id="turnLeftButton">
-          turnLeft(30);
-        </button> <br>
         <button type="button" id="testAButton">
           testA();
-        </button>
+        </button> <br>
         <button type="button" id="testBButton">
           testB();
-        </button>
+        </button> <br>
          <button type="button" id="testCButton">
           testC();
         </button>
-      </div>
     </div>
-
   </body>
 </html>
