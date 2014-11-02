@@ -111,6 +111,7 @@ $(document).ready( function() {
       parseInt($("#turnRightCount").val()));
     displayState();
   });
+
   $("#upButton").on("click", function () {
     penUp();
     displayState();

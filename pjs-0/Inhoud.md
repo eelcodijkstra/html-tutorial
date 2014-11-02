@@ -15,6 +15,7 @@ TODO:
 
 * [x] knoppen toevoegen voor functies `testA` etc.
 * [x] initialisatie van turtle: (100, 100) (nog niet "down", er moet iets over blijven...)
+* [ ] log van proces (acties)
 
 
 ### Cheating
@@ -35,7 +36,9 @@ TODO:
 * [x] button voor eigen functies toevoegen (testA, testB, testC).
 * [x] initialisatie van turtle: (100, 100)
 * [x] bochten
-* [ ] uitleg over DRY (en waarom) 
+* [ ] uitleg over DRY (en waarom)
+* [ ] stap voor stap uitvoeren van proces
+* [ ] log van acties
 
 ## Les 3 - functies met resultaat; waarden; expressies
 
@@ -184,5 +187,15 @@ aan te roepen.
 * er gebeurt niets met de turtle -> is Auto-run JS geselecteerd? (in output-panel, rechts)
 * er verschijnt niets in het Canvas -> is de pen "down"?
 
+
+```js
+function leaf(rad, deg) {
+  right(-deg);
+  turnRight(rad, 2 * deg);
+  right(180 - 2 * deg);
+  turnRight(rad, 2 * deg);
+  right(180 - deg);
+}
+```
 
     
