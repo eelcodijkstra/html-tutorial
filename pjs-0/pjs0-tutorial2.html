@@ -86,8 +86,11 @@ function rectangle(width, height) {
       <hr>
       <p><em>Opdrachten:</em></p>
       <ul>
+        <li>Kopieer dit voorbeeld naar het JavaScript-venster, en maak een test hiervoor
+          gekoppeld aan een knop (bijv. via functie <code>testA</code>).
+        </li>
         <li> Definieer een functie <code>rectangle</code> zoals hierboven beschreven, voor
-          het tekenen van een rechthoek.
+          het tekenen van een rechthoek. Maak een test voor deze functie.
         </li>
         <li> Waarom gebruiken we voor de draaiing een vaste waarde (90 graden)?
         </li>
@@ -220,6 +223,78 @@ function turnRight(size) {
           veranderen. <em>Hint:</em> zorg ervoor dat <br>
           <code>turnRight(30); turnLeft(30);</code> <br>
           weer op precies dezelfde positie uitkomt.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Voorbeeld: huisje</h1>
+      <p>Als voorbeeld willen we een huisje tekenen. Dit kan op verschillende manieren.
+
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li>PM
+        </li>
+        <li>PM
+        </li>
+      </ul>
+    </section>
+
+
+    <section>
+      <h1>Voorbeeld: driekhoek</h1>
+      <p>Op eenzelfde manier als een vierkant, kunnen we ook een driehoek tekenen.
+        (Later zullen we dit generaliseren tot regelmatige n-hoeken.)
+      </p>
+<pre>
+function triangle(size) {
+   forward(size); right(120);
+   forward(size); right(120);
+   forward(size); right(120);
+}
+</pre>
+      <p>Als je deze functie uitvoert, krijg je niet het gebruikelijke huisje te zien.
+        Hoe kan dat?
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li>Kopieer deze functie naar het JavaScript-venster, en maak een test voor
+          deze functie (gekoppeld aan één van de knoppen).
+        </li>
+        <li>Vraag: waarom hebben we de laatste opdracht <code>right(120);</code> toegevoegd?
+          Ook zonder die opdracht wordt er toch een driehoek getekend?
+        </li>
+        <li>Voeg aan de testfunctie nog een extra rotatie toe, bijvoorbeeld
+          <code>right(30);</code>
+        </li>
+      </ul>
+    </section>
+
+     <section>
+      <h1>Voorbeeld: huisje</h1>
+      <p>Als voorbeeld willen we een huisje tekenen. Dit kan op verschillende manieren.
+        We proberen hier een huisje te tekenen op basis van een vierkant en een driehoek.
+        Een eerste poging ziet er dan bijvoorbeeld als volgt uit:
+      </p>
+<pre>
+function huisje(size) {
+  triangle(size);
+  square(size);
+}
+</pre>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li>Pas deze functie zo aan dat er een huisje ontstaat.
+        </li>
+        <li>Maak een functie voor het tekenen van een huisje 'als een doorlopende lijn',
+          zonder de pen van het papier te halen.
+        </li>
+        <li>Voeg aan test voor huisje nog een extra opdracht toe, zodat je
+          bij herhaald aanroepen (drukken op de knop) een straatje krijgt.
         </li>
       </ul>
     </section>

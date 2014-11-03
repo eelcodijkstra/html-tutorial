@@ -32,5 +32,25 @@ function stepX(i) {
 * This is also an example of "DRY".
 * Note that this example does not work when we would have separate functions for right and left.
 
+## Leaf
 
+```js
+function leaf(rad, deg) {
+  right(-deg);
+  turnRight(rad, 2 * deg);
+  right(180 - 2 * deg);
+  turnRight(rad, 2 * deg);
+  right(180 - deg);
+}
+```
+Suggestion: first start with a half-leaf: straight line, circle fragment, straight line.
 
+```js
+function halfLeaf(rad, deg) {
+  forwarid(40);
+  right(-deg);
+  turnRight(rad, 2 * deg);
+  right(-deg);
+  forward(40);
+}
+```

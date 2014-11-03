@@ -35,7 +35,7 @@ TODO:
 
 * [x] button voor eigen functies toevoegen (testA, testB, testC).
 * [x] initialisatie van turtle: (100, 100)
-* [x] bochten
+* [x] bochten (cirkels)
 * [ ] uitleg over DRY (en waarom)
 * [ ] stap voor stap uitvoeren van proces
 * [ ] log van acties
@@ -75,12 +75,15 @@ TODO:
     * we gebruiken hier dat parameters in JS optioneel zijn
 * Functie als waarde (al eerder genoemd?)
 * Verschil tussen functie als waarde, aanroep, en resultaat
+* Voorbeelden met mod (draaiing)
+* Random?
 
 ## Les 5
 
 * Keuze - bijv. als turtle tegen een grens aanloopt
 * Event - met daaraan gekoppelde actie
-    * verband tussen keuze en event
+    * verband (ven verschil!!) tussen keuze en event
+    * misverstand is vergelijkbaar als bij `while`; IF is niet WHEN
 * Hoe kunnen we dit vormgeven? We willen bijvoorbeeld aan andere vorm van "forward", die binnen de wereld blijft.
     * hiervoor hebben we wel redelijk wat wiskunde nodig; voor deze inleiding niet handig.
     * gebruik van een soort "radar"?
@@ -95,6 +98,7 @@ TODO:
    * controleren op toestand bij het afhandelen van een event (bijv. knop ingedrukt).
    * event-object als par. voor handler; bijv. `evt.altKey`
 * NB: een echte FizzBuzz: alleen rotatie bij deelbaar door 3 of 5, alleen forward bij rest.
+* combinatie van herhaling en keuze; actie afhankelijk van de index, nog verder doorgevoerd.
 
 ## Les 6
 
@@ -186,16 +190,5 @@ aan te roepen.
 
 * er gebeurt niets met de turtle -> is Auto-run JS geselecteerd? (in output-panel, rechts)
 * er verschijnt niets in het Canvas -> is de pen "down"?
-
-
-```js
-function leaf(rad, deg) {
-  right(-deg);
-  turnRight(rad, 2 * deg);
-  right(180 - 2 * deg);
-  turnRight(rad, 2 * deg);
-  right(180 - deg);
-}
-```
 
     
