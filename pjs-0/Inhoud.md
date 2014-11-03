@@ -30,6 +30,8 @@ TODO:
     * herhaling "met de hand"
 * eenvoudige figuren, ook samengesteld
     * huisje als combinatie van rechthoek en vierkant.
+* bochten-opdracht voor turtle    
+* blad - als combinatie van twee cirkel-fragmenten.
 
 TODO:
 
@@ -38,7 +40,7 @@ TODO:
 * [x] bochten (cirkels)
 * [ ] uitleg over DRY (en waarom)
 * [ ] stap voor stap uitvoeren van proces
-* [ ] log van acties
+* [x] log van acties
 
 ## Les 3 - functies met resultaat; waarden; expressies
 
@@ -61,6 +63,8 @@ TODO:
 * console als rekenmachine?
 
 NB: we hebben een naamconflict met `square` - ook voor het tekenen!
+
+Opstap voor herhaling.
 
 TODO:
 
