@@ -162,7 +162,6 @@ vierkant(square(2+3));</pre>
         een gebrek aan fantasie. We zullen later zien welke hulpmiddelen we hebben om minder
         last te hebben van dit soort problemen.
       </p>
-
       <hr>
       <p><em>Opdrachten:</em></p>
       <ul>
@@ -172,5 +171,117 @@ vierkant(square(2+3));</pre>
         </li>
       </ul>
     </section>
+
+    <section>
+      <h1>Opstap naar herhaling</h1>
+      <p>We willen het hele Canvas vullen met vierkanten van dezelfde grootte.
+        Dit doen we door een basisfiguur steeds te herhalen.
+        Hoe ziet deze basisfiguur eruit? Hebben we aan één basisfiguur
+        genoeg?
+      </p>
+      <p>De basisfiguur moet meer zijn dan alleen een vierkant. Immers, als we een vierkant
+        tekenen, komen we weer op het beginpunt uit. Als we daar weer een vierkant tekenen,
+        overlapt deze precies met de vorige: we komen niet verder.
+      </p>
+      <pre>
+function squareStep(size) {
+  square(size);
+  forward(size);
+}</pre>
+      <p>We kunnen nu een rij vierkanten naast elkaar tekenen door deze functie te herhalen:
+      </p>
+      <pre>
+squareStep(10);
+squareStep(10);
+squareStep(10);</pre>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li>Maak een vergelijkbare functie <code>squareStep1(size)</code> om een
+          kolom vierkanten te tekenen, dus onder elkaar.
+        </li>
+        <li>PM
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>title</h1>
+       <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li>PM
+        </li>
+        <li>PM
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>Andere manieren (1) </h1>
+      <p>Er zijn verschillende manieren om een vlak te vullen met vierkantjes.
+        We hebben tot nu toe één manier gezien: van links naar rechts, en van
+        boven naar beneden - zoals je leest.
+      </p>
+      <p>Maar je kunt het ook anders doen. Probeer zelf een (of meer) andere
+        manieren te bedenken. <br>
+        <em>Hint:</em> hoe maai je een gazon?
+      </p>
+       <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li>PM
+        </li>
+        <li>PM
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>Andere manieren (2)</h1>
+      <p>Een andere manier is om aan het eind van een rij, de rij eronder in de
+        andere richting te doorlopen (van rechts naar links).
+      </p>
+      <p>Nog een andere manier is om kolom voor kolom in te vullen, in plaats van rij
+        voor rij.
+      </p>
+      <p>Nog weer een andere manier is om het vlak van buiten naar binnen in te vullen.
+        Of, van binnen naar buiten, spiraalsgewijs.
+      </p>
+       <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li>PM
+        </li>
+        <li>PM
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h1>Andere manieren (3)</h1>
+      <p> We hebben een functie <code>turnRight(size)</code> gedefinieerd om het tekenen
+        van de vierkanten in een andere richting voor te zetten:
+      </p>
+      <pre>
+function turnRight(size) {
+  right(90);
+  forward(size);
+}
+      </pre>
+       <hr>
+      <p><em>Opdrachten:</em></p>
+      <ul>
+        <li> Hoe kun je met de twee functies <code>squareStep</code> en <code>turnRight</code>
+          een vierkante rand van vierkanten tekenen, bijv. van 4 x 4? (totaal 12 vierkanten).
+        </li>
+        <li>Hoe kun je met de twee functies <code>squareStep</code> en <code>turnRight</code>
+          een vierkant van 4 x 4 vierkanten tekenen? (totaal 16 vierkanten).
+        </li>
+        <li>Definieer een functie <code>turnLeft(size)</code> om de richting naar links te
+          veranderen. <em>Hint:</em> zorg ervoor dat <br>
+          <code>turnRight(30); turnLeft(30);</code> <br>
+          weer op precies dezelfde positie uitkomt.
+        </li>
+      </ul>
+    </section>
+
   </body>
 </html>
