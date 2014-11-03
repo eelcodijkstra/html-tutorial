@@ -15,7 +15,7 @@ TODO:
 
 * [x] knoppen toevoegen voor functies `testA` etc.
 * [x] initialisatie van turtle: (100, 100) (nog niet "down", er moet iets over blijven...)
-* [ ] log van proces (acties)
+* [x] log van proces (acties)
 
 
 ### Cheating

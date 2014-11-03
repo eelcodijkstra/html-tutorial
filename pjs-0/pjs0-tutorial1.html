@@ -60,18 +60,36 @@
         (Later zullen we zien dat je de turtle ook kunt <em>programmeren</em>.)
       </p>
 
+      <p> De knop <em>Clear canvas &amp; log</em> maakt  het scherm
+          schoon en zet de turtle in de beginpositie. <br>
+      </p>
+
       <hr>
       <p><em>Opdrachten:</em></p>
       <ul>
-        <li>Probeer met deze knoppen een vierkant te tekenen.
-          Denk erom dat je de turtle eerst de pen op het papier laat zetten
+        <li>Teken met deze knoppen een vierkant.
+          Laat de turtle de pen eerst op het papier zetten
           (anders zie je zo weinig). <br>
+          <em>Hint:</em> klik een aantal malen op knop <em>testA();</em>
         </li>
         <li>Je kunt de waarden in de witte invoer-vakjes veranderen.
           Teken nu een groter vierkant.
         </li>
       </ul>
 
+    </section>
+
+    <section>
+      <h1>Log van acties</h1>
+      <p>In het venster naast het teken-canvas zie je de <em>log</em> van de acties die
+        uitgevoerd zijn voor de tekening die je ziet. Deze reeks van acties vormen het
+        <em>proces</em> waarvan de tekening het <em>resultaat</em> is.
+      </p>
+      <p>De knop voor het schoonvegen van het Canvas maakt ook deze log weer leeg.
+      </p>
+      <p>Probeer steeds te begrijpen hoe de opdrachten die je geeft, het proces dat
+        daaruit volgt, en de resulterende tekening samenhangen.
+      </p>
     </section>
 
     <section>
@@ -117,10 +135,8 @@
         <em>console</em> gebruiken. Dit is zichtbaar in een apart venster.
         Hier kun je de opdrachten intoetsen zoals deze
         bij de knoppen staan, bijvoorbeeld: <code>forward(30);</code> (RETURN) <br>
-        Je moet elke opdracht op het console afsluiten met de return-toets. <br>
-        Je kunt ook opeenvolgende opdrachten op één regel plaatsen, bijvoorbeeld:
+        Je moet elke opdracht op het console afsluiten met de return-toets.
       </p>
-      <pre> forward(50); right(90); </pre>
       <p> Let goed op de notatie:
         je moet precies de goede naam gebruiken, de juiste haakjes en de juiste leestekens,
         zoals de puntkomma.
@@ -134,7 +150,9 @@
       <hr>
       <p><em>Opdrachten:</em></p>
       <ol>
-        <li> Probeer nu een vierkant te tekenen door opdrachten op het console.
+        <li> Probeer nu een vierkant te tekenen door opdrachten op het console. <br>
+          <em>Suggestie:</em> je kunt ook (een deel van) de log kopiëren naar het console
+            (via Copy/Paste).
         </li>
         <li> Vraag de toestand van de turtle op via het console.
         </li>
@@ -230,7 +248,7 @@
         </li>
         <li> Definieer onderaan in dit venster de functie
           <code>testC</code> zo, dat deze eerst <br>
-          (i) een vierkant tekent met de functie <code>square50</code>, en daarna </br>
+          (i) een vierkant tekent met de functie <code>square50</code>, en daarna <br>
           (ii) 10 graden rechts draait. <br>
         </li>
         <li> Roep deze functie herhaaldelijk aan door op de knop <code>testC();</code>
@@ -276,7 +294,7 @@
           laten inspringen?
         </li>
         <li>Je kunt een regelovergang in het resultaat afdwingen door middel van
-          <code>&lt;br></code>. Dit is een element zonder sluithaak en zonder inhoud.
+          <code>&lt;br&gt;</code>. Dit is een element zonder sluithaak en zonder inhoud.
           (Waarom heeft dit geen sluithaak?) <br>
           Probeer dit uit.
         </li>

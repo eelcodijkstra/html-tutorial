@@ -21,11 +21,11 @@ It is possible to import a gist directly into JSBin; but, apparently, this does 
 
 ## Wishlist
 
-* add to the Turtle-functions: qCircle(n) - where n is the size (arc size, or radius?)
+* add to the Turtle-functions: circle(n) - where n is the size (arc size, or radius?)
     * it is an alternative way to turn: it requires a distance.
 * button on tutorial-frame, to reduce the size (as in HTML-0)
 * the tutorial-frame may be used for all lessons, with easy navigation between the lessons.
-* the JSBin framework may be used for all lessons in the same way?
+* the JSBin framework may be used for all lessons in the same way? (i.e., the same HTML/JavaScript, for all the tutorials)
 
 ## Steps in programming
 
