@@ -8,32 +8,31 @@
 * elementaire opdrachten
 * samenstellen: opeenvolging
 * samenstellen: groepering/naamgeving: functies
-    * functie als script, voor een proces
+    * functie als deel-script, voor een deel-proces
     * resultaat van functie: afhankelijk van toestand
     * maak je eigen opdrachten (bouwstenen)
 * testen van functie (hier: via knoppen)
+* programmeren voor mensen: white space
 
 TODO:
 
-### Cheating
-
-* waarde van `pos.x` veranderen door een expliciete toekenning. (Een echte robot kun je niet verplaatsen door louter de GPS-coordinaten aan te passen.)
 
 ## Les 2 - functies met parameters
 
 * "testen" - hier met knoppen (buttons)
 * ook voor eigen functie
-* opstap naar herhaling
+* opstap naar herhaling (impliciet)
     * herhaling "met de hand"
 * eenvoudige figuren, ook samengesteld
     * huisje als combinatie van rechthoek en vierkant.
 * bochten-opdracht voor turtle    
-
+* namen (van functies, parameters)
 
 TODO:
 
 * [ ] uitleg over DRY (en waarom)
 * [ ] stap voor stap uitvoeren van proces
+* [ ] uitleg over testen
 
 
 ## Les 3 - functies met resultaat; waarden; expressies
@@ -52,19 +51,17 @@ TODO:
     * elementaire operaties: `+ - * /` en `%` (rest na deling)
     * samenstelling: expressie; haakjes
     * abstractie: functie (in eerste instantie: naam geven aan een expressie).
+* console als rekenmachine
+* Vb: blad - als combinatie van twee cirkel-fragmenten.
+    * vereist enig rekenwerk
+* Vb: bloem
+* opstap naar herhaling (expliciet)
+    * herhaling "met de hand"
 * namen (vervolg); gebruik van namen in expressies
 * namen: de betekenis (het gedrag) van een functie verandert niet als je de naam van een parameter vervangt door een andere naam - zolang je geen naamconflicten hebt.
-* console als rekenmachine
-* blad - als combinatie van twee cirkel-fragmenten.
-    * vereist enig rekenwerk
-
-NB: we hebben een naamconflict met `square` - ook voor het tekenen!
-
-Opstap voor herhaling.
 
 TODO:
 
-* [x] kwart-cirkel toevoegen als tekenfunctie
 * [ ] 
 
 ## Les 4
@@ -77,16 +74,27 @@ TODO:
 * Verschil tussen functie als waarde, aanroep, en resultaat
 * Voorbeelden met mod (draaiing)
 * Random?
+* Opdracht afhankelijk van rangnr. van iteratie
+    * vb: geneste vierkanten, cirkels
+    * vb: spiraal (vierkant, rond)
 
 ## Les 5
 
+* keuze; case analysis
+    * if, if-else
+    * notatie
+* in combinatie met herhaling: opdracht afhankelijk van rangnr. van iteratie
+    * vb: slingerpad (vierkant)
+    * vb: fizzbuzz (log)
+* in berekeningen
+    * vb: min, max
+    * conditionele expressie? `(cond) ? expr1 : expr2`
+    * altijd compleet!
+* case analysis - bij het oplossen van problemen
+    * zorg ervoor dat je alle gevallen afdekt ("check"; ook bij testen)
+    * (`switch` - voorlopig vermijden, kans op programmeerfouten)
+    * vb. van decompositie met keuze?
 * Keuze - bijv. als turtle tegen een grens aanloopt
-* Event - met daaraan gekoppelde actie
-    * verband (ven verschil!!) tussen keuze en event
-    * misverstand is vergelijkbaar als bij `while`; IF is niet WHEN
-* Hoe kunnen we dit vormgeven? We willen bijvoorbeeld aan andere vorm van "forward", die binnen de wereld blijft.
-    * hiervoor hebben we wel redelijk wat wiskunde nodig; voor deze inleiding niet handig.
-    * gebruik van een soort "radar"?
 * Voorbeeld: strook voor strook, "bolvormig", opvullen van de ruimte.
     * als y === 0 , naar rechts ipv. naar omhoog
     * als 
@@ -94,11 +102,9 @@ TODO:
 * Andere voorbeelden van IF:
    * botsingen (collisions), onderling of met de rand
    * actie afhankelijk van indrukken van een toets.
-   * max, min
    * controleren op toestand bij het afhandelen van een event (bijv. knop ingedrukt).
    * event-object als par. voor handler; bijv. `evt.altKey`
 * NB: een echte FizzBuzz: alleen rotatie bij deelbaar door 3 of 5, alleen forward bij rest.
-* combinatie van herhaling en keuze; actie afhankelijk van de index, nog verder doorgevoerd.
 
 ## Les 6
 
@@ -162,7 +168,14 @@ TODO:
 ## Les 10
 
 
+## rest
 
+* Event - met daaraan gekoppelde actie
+    * verband (ven verschil!!) tussen keuze en event
+    * misverstand is vergelijkbaar als bij `while`; IF is niet WHEN
+* Hoe kunnen we dit vormgeven? We willen bijvoorbeeld aan andere vorm van "forward", die binnen de wereld blijft.
+    * hiervoor hebben we wel redelijk wat wiskunde nodig; voor deze inleiding niet handig.
+    * gebruik van een soort "radar"?
 
 ## Opmerkingen
 
@@ -191,4 +204,12 @@ aan te roepen.
 * er gebeurt niets met de turtle -> is Auto-run JS geselecteerd? (in output-panel, rechts)
 * er verschijnt niets in het Canvas -> is de pen "down"?
 
-    
+### Cheating
+
+* waarde van `pos.x` veranderen door een expliciete toekenning. (Een echte robot kun je niet verplaatsen door louter de GPS-coordinaten aan te passen.)
+
+
+## Issues
+
+* [ ] Andere naam voor `rightTurn`? circle? arc?
+* [ ] Uitbreiden van Bin met functie voor afhandelen van mouse click in Canvas?
