@@ -10,13 +10,10 @@
 * samenstellen: groepering/naamgeving: functies
     * functie als script, voor een proces
     * resultaat van functie: afhankelijk van toestand
+    * maak je eigen opdrachten (bouwstenen)
+* testen van functie (hier: via knoppen)
 
 TODO:
-
-* [x] knoppen toevoegen voor functies `testA` etc.
-* [x] initialisatie van turtle: (100, 100) (nog niet "down", er moet iets over blijven...)
-* [x] log van proces (acties)
-
 
 ### Cheating
 
@@ -31,16 +28,13 @@ TODO:
 * eenvoudige figuren, ook samengesteld
     * huisje als combinatie van rechthoek en vierkant.
 * bochten-opdracht voor turtle    
-* blad - als combinatie van twee cirkel-fragmenten.
+
 
 TODO:
 
-* [x] button voor eigen functies toevoegen (testA, testB, testC).
-* [x] initialisatie van turtle: (100, 100)
-* [x] bochten (cirkels)
 * [ ] uitleg over DRY (en waarom)
 * [ ] stap voor stap uitvoeren van proces
-* [x] log van acties
+
 
 ## Les 3 - functies met resultaat; waarden; expressies
 
@@ -50,9 +44,9 @@ TODO:
 * tot nu toe: proces met resultaat buiten programma
     * je kunt niets met het resultaat in het programma
     * je kunt er niet verder mee rekenen; het is geen waarde in het programma
+* we willen kunnen rekenen - bijvoorbeeld om vierkanten van verschillende grootte te tekenen.
 * berekening - vs. actie (proces)
 * waarde - in eerste instantie: getallen
-* we willen kunnen rekenen - bijvoorbeeld om vierkanten van verschillende grootte te tekenen.
 * overeenkomst tussen operatoren en functies
 * ook hier weer: elementaire operaties, samenstelling, en abstractie
     * elementaire operaties: `+ - * /` en `%` (rest na deling)
@@ -60,7 +54,9 @@ TODO:
     * abstractie: functie (in eerste instantie: naam geven aan een expressie).
 * namen (vervolg); gebruik van namen in expressies
 * namen: de betekenis (het gedrag) van een functie verandert niet als je de naam van een parameter vervangt door een andere naam - zolang je geen naamconflicten hebt.
-* console als rekenmachine?
+* console als rekenmachine
+* blad - als combinatie van twee cirkel-fragmenten.
+    * vereist enig rekenwerk
 
 NB: we hebben een naamconflict met `square` - ook voor het tekenen!
 

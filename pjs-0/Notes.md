@@ -72,3 +72,8 @@ and in html:
 ```html
 
 ```
+
+## Testing
+
+* http://www.javaworld.com/article/2107745/testing-debugging/your-quick-guide-to-better-javascript-testing.html
+* https://github.com/velesin/jasmine-jquery
