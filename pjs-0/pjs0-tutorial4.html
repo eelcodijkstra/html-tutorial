@@ -73,7 +73,7 @@ function repeat (n, f)
       <p> De functie die je meegeeft aan <code>repeat</code> kun je voorzien van een
         parameter: deze geeft de stap in de herhaling aan.
       </p>
-      <p> De stappen zijn genummerd <em>vanaf 0</em>. </br>
+      <p> De stappen zijn genummerd <em>vanaf 0</em>. <br>
       Voorbeeld: <code>repeat(3, fz);</code> resulteert in <code>fz(0); fz(1); fz(2); </code>
 
       </p>
@@ -157,46 +157,106 @@ function polygon (n, c) { .... }
     </section>
 
     <section>
-      <h1>Voorbeeld</h1>
-      <p>
+      <h1>Een nest van vierkanten</h1>
+      <p> Bekijk de volgende functie:
       </p>
-
+<pre>
+function sqStep(n) {
+  square(n * 20);
+  right(-90);
+  forward(10);  // up
+  right(-90);
+  forward(10);  // left
+  right(180);   // original direction
+}
+</pre>
+      <p> Gebruik deze in combinatie met de testfunctie:
+      </p>
+<pre>
+function testB() {
+  penDown();
+  repeat(10, sqStep);
+}
+</pre>
       <hr>
       <p><em>Opdrachten:</em></p>
       <ol>
-        <li> PM
+        <li> Pas de functie <code>sqStep</code> zo aan dat de verbindingslijnen tussen
+          de vierkanten niet getekend worden (met <code>penUp();</code> en <code>penDown();</code>).
         </li>
-        <li> PM
+        <li> Laat de turtle draaien voordat deze aan de herhaling (<code>repeat</code>) begint,
+          in de functie <code>testB</code>. Wat is het effect?
+        </li>
+        <li> Verander de hoek aan het eind een klein beetje, bijv. 179 of 181 graden.
+          Wat is het effect?
+        </li>
+        <li> Als je de factor 20 verandert, wat is dan het effect? Hoe krijg je weer een
+          "nette" nesting?
+        </li>
+        <li> (*) Hoe kun je de verbinding tussen twee vierkanten maken met twee rotaties
+          (aanroepen van <code>right</code>) en één aanroep van <code>forward</code>?
         </li>
       </ol>
     </section>
 
     <section>
-      <h1>titel</h1>
-      <p>
+      <h1>Spiraal</h1>
+      <p> Ook een spiraal is een vorm die gebaseerd is op herhaling. We zien dat het duidelijkst
+        als we de spiraal met rechte hoeken tekenen. Neem voor de stap van de herhaling de
+        volgende functie:
       </p>
-
+<pre>
+function spiralStep(i) {
+  forward(i * 2);
+  right(90);
+}
+</pre>
+      <p>De "straal" van de spiraal neemt elke stap toe, terwijl de draaiing gelijk blijft.
+      </p>
+      <p>In natuurkundige termen: de hoeksnelheid blijft gelijk, terwijl de snelheid toeneemt.
+      </p>
       <hr>
       <p><em>Opdrachten:</em></p>
       <ol>
-        <li> PM
+        <li> Verander in dit voorbeeld de grootte van de stap - door de factor te veranderen.
+          Kies zowel waarden groter als kleiner dan 2. (Je kunt ook door 2 delen, enz.)
         </li>
-        <li> PM
+        <li> Verander in dit voorbeeld de hoek (parameter van <code>right</code>); kies zowel
+           een aantal waarden kleiner als een aantal waarden groter dan 90. <br>
+        </li>
+        <li> Wat is het verschil tussen een hoek die een deler is van 360 graden (bijv. 30, 60,
+          90, 120), en een hoek die dat niet is (bijv. 100)?
+        </li>
+        <li> Teken een aantal mooie spiralen.
         </li>
       </ol>
     </section>
 
     <section>
-      <h1>titel</h1>
-      <p>
+      <h1>Geneste cirkels</h1>
+      <p> Gebruik de volgende functie:
       </p>
-
+<pre>
+function circleStep(n) {
+  turnRight(n * 10, 360);
+  right(-90);
+  forward(10);
+  right(90);
+}
+</pre>
+      <p>Gebruik deze stap in een testfunctie met een herhaling.</p>
       <hr>
       <p><em>Opdrachten:</em></p>
       <ol>
-        <li> PM
+        <li>Kopieer deze functie naar het JavaScript venster, en maak een testfunctie
+          hiervoor.
         </li>
-        <li> PM
+        <li> Pas deze functie aan zodat de verbindingslijnen niet getekend worden.
+        </li>
+        <li> Wat is het resultaat als je de verbindingslijnen korter of langer maakt?
+        </li>
+        <li> Wat is het resultaat als je de turtle een kleine draai laat maken voor de
+          herhaling (bijv. 30 graden)?
         </li>
       </ol>
     </section>
