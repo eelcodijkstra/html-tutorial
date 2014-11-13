@@ -106,6 +106,11 @@ TODO:
    * event-object als par. voor handler; bijv. `evt.altKey`
 * NB: een echte FizzBuzz: alleen rotatie bij deelbaar door 3 of 5, alleen forward bij rest.
 
+Todo:
+
+* [ ] uniforme JSBin-library gebruiken (en testen)
+* [ ] aanpassen in JSBin-library voor turtle: gebruik van FP-coordinaten; afronden bij `displayState`
+
 ## Les 6
 
 * Variabelen

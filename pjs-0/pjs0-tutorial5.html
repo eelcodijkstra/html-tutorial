@@ -40,10 +40,210 @@
 
 
     <section>
-      <h1>Keuze (if)</h1>
-      <p>
+      <h1>Keuze: if ... else </h1>
+      <p> In deze les maken we kennis met de keuze-opdracht: het "if-statement". We spreken
+        ook wel over de conditionele opdracht. Dit gebruiken we als er voor verschillende
+        gevallen verschillende opdrachten uitgevoerd moeten worden. De vorm hiervan is:
+      </p>
+<pre>
+  if (cond) {
+    command1;
+  } else {
+    command2;
+  }
+</pre>
+      <p>Hierin is <code>cond</code> een conditie die als resultaat <code>true</code> (waar)
+        of <code>false</code> (onwaar) heeft. Als de conditie <code>true</code> is, wordt opdracht
+        <code>command1;</code> uitgevoerd; als de conditie <code>false</code> is, wordt opdracht
+        <code>command2;</code> uitgevoerd.
+      </p>
+      <p>Er is ook een verkorte vorm, zonder <code>else</code>-deel. In dat geval wordt als de
+        conditie <code>false</code> is, de *lege opdracht* uitgevoerd. Deze "doet niets":
+        er verandert niets aan de toestand.
       </p>
 
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Let op de plaats van de accolades, spaties en regelovergangen. Door deze vorm
+          te gebruiken, maak je minder fouten, en is je code beter leesbaar.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Condities en vergelijkingen</h1>
+      <p>Een conditie bevat vaak een vergelijking van waarden.
+        De eenvoudigste vergelijkings-operatoren zijn "a gelijk aan b" - in Javascript,
+        <code>a === b</code>, en "a ongelijk aan b" , in Javascript
+        <code>a !== b</code>
+      </p>
+      <p><em>Opmerking:</em> er zijn ook vergelijkingsoperatoren met een = minder:
+        <code>a == b</code> en <code>a != b</code>. Deze kun je in het algemeen beter
+        niet gebruiken.
+      </p>
+
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Voorbeeld: trapje</h1>
+      <p>We tekenen een trapje, met zijde 10, waarbij het aantal zijden gegeven is.
+        De elementaire stap is dan niet een trede, maar een zijde ("halve trede").
+        De even zijden tekenen we horizontaal, de oneven verticaal.
+        De draaiing aan het eind van een zijde hangt er dan van af of we met een even stap
+        (draai naar rechts) of met een oneven stap (draai naar links) van de herhaling te
+        maken hebben.
+      </p>
+<pre>
+function stairSide(n) {
+  forward(10);
+  if (n % 2 === 0) {  // n is even
+    right(90);
+  } else {
+    right(-90);
+  }
+}
+</pre>
+      <p>We leggen later de conditie <code>n % 2 === 0</code> uit: deze is
+      <code>true</code> als <code>n</code> deelbaar is door 2: n is even.
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Kopieer deze functie naar het JS-deelvenster, en maak twee testfuncties (knoppen):
+          voor bijvoorbeeld 7 en 8 zijden.
+        </li>
+        <li> Voer de test voor 7 zijden een aantal malen uit. Doe dit ook met de test voor 8
+          zijden. Wat zie je?
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Andere vergelijkingen</h1>
+      <p>Voor getallen hebben we ook nog andere operatoren om waarden te vergelijken:
+      </p>
+      <ul>
+        <li><code>a &lt;  b</code> &nbsp; - a kleiner dan b</li>
+        <li><code>a &lt;= b</code> - a ten hoogste b</li>
+        <li><code>a &gt;  b</code> &nbsp; - a groter dan b</li>
+        <li><code>a &gt;= b</code> - a ten minste b</li>
+      </ul>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> PM
+        </li>
+        <li> PM
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Voorbeeld: min</h1>
+      <p> We willen soms het minimum of het maximum van twee of meer getallen bepalen.
+        We kunnen de functie hiervoor als volgt definiëren:
+      </p>
+<pre>
+function min(a, b) {
+  if (a &lt; b) {
+    return a;
+  } else {
+    return b;
+  }
+}
+</pre>
+      <p>We zullen later zien dat we deze functie ook anders kunnen schrijven, als
+        een <em>conditionele expressie</em>.
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li>Kopieer deze functie naar het JS-deelvenster, en test deze functie met een
+        aantal voorbeelden via het console.
+        </li>
+        <li> Maakt het uit of we <code>a &lt;= b</code> als conditie gebruiken, in plaats van
+        <code>a &lt; b</code> ?
+        </li>
+        <li> Schrijf een functie <code>max</code> die het maximum van twee getallen bepaalt.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Slinger</h1>
+      <p> Een slinger is een figuur die er als volgt uitziet:
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Maak een functie voor het tekenen van een slinger met n stappen, waarbij een stap
+          de helft van een complete slingerbeweging is.
+        </li>
+        <li> PM
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Voorbeeld: grensgevallen</h1>
+      <p> We gebruiken if-opdrachten vaak voor grensgevallen. Je kunt je voorstellen dat
+        de turtle bij de "grens" van het Canvas (tekenvel) zich anders gaat gedragen.
+        We geven eerst een voorbeeld waarbij de turtle "botst" en terugkaatst. Dit effect
+        zien we alleen goed bij kleine verplaatsingen: een grote verplaatsing maken we dan
+        met behulp van herhaling
+      </p>
+<pre>
+function fdStep() {
+  if (pos.x &lt; 0) {
+    right(180 -2 * dir);
+  } else if (pos.x &gt;= 200) {
+    right(180 -2 * dir);
+  }
+  if (pos.y &lt; 0) {
+    right(-2 * dir);
+  } else if (pos.y &gt;= 200) {
+    right(-2 * dir);
+  }
+  forward(1);
+}
+
+function fd(n) {
+  repeat(n, fdStep);
+}
+</pre>
+      <p>Het valt op dat de acties bij de x-grens links en rechts gelijk zijn. We zullen later
+      zien hoe je dat handiger kunt schrijven.
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li>Kopieer deze functies naar het JS-deel, en test het gedrag van de turtle
+        uit met <code>fd</code> in plaats van <code>forward</code>. Bijv.:
+<pre>
+  right(15);
+  fd(1000);
+</pre>
+        </li>
+        <li>Maar een andere functie <code>fdStep</code> die de turtle, als deze over een grens
+          gaat, aan de andere kant weer laat verschijnen, in plaats van te laten botsen.
+          <em>Hint:</em> tel 200 op bij de positie, of trek er 200 vanaf.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Titel</h1>
+      <p>
+      </p>
       <hr>
       <p><em>Opdrachten:</em></p>
       <ol>
@@ -155,28 +355,6 @@
     </section>
 
     <section>
-      <h1>Condities en vergelijkingen</h1>
-      <p>Een conditie bevat vaak een vergelijking van waarden.
-        De eenvoudigste vergelijkings-operatoren zijn "a gelijk aan b" - in Javascript,
-        <code>a === b</code>, en "a ongelijk aan b" , in Javascript
-        <code>a !== b</code>
-      </p>
-      <p><em>Opmerking:</em> er zijn ook vergelijkingsoperatoren met een = minder:
-        <code>a == b</code> en <code>a != b</code>. Deze kun je in het algemeen beter
-        niet gebruiken.
-      </p>
-
-      <hr>
-      <p><em>Opdrachten:</em></p>
-      <ol>
-        <li> PM
-        </li>
-        <li> PM
-        </li>
-      </ol>
-    </section>
-
-    <section>
       <h1>Conditionele actie</h1>
       <p>Soms wil je dat een opdracht alleen uitgevoerd wordt als aan een bepaalde
         voorwaarde (condition) is voldaan.
@@ -233,25 +411,7 @@ function step(i) {
       </ol>
     </section>
 
-    <section>
-      <h1>Andere vergelijkingen</h1>
-      <p>Voor getallen hebben we ook nog andere operatoren om waarden te vergelijken:
-      </p>
-      <ul>
-        <li><code>a &lt;  b</code> &nbsp; - a kleiner dan b</li>
-        <li><code>a &lt;= b</code> - a ten hoogste b</li>
-        <li><code>a &gt;  b</code> &nbsp; - a groter dan b</li>
-        <li><code>a &gt;= b</code> - a ten minste b</li>
-      </ul>
-      <hr>
-      <p><em>Opdrachten:</em></p>
-      <ol>
-        <li> PM
-        </li>
-        <li> PM
-        </li>
-      </ol>
-    </section>
+
 
     <section>
       <h1>Titel</h1>
