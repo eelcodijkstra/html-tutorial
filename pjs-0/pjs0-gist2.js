@@ -1,3 +1,6 @@
+/*jslint browser: true, vars: true */
+/*global $: true, alert: true, displayState: true, testA: true, testB: true, testC: true,  */
+
 function log(s) {
   var logField = document.getElementById("logArea");
   var val = logField.value;
@@ -117,7 +120,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-$(document).ready( function() {
+$(document).ready(function () {
 
   $("#forwardButton").on("click", function () {
     forward(parseInt($("#forwardCount").val(), 10));
@@ -186,10 +189,14 @@ $(document).ready( function() {
 
 function square50() {
   penDown();
-  forward(50); right(90);
-  forward(50); right(90);
-  forward(50); right(90);
-  forward(50); right(90);
+  forward(50);
+  right(90);
+  forward(50);
+  right(90);
+  forward(50);
+  right(90);
+  forward(50);
+  right(90);
 }
 
 function rectangle(width, height) {
