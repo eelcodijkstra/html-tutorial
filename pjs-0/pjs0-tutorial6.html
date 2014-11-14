@@ -81,7 +81,7 @@
 </pre>
       <p> Een toekenning heeft de vorm: </p>
 <pre> variable = expression; </pre>
-      <p>Het teken <code>=</code> lees je uit als "wordt" ("becomes"). <br>
+      <p>Het teken <code>=</code> spreek je uit als <em>wordt</em> (becomes). <br>
         Deze opdracht (i) rekent eerst de expressie uit; en (ii) kent het resultaat van
         deze berekening toe aan de variabele.
       </p>
@@ -95,9 +95,9 @@
         <li> Plaats de pen op het papier: <br>
           <code>down = true;</code>
         </li>
-        <li> Plaats de turtle op (100,100): <br>
-          <code>x.pos = 100;</code> en
-          <code>y.pos = 100;</code> <br>
+        <li> Plaats de turtle op (50,50): <br>
+          <code>pos.x = 50;</code> en
+          <code>pos.y = 50;</code> <br>
           (Dit is een vorm van "teleportatie".)
         </li>
         <li> Verplaats de turtle: <code>forward(50);</code>
@@ -111,16 +111,20 @@
     <section>
       <h1>Variabele-declaratie</h1>
       <p> Voordat we een variabele kunnen gebruiken, moeten we deze <em>declareren</em>.
-        Hiermee geven we twee dingen aan: <br>
-        (i) we voeren een nieuwe naam in, die we verderop in het programma als
-        variabele kunnen gebruiken. <br>
-        (ii) we reserveren ruimte in het geheugen om de waarde van de variabele op te slaan.
+        Hiermee geven we twee dingen aan:
       </p>
+      <ol>
+        <li> we voeren een nieuwe naam in, die we verderop in het programma als
+        variabele kunnen gebruiken.
+        </li>
+        <li> we reserveren ruimte in het geheugen om de waarde van de variabele op te slaan.
+        </li>
+      </ol>
       <p>
         Een variabele-declaratie heeft de vorm:
       </p>
 <pre>
-var varA = expr1, varB = expr2, ... ;
+var varA = expr1;
 </pre>
       <p>De toekenning met de beginwaarde kun je weglaten. In dat geval is de waarde <code>
         undefined</code>.
@@ -152,9 +156,12 @@ var varA = expr1, varB = expr2, ... ;
       <p> Hoe moeten we deze vorm begrijpen?
       </p>
       <ol>
-        <li>reken eerst de expressie uit; als <code>x === 122</code>, dan is het resultaat
-          van <code>x + 1</code> gelijk aan <code>123</code></li>
-        <li>ken dit resultaat toe aan de variabele. Nu geldt: <code>x === 123</code>
+        <li>reken eerst de expressie rechts van de <code>=</code> uit; <br>
+          als <code>x</code> de waarde <code>122</code> heeft, <code>x === 122</code>,
+          dan is <code>x + 1</code> gelijk aan <code>123</code></li>
+        <li>ken dit resultaat toe aan de variabele. <br>
+          Nu heeft <code>x</code> de waarde <code>123</code>. <br>
+          Er geldt: <code>x === 123</code>
         </li>
       </ol>
       <p> Dit noemen we ook wel een <em>update</em> van de variabele.</p>
