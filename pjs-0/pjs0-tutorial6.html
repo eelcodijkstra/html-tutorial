@@ -227,5 +227,62 @@ var varA = expr1;
         </li>
       </ol>
     </section>
+
+    <section>
+      <h1>Functie als waarde, functie-variabelen</h1>
+      <p> In JavaScript is een functie een waarde, net als getallen en strings waarden zijn.
+        Dit betekent dat we een functie-waarde ook kunnen toekennen aan een variabele.
+        In de aanroep gebruiken we dan de naam van de variabele op de plek van de functie-naam.
+      </p>
+<pre>
+var pi = Math.PI;
+var fun = Math.cos;
+console.log(fun(pi));
+fun  = Math.sin;
+console.log(fun(pi));
+</pre>
+      <p>We gebruiken functie-variabelen onder andere om eigen functies te koppelen aan
+        html-elementen zoals knoppen (buttons).
+      </p>
+      <p>Bij de behandeling van functies komen we hier uitgebreider op terug.</p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li>Kopieer bovenstaand voorbeeld naar het console, en bekijk het resultaat. <br>
+          Merk op dat door het gebruik van variabelen een expressie die er hetzelfde uitziet,
+          afhankelijk van de toestand een ander resultaat kan opleveren.
+        </li>
+        <li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Objecten</h1>
+      <p> We zijn eerder de notaties <code>pos.x</code> en <code>pos.y</code> tegengekomen.
+        Hoe kunnen we deze begrijpen?
+      </p>
+      <p><code>pos</code> is een <em>object</em>, met <em>properties</em> <code>x</code>
+        en <code>y</code>. Een object kun je beschouwen als een samengestelde waarde die
+        een verzameling variabelen bevat. De variabelen van een object noemen we de
+        eigenschappen of properties van dat object.
+      </p>
+      <p>Dit betekent dat we <code>pos.x</code> als een variabele kunnen gebruiken.
+        Het betekent ook dat we <code>pos</code> kunnen gebruiken als waarde die zowel
+        <code>pos.x</code> als <code>pos.y</code> bevat.
+      </p>
+      <p>De declaratie van <code>pos</code> ziet er als volg uit:</p>
+<pre>
+var pos = {x: 0, y: 0};
+</pre>
+      <p>In het hoofdstuk over objecten komen we hier uitgebreid op terug.</p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Een variabele kan ook een functie-waarde bevatten. </li>
+
+        <li> PM
+        </li>
+      </ol>
+    </section>
   </body>
 </html>

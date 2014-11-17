@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Programmeren in JavaScript</title>
+    <style>
+      #lesHeader {
+        color: blue;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="lesHeader" >Les 1</h1>
+      <iframe id="tutorialFrame" src="pjs0-tutorial1.html" height="600" width="25%">
+      </iframe>
+      <a class="jsbin-embed"
+         href="http://jsbin.com/tiqufi/4/embed?output&height=600px&width=73%25&hello=true">Canvas 1</a>
+      <script src="http://static.jsbin.com/js/embed.js"></script>
+    </div>
+    <div>
+      <button id="les1Button">les 1</button>
+      <button id="les2Button">les 2</button>
+      <button id="les3Button">les 3</button>
+      <button id="les4Button">les 4</button>
+      <button id="les5Button">les 5</button>
+      <button id="les6Button">les 6</button>
+      <button id="les7Button">les 7</button>
+    </div>
+    <script>
+      var tFrame = document.getElementById("tutorialFrame");
+      var lesHeader = document.getElementById("lesHeader");
+
+      function lesHandler (nr) {
+        tFrame.src = "pjs0-tutorial" + nr + ".html";
+        lesHeader.innerHTML = "Les " + nr;
+      }
+
+      var les1B = document.getElementById("les1Button");
+      var les2B = document.getElementById("les2Button");
+      var les3B = document.getElementById("les3Button");
+      var les4B = document.getElementById("les4Button");
+      var les5B = document.getElementById("les5Button");
+      var les6B = document.getElementById("les6Button");
+      var les7B = document.getElementById("les7Button");
+
+
+      les1B.onclick = function () { lesHandler(1); }
+      les2B.onclick = function () { lesHandler(2); }
+      les3B.onclick = function () { lesHandler(3); }
+      les4B.onclick = function () { lesHandler(4); }
+      les5B.onclick = function () { lesHandler(5); }
+      les6B.onclick = function () { lesHandler(6); }
+      les7B.onclick = function () { lesHandler(7); }
+
+    </script>
+  </body>
+</html>

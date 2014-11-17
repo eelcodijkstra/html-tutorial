@@ -56,8 +56,8 @@
       -90 graden is een kwartslag naar links.
       </p>
 
-      <p>Je kunt de turtle <em>direct</em> besturen met de knoppen in het blauwe deelvenster.
-        (Later zullen we zien dat je de turtle ook kunt <em>programmeren</em>.)
+      <p>Je kunt de turtle <em>direct besturen</em> met de knoppen in het blauwe deelvenster.
+        Later zullen we zien dat je de turtle ook kunt <em>programmeren</em>.
       </p>
 
       <p> De knop <em>Clear canvas &amp; log</em> maakt  het scherm
@@ -73,7 +73,7 @@
           <em>Hint:</em> klik een aantal malen op knop <em>testA();</em>
         </li>
         <li>Je kunt de waarden in de witte invoer-vakjes veranderen.
-          Teken nu een groter vierkant.
+          Teken nu een groter vierkant met <code>forward</code> en <code>right</code>.
         </li>
       </ul>
 
@@ -95,7 +95,7 @@
     <section>
       <h1>De toestand van de turtle</h1>
       <p> De turtle staat altijd op een bepaalde plaats op het tekenvel (het <em>Canvas</em>),
-        met zijn hoofd in een bepaalde richting.
+        in een bepaalde richting.
       </p>
       <p>
         De <em>plaats</em> geven we aan door de x-positie (horizontaal, neemt toe naar rechts)
@@ -118,13 +118,46 @@
       <ol>
         <li>Kijk hoe de toestand verandert door de opdrachten die je met de knoppen geeft.
         </li>
-        <li>Probeer de toestand te bereiken: <code>x: 130, y: 130, down: false</code>.
+        <li>Probeer de toestand te bereiken: <code>x: 130, y: 130, down: true</code>.
           Kun je deze toestand bereiken zonder een spoor achter te laten?
         </li>
         <li>Wat gebeurt er als je een negatief getal invoert als parameter voor <code>right</code>?
         </li>
         <li>Wat gebeurt er als je een negatief getal invoert als parameter voor
           <code>forward</code>?
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Open en sluiten van vensters</h1>
+      <p>Enkele tips voor het werken met JSBin:</p>
+      <ul>
+        <li> Je kunt een deelvenster openen of sluiten door op de bijbehorende tab
+          (bovenaan) te klikken;
+        </li>
+        <li> Als er niets gebeurt, controleer dan of "Auto-run JS" geselcteerd is (in het
+          uitvoervenster, bovenin of onderin).
+        </li>
+      </ul>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Open het console-venster. Hier kun je JavaScript-opdrachten geven die direct
+          uitgevoerd worden. Je kunt dit als rekenmachine gebruiken, voer bijvoorbeeld in
+          <code>6 * 7</code>
+        </li>
+        <li> Sluit het console-venster, en open het Javascript-venster. Scroll naar het
+          onderste deel van het venster, waar de "user defined functions" staan.
+        </li>
+        <li> De functies <code>testA</code>, <code>testB</code> en <code>testC</code>
+          zijn gekoppeld aan de knoppen (buttons) met dezelfde naam in het
+          "user defined commands" deelvenster.
+          Probeer deze knoppen uit.
+        </li>
+        <li>Sluit het Javascript-venster, open het Console-venster, en roep de
+          functie <code>testA</code> aan vanuit het console: <br>
+          <code>testA();</code>
         </li>
       </ol>
     </section>
@@ -151,7 +184,7 @@
       <p><em>Opdrachten:</em></p>
       <ol>
         <li> Probeer nu een vierkant te tekenen door opdrachten op het console. <br>
-          <em>Suggestie:</em> je kunt ook (een deel van) de log kopiëren naar het console
+          <em>Tip:</em> je kunt ook (een deel van) de log kopiëren naar het console
             (via Copy/Paste).
         </li>
         <li> Vraag de toestand van de turtle op via het console.
@@ -161,7 +194,7 @@
 
     <section>
       <h1>Functies: aanroep</h1>
-      <p> Door middel van een programma kunnen je de turtle opdrachten uit laten voeren zonder
+      <p> Door middel van een programma kun je de turtle opdrachten uit laten voeren zonder
         deze steeds zelf in te voeren.
       </p>
       <p> Een <em>functie</em> is een stukje programma dat we een naam geven.
@@ -194,34 +227,7 @@
       </ol>
     </section>
 
-    <section>
-      <h1>Open en sluiten van vensters</h1>
-      <p>Enkele tips voor het werken met JSBin:</p>
-      <ul>
-        <li> Je kunt een deelvenster openen of sluiten door op de bijbehorende tab
-          (bovenaan) te klikken;
-        </li>
-        <li> Als er niets gebeurt, controleer dan of "Auto-run JS" geselcteerd is (in het
-          uitvoervenster, bovenin of onderin).
-        </li>
-      </ul>
-      <hr>
-      <p><em>Opdrachten:</em></p>
-      <ol>
-        <li> Sluit het console-venster, en open het Javascript-venster. Scroll naar het
-          onderste deel van het venster, waar de "user defined functions" staan.
-        </li>
-        <li> De functies <code>testA</code>, <code>testB</code> en <code>testC</code>
-          zijn gekoppeld aan de knoppen (buttons) met dezelfde naam in het
-          "user defined commands" deelvenster.
-          Probeer deze knoppen uit.
-        </li>
-        <li>Sluit het Javascript-venster, open het Console-venster, en roep de
-          functie <code>testA</code> aan vanuit het console: <br>
-          <code>testA();</code>
-        </li>
-      </ol>
-    </section>
+
 
     <section>
       <h1>Functies: definitie</h1>

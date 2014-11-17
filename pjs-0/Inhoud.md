@@ -221,5 +221,5 @@ aan te roepen.
 
 ## Issues
 
-* [ ] Andere naam voor `rightTurn`? circle? arc?
+* [ ] Andere naam voor `turnRight`? circle? arc?
 * [ ] Uitbreiden van Bin met functie voor afhandelen van mouse click in Canvas?
