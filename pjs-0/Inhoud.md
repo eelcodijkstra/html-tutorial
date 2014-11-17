@@ -33,7 +33,7 @@ TODO:
 * [ ] uitleg over DRY (en waarom)
 * [ ] stap voor stap uitvoeren van proces
 * [ ] uitleg over testen
-
+* [ ] button: show/hide log
 
 ## Les 3 - functies met resultaat; waarden; expressies
 
@@ -138,13 +138,18 @@ Todo:
 
 ## Les 7
 
-* Andere waarden: strings
+* Andere waarden: strings (tekstwaarden)
 * Begrip typering; typering van waarden
 * Wat kunnen we met strings in het geval van turtle?
+    * namen van kleuren?
+    * strings voor invoer; omzetten?
+* voor deze les een andere omgeving?
+* invoer van text; bijv.: galgje? (nu nog te lastig...)
 * Conversies tussen waarden.
-* Notatie en interpretatie
+    * invoer (en uitvoer) van coordinaten
+* Notatie (representatie) en interpretatie
 * Overloading van operatoren (in JS: `+`)
-
+* String: quotes (`'` en `"`); escape-notatie (`\x`).
 
 ## Les 8
 

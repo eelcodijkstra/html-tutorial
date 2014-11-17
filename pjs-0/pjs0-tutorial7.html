@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial 7</title>
+    <!-- this stylesheet provides default styles for tutorials -->
+    <link href="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.css" rel="stylesheet">
+    <!-- these scripts turn your make into a tutorial -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.js"></script>
+
+    <script>
+      jQuery(document).ready(function($){
+        $('body').tutorial();
+      });
+    </script>
+
+  </head>
+  <body>
+    <!--
+      enclose each tutorial step in its own section tags
+      you can include any sort of markup, including images
+      you can also add more sections
+
+      if you want to attach this tutorial to another make,
+      first publish this make
+      then tag the other make with prefix "tutorial-" followed by the url for this make
+    -->
+
+    <section>
+      <h1>Programmeren in JavaScript - Les 7</h1>
+
+     <p> Dit is de zevende les in Programmeren in Javascript.
+       Naast deze tutorials is er een uitleg via XXX.
+     </p>
+
+            <p> Ga nu naar de volgende pagina. </p>
+    </section>
+
+
+
+    <section>
+      <h1>Tekstwaarden (strings)</h1>
+      <p>Een string is een reeks tekens.</p>
+      <p>Een stringwaarde in een programmatekst noemen we een string literal.
+        Enkele voorbeelden van string literals - hier toegekend aan variabelen:
+      </p>
+<pre>
+var aap = 'aap';
+var hi = 'Hello World';
+var par = '&lt;p&gt;$tekst$&lt;/p&gt;';
+var nr = '1234';
+var spatie = ' ';
+</pre>
+      <p>Zoals je ziet is een enkel teken ook een string - van lengte 1.</p>
+      <p>De lengte van de string <code>str</code> krijg je via <code>str.length</code>.
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <p>Voer onderstaande opdrachten uit via het console. Kopieer deze variabele-declaraties
+        naar het JS-venster.</p>
+      <ol>
+        <li> Ga na dat het geen verschil uitmaakt of je enkele of dubbele aanhalingstekens
+          gebruikt: wat is het resultaat van <br>
+          <code>'aap' === "aap"</code>?
+        </li>
+        <li> Bepaal de lengte van deze strings.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Concatenatie</h1>
+      <p>De eerste operatie die we gebruiken op strings is concatenatie: het aaneenrijgen
+        van strings. JavaScript gebruikt hiervoor de operator `+`
+      </p>
+      <p> </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Geef een aantal voorbeelden van concatenatie van strings; gebruik zowel string-variabelen als string-literals.
+        </li>
+        <li> Je kunt meerdere contatenaties in één expressie gebruiken. Hierbij kun je zowel
+          variabelen als string literals combineren.
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>De lege string</h1>
+      <p>De string <code>""</code> of <code>''</code> noemen we <em>de lege string</em>.
+        Dit is de enige string met lengte 0.
+      </p>
+      <p>De lege string is de <em>nul-waarde</em> voor concatenatie; voor elke string
+        <code>str</code> geldt:<br>
+        <code>str + "" === str</code> en <code>"" + str === str</code>
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li>
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Positie van tekens</h1>
+      <p> Het eerste (meest linkse) teken van een string heeft positie 0. </p>
+      <p> Je krijgt het teken op positie <code>pos</code> van string <code>str</code>
+        door middel van <code>str.charAt(pos).</code>
+      </p>
+      <p> Je krijgt de eerste (meest linkse) positie van string (of teken) <code>x</code>
+        in string <code>str</code> via <code>str.indexOf(x)</code>.
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Geef een aantal voorbeelden van het gebruik van <code>charAt</code>.
+        </li>
+        <li> Welk resultaat geeft <code>charAt</code> voor een index (positie) die buiten
+          de string ligt, links of rechts? Kun je hiervoor een logische uitleg geven?
+        </li>
+        <li> Geef een aantal voorbeelden van het gebruik van <code>indexOf</code>.
+        </li>
+        <li> (*) Je kunt de functie <code>indexOf</code> gebruiken met een extra parameter.
+          Zoek dit op, en geef een voorbeeld.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Tekstwaarden (strings)</h1>
+      <p> </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> a
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Tekstwaarden (strings)</h1>
+      <p> </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> a
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Tekstwaarden (strings)</h1>
+      <p> </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> a
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Conversie naar string</h1>
+      <p> Strings vormen een handige en universele representatie als je een waarde moet
+        communiceren: als een waarde in de invoer of uitvoer gebruikt wordt, als deze
+        naar een andere computer verstuurd moet worden, of als deze opgeslagen moet worden.
+      </p>
+      <p> Dit betekent dat je het omzetten van een waarde in een string, en omgekeerd,
+        vaak in een programma tegenkomt.
+      </p>
+      <p> Je kunt een getal of een logische waarde omzetten in een string, met de functie
+        <code>toString:</code>
+      </p>
+<pre>
+  var num = 1234;
+  console.log("num: " + num.toString());
+  var valid = false;
+  console.log("valid: " + valid.toString());
+</pre>
+      <p>Opmerking: je kunt niet zomaar schrijven: <code>1234.toString()</code>
+        (Waarom niet?) Je moet de betreffende waarde altijd een naam geven - als variabele
+        of als parameter.
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Kopieer bovenstaande tekst naar het JS console
+        </li>
+        <li> Wat gebeurt er als je <code>toString()</code> gebruikt voor andere waarden,
+          bijvoorbeeld voor een functie, voor een string, voor een
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Tekstwaarden (strings)</h1>
+      <p> </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> a
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+  </body>
+</html>
