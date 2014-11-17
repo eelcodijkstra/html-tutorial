@@ -16,6 +16,7 @@
 
 TODO:
 
+* [ ] functie-definitie verhuizen naar Les 2? (Vgl. ook hfdstk. in boek)
 
 ## Les 2 - functies met parameters
 
@@ -34,6 +35,7 @@ TODO:
 * [ ] stap voor stap uitvoeren van proces
 * [ ] uitleg over testen
 * [ ] button: show/hide log
+* [ ] gebruik van uniforme JSBin voor alle lessen.
 
 ## Les 3 - functies met resultaat; waarden; expressies
 

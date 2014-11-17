@@ -29,30 +29,20 @@
       <button id="les7Button">les 7</button>
     </div>
     <script>
-      var tFrame = document.getElementById("tutorialFrame");
-      var lesHeader = document.getElementById("lesHeader");
 
-      function lesHandler (nr) {
-        tFrame.src = "pjs0-tutorial" + nr + ".html";
-        lesHeader.innerHTML = "Les " + nr;
+      function makeHandler(nr) {
+        return function() {
+          var tFrame = document.getElementById("tutorialFrame");
+          var lesHeader = document.getElementById("lesHeader");
+          tFrame.src = "pjs0-tutorial" + nr + ".html";
+          lesHeader.innerHTML = "Les " + nr;
+        }
       }
 
-      var les1B = document.getElementById("les1Button");
-      var les2B = document.getElementById("les2Button");
-      var les3B = document.getElementById("les3Button");
-      var les4B = document.getElementById("les4Button");
-      var les5B = document.getElementById("les5Button");
-      var les6B = document.getElementById("les6Button");
-      var les7B = document.getElementById("les7Button");
-
-
-      les1B.onclick = function () { lesHandler(1); }
-      les2B.onclick = function () { lesHandler(2); }
-      les3B.onclick = function () { lesHandler(3); }
-      les4B.onclick = function () { lesHandler(4); }
-      les5B.onclick = function () { lesHandler(5); }
-      les6B.onclick = function () { lesHandler(6); }
-      les7B.onclick = function () { lesHandler(7); }
+      for (var i = 1; i < 8; i += 1) {
+        lesButton = document.getElementById("les" + i + "Button");
+        lesButton.onclick = makeHandler(i);
+      }
 
     </script>
   </body>
