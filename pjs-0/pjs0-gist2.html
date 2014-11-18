@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+<meta name="description" content="Setup with log and circle" />
 	<meta charset="utf-8" />
 	<title>Canvas 1</title>
 	<style type="text/css">
@@ -35,8 +36,20 @@
       <p>
         Canvas: <br>
         <canvas id="mycanvas" width="200" height="200"></canvas>
-        <button type="button" id="clearButton">Clear canvas</button>
+        <textarea id="logArea" cols="30" rows="15" readonly="readonly">
+           log of actions
+        </textarea>
+        <button type="button" id="clearButton">Clear canvas &amp; log</button>
       </p>
+
+      <div id="div3">
+        Turtle state: <br>
+        pos.x: <input type="text" id="xDisplay" readonly="readonly" size="5">
+        pos.y: <input type="text" id="yDisplay" readonly="readonly" size="5"> <br>
+        dir: &nbsp; &nbsp; <input type="text" id="dirDisplay" readonly="readonly" size="5"> <br>
+        down: <input type="text" id="penDisplay" readonly="readonly" size="5"/>
+      </div>
+
       <div id="div2">
         Turtle commands: <br>
         <button type="button" id="forwardButton"> forward(</button>
@@ -49,16 +62,8 @@
         <button type="button" id="downButton"> penDown (); </button> &nbsp; &nbsp;
         <button type="button" id="upButton"> penUp (); </button> <br>
       </div>
-      <div id="div3">
-        Turtle state: <br>
-        pos.x: <input type="text" id="xDisplay" readonly="readonly" size="5">
-        pos.y: <input type="text" id="yDisplay" readonly="readonly" size="5"> <br>
-        dir: &nbsp; &nbsp; <input type="text" id="dirDisplay" readonly="readonly" size="5"> <br>
-        down: <input type="text" id="penDisplay" readonly="readonly" size="5"/>
-      </div>
-      <div id="div4">
 
-        </button>
+      <div id="div4">
         User-defined commands: <br>
         <button type="button" id="testAButton">
           testA();
@@ -69,7 +74,7 @@
          <button type="button" id="testCButton">
           testC();
         </button>
+      </div>
     </div>
-
   </body>
 </html>

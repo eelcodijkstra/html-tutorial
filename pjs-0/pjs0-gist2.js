@@ -187,21 +187,7 @@ $(document).ready(function () {
 
 //  ======== User-defined functions ============
 
-function square50() {
-  penDown();
-  forward(50);
-  right(90);
-  forward(50);
-  right(90);
-  forward(50);
-  right(90);
-  forward(50);
-  right(90);
-}
 
-function rectangle(width, height) {
-  alert("not yet defined");
-}
 
 // functions linked to buttons:
 
@@ -211,7 +197,7 @@ function testA() {
 }
 
 function testB() {
-  square50();
+  alert("not yet defined");
 }
 
 function testC() {
