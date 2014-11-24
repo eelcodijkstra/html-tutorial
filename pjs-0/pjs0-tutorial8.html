@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial 8</title>
+    <!-- this stylesheet provides default styles for tutorials -->
+    <link href="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.css" rel="stylesheet">
+    <!-- these scripts turn your make into a tutorial -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.js"></script>
+
+    <script>
+      jQuery(document).ready(function($){
+        $('body').tutorial();
+      });
+    </script>
+
+  </head>
+  <body>
+    <!--
+      enclose each tutorial step in its own section tags
+      you can include any sort of markup, including images
+      you can also add more sections
+
+      if you want to attach this tutorial to another make,
+      first publish this make
+      then tag the other make with prefix "tutorial-" followed by the url for this make
+    -->
+
+    <section>
+      <h1>Programmeren in JavaScript - Les 8</h1>
+
+     <p> Dit is de achtste les in Programmeren in Javascript.
+       Naast deze tutorials is er een uitleg via XXX.
+     </p>
+
+            <p> Ga nu naar de volgende pagina. </p>
+    </section>
+
+    <section>
+      <h1>Objecten</h1>
+      <p> Een object is een groep properties (eigenschappen).
+        Een property heeft een naam en een bijbehorende waarde. <br>
+        Je kunt een object-waarde noteren door de
+        (naam: waarde)-paren op te sommen, tussen accolades:
+      </p>
+<pre>
+var pos = {x: 0, y: 0};
+</pre>
+      <p>Deze vorm heet een <em>object literal</em> of <em>initializer</em>.</p>
+      <p> Via de naam kun je de waarde opvragen of veranderen. In beide
+        gevallen gebruik je de vorm  <code>obj.p</code> voor property <code>p</code>
+        van object <code>obj</code> .
+      </p>
+<pre>
+  obj.p = "Hi there";  // toekenning
+  console.log(obj.p);  // gebruik
+</pre>
+      <hr>
+      <p><em>Opdrachten (uitvoeren via het console):</em></p>
+
+      <ol>
+        <li>Maak een object-variabele <code>leerling</code> aan met properties <code>naam</code>
+          - geef deze een string-waarde; en <code>year</code> - geef deze een getal-waarde. <br>
+          Laat de waarde hiervan zien op het console.
+        </li>
+        <li> Verander de waarde van één van deze properties, en laat het resultaat-object
+          zien op het console.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Math object</h1>
+      <p>Het <code>Math</code> object bevat een aantal veel gebruikte wiskundige constanten
+        en functies, bijvoorbeeld:
+      </p>
+      <ul>
+        <li><code>Math.PI</code> - de constante pi () </li>
+        <li><code>Math.sin(x)</code> - de sinus-functie (in radialen)</li>
+        <li><code>Math.sqrt(x)</code> - de wortel-functie</li>
+      </ul>
+      <p>Door het gebruik van dit aparte <code>Math</code>-object verwar je de namen voor
+        deze functies en constanten niet met namen in je eigen programma.
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Zoek via de documentatie op het web uit wat de
+          functie <code>Math.floor(x)</code> doet.
+          Laat dit zien door een aantal test-voorbeelden via het console.
+         </li>
+        <li> Hoe is de functie <code>sin</code> gedefinieerd in de turtle-code?
+          Waarvoor wordt deze gebruikt?
+        </li>
+        <li> Hoe zou de turtle-code beter gedefinieerd kunnen zijn, zodat de namen
+          hiervoor niet met je eigen namen in de war komen?
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Toevoegen van een property</h1>
+      <p> Je kunt in JavaScript een property toevoegen aan een object, door een
+        toekenning.
+      </p>
+<pre>
+var turtle = {dir: 0, down: false};
+turtle.pos = {x: 50, y: 100};
+</pre>
+      <p>
+      </p>
+      <hr>
+      <p><em>Opdrachten (via het console):</em></p>
+      <ol>
+        <li> Kopieer bovenstaand voorbeeld naar het console. Vraag de waarde van
+          <code>turtle</code> op via het console.
+        </li>
+        <li> Voeg een property <code>color</code> toe (met een string-waarde).
+          Vraag de waarde nogmaals op.
+        </li>
+        <li> Je kunt een property ook weer verwijderen, bijvoorbeeld via <br>
+          <code>delete turtle.color</code>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>DOM als object</h1>
+      <p> De variabele <code>document</code> in de browser is een object waarin
+        het HTML-document voorgesteld wordt. Vanuit dit object: het Document
+        Object Model (DOM), maakt de browser de presentatie op het scherm.
+      </p>
+      <p> Je kunt een HTML-element met een id-attribuut in dit document vinden
+        met de functie <code>getElementById</code>. Voorbeeld:
+      </p>
+<pre>
+var b = document.getElementById("testAButton");
+</pre>
+      <p>Van een element in de DOM kun je waarden opvragen en veranderen, bijvoorbeeld:
+      </p>
+<pre>
+b.style.color = "red";
+b.innerHTML = "klik hier";
+</pre>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Kopieer de bovenstaande voorbeeld-regels één voor één naar het console.
+          Wat is het effect van de laatste twee regels?
+        </li>
+        <li> Vraag de waarde van het element-object <code>b</code> op via het console.
+          Schrik niet! Je krijgt een heel groot aantal eigenschappen te zien. Via het
+          console kun je hier in bladeren. Kijk of je bekende dingen tegenkomt.
+        </li>
+        <li> Het element met daarin de test-buttons heeft als naam (id): <code>"div4"</code>.
+          Verander de achtergrondkleur (<code>backgroundColor</code>)van de
+          <code>style</code> van dit element. (Bijvoorbeeld: "lightYellow"). <br>
+          Zoek op het web naar "CSS color names" om te vinden welke namen je kunt
+          gebruiken.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Samengestelde objecten als waarde</h1>
+      <p> Een variabele met een samengestelde waarde, bevat altijd een <em>verwijzing</em>
+        naar de eigenlijke waarde. Een toekenning van een samengestelde
+        waarde aan een variabele kopieert de verwijzing - niet de waarde zelf.
+      </p>
+      <p>
+       Twee variabelen kunnen naar dezelfde waarde verwijzen (<em>aliasing</em>).
+        Als je deze waarde verandert via de ene variabele, zie je deze verandering
+        ook via de andere variabele. Voorbeeld:
+      </p>
+<pre>
+var objA = {name: "Hans", year: 2013};
+var objB = objA;
+objB.name = "Klaas";
+</pre>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Kopieer bovenstaande regels één voor één naar het console, en vraag
+          steeds de waarde van <code>objA</code> en <code>objB</code> op.
+        </li>
+        <li> Maak een tekening van deze objecten en van de toekenningen, om te laten
+          zien welke verwijzingen veranderen. <br>
+          Hint: voer het onderstaande Python-programma uit in pythontutor.com:
+        </li>
+      </ol>
+<pre>
+x = {'name': 'Klaas', 'year': 2014}
+y = x
+x['name'] = 'Hans'
+</pre>
+    </section>
+
+    <section>
+      <h1>String als property-name</h1>
+      <p> Een property-name is een string; deze hoeft niet aan de regels voor
+        JavaScript-namen te voldoen.
+      </p>
+      <p> Voor het gebruik en veranderen van property <code>name</code> van object <code>obj</code>
+        kunnen we, in plaat <code>obj.name</code>, ook gebruiken: <code>obj["name"]</code>. <br>
+        Deze index-notatie geeft ook de mogelijkheid om de naam van een property te berekenen
+        (zie verderop: associatieve arrays.)
+      </p>
+<pre>
+var objA = {"name": "Hans, "year": 2013};
+objA["name"]
+</pre>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> a
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Objecten</h1>
+      <p> </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> a
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Objecten</h1>
+      <p> </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> a
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Objecten</h1>
+      <p> </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> a
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+  </body>
+</html>

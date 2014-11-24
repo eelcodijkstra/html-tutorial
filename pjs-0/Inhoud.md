@@ -152,6 +152,11 @@ Todo:
 * Notatie (representatie) en interpretatie
 * Overloading van operatoren (in JS: `+`)
 * String: quotes (`'` en `"`); escape-notatie (`\x`).
+* String-operaties:
+    * concatenatie (aaneenrijgen)
+    * vergelijken (gelijkheid; en ordening)
+    * vergelijken van getallen vs. vergelijken van strings
+    
 
 ## Les 8
 
@@ -210,6 +215,9 @@ aan te roepen.
     * we kunnen in JS later ook met een gemengde representatie werken.
 * de vormgeving is nu nog niet heel aantrekkelijk. Het is vrij eenvoudig voor leerlingen om daar zelf wat aan te doen (met verschillende kleuren, diktes, patronen).
 * kunnen we niet met hetzelfde JSBin framework volstaan, voor alle lessen? (Of, in elk geval meerdere lessen met hetzelfde framework. Of, met eenzelfde JS-turtle library.)
+* Eén van de dingen die leerlingen moeten leren is het zoeken in de JS-documentatie; hiervoor zijn verschillende bronnen beschikbaar, maar één van de betere is MDN (Mozilla Developer Network). Met behulp van DevDocs kun je meerdere bronnen snel en handig raadplegen.
+    * We moeten leerlingen uitleggen wat het karakter van de verschillende bronnen is.
+    
 
 ## Help
 
@@ -225,3 +233,6 @@ aan te roepen.
 
 * [ ] Andere naam voor `turnRight`? circle? arc?
 * [ ] Uitbreiden van Bin met functie voor afhandelen van mouse click in Canvas?
+* [ ] Selectief uitschakelen van logfunctie
+* [ ] logwindow in- en uitschakelen
+
