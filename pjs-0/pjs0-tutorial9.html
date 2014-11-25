@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial 9</title>
+    <!-- this stylesheet provides default styles for tutorials -->
+    <link href="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.css" rel="stylesheet">
+    <!-- these scripts turn your make into a tutorial -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.js"></script>
+
+    <script>
+      jQuery(document).ready(function($){
+        $('body').tutorial();
+      });
+    </script>
+
+  </head>
+  <body>
+    <!--
+      enclose each tutorial step in its own section tags
+      you can include any sort of markup, including images
+      you can also add more sections
+
+      if you want to attach this tutorial to another make,
+      first publish this make
+      then tag the other make with prefix "tutorial-" followed by the url for this make
+    -->
+
+    <section>
+      <h1>Programmeren in JavaScript - Les 9</h1>
+
+     <p> Dit is de negende les in Programmeren in Javascript.
+       Naast deze tutorials is er een uitleg via XXX.
+     </p>
+
+            <p> Ga nu naar de volgende pagina. </p>
+    </section>
+
+    <section>
+      <h1>Arrays en indicering</h1>
+      <p> Een array is een samenstelling van gelijksoortige waarden, in een reeks:
+      </p>
+<pre>
+var primes = [2, 3, 5, 7, 11, 13];
+var names = ["hans", "marie", "anna",
+  "koos", "jan"];
+</pre>
+      <p> We kunnen een element uit deze reeks selecteren door <em>indicering</em>,
+        bijvoorbeeld <code>primes[i + 1]</code> of <code>names[f(j)]</code>.
+      </p>
+      <p>De
+        index-expressie, tussen de rechte haken, is een normale expressie; deze wordt
+        tijdens uitvoering van het programma berekend.
+      </p>
+      <p> <code>a.length</code> geeft de lengte van array <code>a</code> .
+      </p>
+      <p> De elementen van een array zijn genummerd vanaf 0. Het index-bereik van
+        array <code>a</code> loopt van 0 tot en met <code>a.length-1</code> .
+      </p>
+      <hr>
+      <p><em>Opdrachten (uitvoeren op het console):</em></p>
+      <ol>
+        <li> Kopieer bovenstaande regels naar het console. Vraag de waarde op van
+          deze beide variabelen.
+        </li>
+        <li> Vraag de lengte op van beide variabelen. Wat is de waarde van
+          <code>primes[0]</code>?
+        </li>
+        <li> Wat is de waarde van <code>primes[-1]</code>? En van <code>primes[6]</code>?
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Arrays: update</h1>
+      <p>Een array is, net als een object, een samengestelde waarde. Dit betekent dat
+        je de afzonderlijke elementen van een array kunt veranderen, door middel van
+        een toekenning:
+      </p>
+<pre>
+names[1] = "maria";
+</pre>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> a
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Uitbreiden en inkrimpen van arrays</h1>
+      <p> Je kunt een array in JavaScript naar behoefte uitbreiden (of kleiner maken).
+        Voor het toevoegen van een waarde <code>x</code> aan het eind van array
+        <code>a</code> gebruik je <code>a.push(x)</code>
+      </p>
+<pre>
+var primes = [2, 3, 5, 7, 11];
+primes.push(13);
+primes.push(17);
+</pre>
+      <p> Je kunt de laatste waarde van een array <code>a</code> verwijderen met
+        <code>a.pop()</code>
+      </p>
+<pre>
+var p = primes.pop();
+</pre>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Kopieer bovenstaande regels één voor één naar het console. Vraag na
+          elke opdracht de lengte van <code>primes</code> op.
+        </li>
+        <li> Zoek in de documentatie op het web uit hoe je een array aan de
+          voorkant kunt uitbreiden en inkrimpen.
+        </li>
+        <li>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Gelijksoortige waarden?</h1>
+      <p> In Javascript zijn variabelen niet getypeerd, alleen waarden.
+        Dit betekent dat de waarden in een JavaScript array van verschillende
+        types kunnen zijn. Voorbeeld:
+      </p>
+<pre>
+var a = [0, true, "hallo", [2, 3, 5], function (x) { return x*x; } ];
+</pre>
+      <p> Een gevolg hiervan is dat het type van een index-expressie als <code>a[i]</code>
+        afhangt van de waarde van <code>i</code>. Deze is pas bij uitvoering van deze
+        uitdrukking bekend.
+      </p>
+      <p> We zullen van deze eigenschap zelden gebruik maken: (i) het maakt het redeneren
+        over programma's lastiger; (ii) in andere talen heb je een dergelijke vrijheid
+        meestal niet.
+      </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> a
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+
+
+    <section>
+      <h1>Arrays: iteratie (herhaling)</h1>
+      <p> Het komt vaak voor dat je iets moet doen met alle elementen van een array.
+        We behandelen eerst <code>a.forEach()</code>: deze geef je een functie mee met
+        3 parameters (of minder):
+      </p>
+      <p>
+        <code>function f (elt, inx, arr) {...}</code>
+      </p>
+      <p>
+        De eerste parameter is het array-element, de tweede parameter is
+        de index van dit element, en de laatste parameter is het array zelf.
+        Deze functie wordt voor alle elementen van het array aangeroepen.
+      </p>
+<pre>
+function printName (nm) {
+  console.log("naam: " + nm);
+}
+var names = ["marie", "jan", "anna", "klaas", "piet"];
+names.forEach( printName );
+</pre>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> Kopieer de bovenstaande regels naar het console, en bekijk het resultaat.
+        </li>
+        <li>
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Arrays: map, reduce</h1>
+      <p> Een tweede vorm van herhaling over alle elementen van een array <code>a</code>is
+        <code>a.map()</code>. Deze geef je een functie mee die voor elk element van het
+        array een nieuwe waarde uitrekent. Het resultaat is een nieuw array, met deze nieuw
+        berekende waarden:
+      </p>
+<pre>
+
+</pre>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> a
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Arrays</h1>
+      <p> </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> a
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Arrays</h1>
+      <p> </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> a
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Objecten</h1>
+      <p> </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> a
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Objecten</h1>
+      <p> </p>
+      <hr>
+      <p><em>Opdrachten:</em></p>
+      <ol>
+        <li> a
+        </li>
+        <li> b
+        </li>
+        <li> c
+        </li>
+      </ol>
+    </section>
+  </body>
+</html>
