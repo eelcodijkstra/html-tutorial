@@ -1,15 +1,16 @@
 /*jslint browser: true, vars: true */
 /*global $: true, alert: true, displayState: true, testA: true, testB: true, testC: true,  */
 
+var logging = true;
+var logField = document.getElementById("logArea");
+
 function log(s) {
-  var logField = document.getElementById("logArea");
-  var val = logField.value;
-  val = val + s + "\n";
-  logField.value = val;
+  if (logging) {
+    logField.value = logField.value + s + "\n";
+  }
 }
 
 function clearLog() {
-  var logField = document.getElementById("logArea");
   logField.value = "// log \n";
 }
 
@@ -153,6 +154,19 @@ $(document).ready(function () {
   $("#clearButton").on("click", function () {
     clearCanvas();
     displayState();
+  });
+
+  $("#hideLogButton").on("click", function () {
+    var button =  $("#hideLogButton");
+    var logElt = $("#logArea");
+    logging = !logging;
+    if (!logging) {
+      button.html("Show Log");
+      logElt.hide();
+    } else {
+      button.html("Hide Log");
+      logElt.show();
+    }
   });
 
   $("#testAButton").on("click", function () {
