@@ -29,6 +29,7 @@
       <button id="les7Button">les 7</button>
       <button id="les8Button">les 8</button>
       <button id="les9Button">les 9</button>
+      <button id="les10Button">les 10</button>
     </div>
     <script>
 
@@ -41,7 +42,7 @@
         }
       }
 
-      for (var i = 1; i < 10; i += 1) {
+      for (var i = 1; i < 11; i += 1) {
         lesButton = document.getElementById("les" + i + "Button");
         lesButton.onclick = makeHandler(i);
       }
