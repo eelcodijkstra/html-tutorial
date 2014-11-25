@@ -50,7 +50,9 @@ then tag the other make with prefix "tutorial-" followed by the url for this mak
     * [remix tutorial-5](https://eelcodijkstra.makes.org/thimble/LTIwMjM1NTQ4MTY=/tutorial-5)
 * [html-vb6](https://thimble.webmaker.org/project/91149/edit)
 * [tutorial-6](https://thimble.webmaker.org/project/91148/edit)
-* 
+* [html-vb7](https://thimble.webmaker.org/project/91646/edit)
+* [tutorial-7](https://thimble.webmaker.org/project/91645/edit)
+
 ## Thimble of GitHub?
 
 Wijzigingen in deze tutorials vinden plaats via GitHub: dat is de "moederversie". De reden hiervoor is dat Thimble geen versie-beheer heeft, en geen issue-management.
