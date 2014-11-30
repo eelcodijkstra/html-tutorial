@@ -147,40 +147,6 @@
     </section>
 
     <section>
-      <h1>Oppassen!</h1>
-      <p>Op het scherm is de tekst van de link het enige wat je ziet.
-        Deze tekst hoeft helemaal niet te kloppen met de URL die in de link gebruikt wordt.
-        Als gebruiker kun je zo misleid worden, bijvoorbeeld: <br>
-        <code>&lt;a href="https://nepbank.com"&gt;Login bij ING &lt;/a&gt;</code>
-        <br>
-        Dit geeft op het scherm: &lt;a href="https://nepbank.com"&gt;
-        Login bij ING &lt;/a&gt;
-      </p>
-      <p>
-        Het kan zelfs nog geniepiger: <br>
-        <code>&lt;a href="https://nepbank.com"&gt;
-          https://mijn.ing.nl&lt;/a&gt;</code> <br>
-        met op het scherm: &lt;a href="https://nepbank.com"&gt;
-        https://mijn.ing.nl&lt;/a&gt;
-        </p>
-        <p> Controleer daarom altijd de URL in het URL-venster van de browser, als je
-          een belangrijke website bezoekt.
-        </p>
-      <hr>
-      <p><em>Opdrachten</em></p>
-      <ol>
-        <li> Verander de tekst van de link (de inhoud van het element) in
-          "Leer tekenen met de linkerkant van je brein". Controleer of aanklikken
-          van de link nog steeds werkt (zoals verwacht?).
-        </li>
-        <li> Sommige browsers geven onderaan het venster de URL die bij een
-          link hoort, als de cursor op deze link staat. Controleer dit bij enkele
-           browsers.
-        </li>
-      </ol>
-    </section>
-
-    <section>
       <h1>Plaatjes</h1>
       <p>Met het &lt;img&gt;-element kun je een plaatje opnemen in een
         html-pagina. De link (URL) naar het plaatje geef je aan in het
@@ -197,11 +163,11 @@
       <p>Voor het positioneren van een plaatje gebruiken we CSS. Daar komen
         we later op terug.
       </p>
-      <p>Voorbeeld:<br>
-        <code>&lt;img src="http://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Night.jpg"
+      <p>Voorbeeld:</p>
+<pre>
+&lt;img src="http://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Night.jpg"
           alt="Paris by night" height="100px"&gt;
-        </code>
-      </p>
+</pre>
       <p></p>
        <hr>
       <p><em>Opdrachten</em></p>
@@ -230,6 +196,15 @@
       </ul>
       <p>
       </p>
+<pre>
+&lt;p&gt; Je kunt een smiley-plaatje
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Fb_smiley.jpg" alt="smile"&gt;
+in een lopende tekst gebruiken.
+&lt;\p&gt;
+&lt;img src="http://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Night.jpg" alt="Paris by night" height="100px" &gt;
+&lt;p&gt; Dit is de volgende alinea.
+&lt;\p&gt;
+</pre>
       <hr>
       <p><em>Opdrachten</em></p>
       <ol>
@@ -241,6 +216,36 @@
         </li>
       </ol>
     </section>
+
+    <section>
+      <h1>iframe element</h1>
+      <p>Met het &lt;iframe&gt;-element kun je een ander html-document opnemen in een
+        html-document. De link (URL) naar het document geef je aan in het
+        <code>src</code> attribuut. De inhoud van het iframe-element (tussen de haakjes)
+        is de alternatieve inhoud die getoond wordt als het bron-document niet gevonden
+        kan worden.
+      </p>
+      <p>Je kunt extra informatie opgeven met de attributen:
+      </p>
+      <ul>
+        <li><code>height</code> - hoogte, in <code>px</code> (pixels) </li>
+        <li><code>width</code> - breedte, idem</li>
+      </ul>
+      <p>Voorbeeld:</p>
+<pre>
+&lt;iframe width="560" height="315"
+  src="//webmaker.org" allowfullscreen&gt;
+&lt;/iframe&gt;
+</pre>
+       <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Voeg een iframe toe aan de voorbeeld-website. Gebruik hiervoor
+          een html-document dat al ergens op het web staat, bijvoorbeeld een YouTube video.
+        </li>
+      </ol>
+    </section>
+
 
   </body>
 </html>
