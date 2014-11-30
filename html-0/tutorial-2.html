@@ -28,7 +28,7 @@
     -->
 
     <section>
-      <h1>Lijsten</h1>
+      <h1>Opsomming</h1>
       <p>Met behulp van het ul-element (<em>unordered list</em>) kun je een opsomming maken.
         Een item van zo'n  opsomming geef je aan als li-element (list item).
       </p>
@@ -133,7 +133,7 @@
       </p>
       <p>Enkele andere tekens die je op zo'n manier noteert:</p>
       <ul>
-        <li>&amp; - <code>&ampamp;</code></li>
+        <li>&amp; - <code>&amp;</code></li>
         <li>&copy; - <code>&amp;copy;</code></li>
         <li>&para; - <code>&amp;para;</code></li>
         <li>&nbsp; - <code>&amp;nbsp;</code> - non-breaking space</li>
@@ -202,10 +202,10 @@
         <em>link</em>. Een link bestaat uit de volgende delen:
       </p>
       <ul>
-        <li> een <code>&lt;a></code>-tag,</li>
+        <li> een <code>&lt;a&gt;</code>-tag,</li>
         <li> met als <em>attribuut</em>: <code>href="...een URL...";</code> </li>
         <li> de tekst (of figuur) die op het scherm de link voorstelt; </li>
-        <li> het afsluitende <code>&lt;/a></code>-haakje. </li>
+        <li> het afsluitende <code>&lt;/a&gt;</code>-haakje. </li>
       </ul>
       <p>
         Op het scherm zie je de link als een tekst in een speciale kleur, of soms onderstreept.
@@ -222,6 +222,7 @@
         <li> Bezoek een van deze links door middel van CTRL-click (OS X): selecteer
           "open in nieuw venster" of "open in nieuw tabblad".
           Wat gebeurt er met de kleur van de link?
+        </li>
       </ul>
     </section>
 
@@ -257,7 +258,7 @@
 
     <section>
       <h1>Attributen</h1>
-      <p>Een &lt;a>-element heeft een href-attribuut, met de URL als waarde.
+      <p>Een &lt;a&gt;-element heeft een href-attribuut, met de URL als waarde.
         Elk HTML-element kan attributen hebben. Deze noteer je binnen het openingshaakje,
         na de naam van de tag. Een attribuut noteer je als <code>naam="waarde"</code>,
         bijvoorbeeld: <code>href="http://infvo.nl"</code>.
@@ -278,41 +279,12 @@
       <hr>
       <p>Opdrachten:</p>
       <ol>
-        <li> breid een &lt;a>-tag in je voorbeeld uit met een target-attribuut, om
+        <li> breid een &lt;a&gt;-tag in je voorbeeld uit met een target-attribuut, om
           de pagina in een nieuw venster te openen. Controleer of dit werkt.
         </li>
         <li> </li>
       </ol>
     </section>
 
-    <section>
-      <h1>Oppassen!</h1>
-      <p>Op het scherm is de tekst van de link het enige wat je ziet.
-        Deze tekst hoeft helemaal niet te kloppen met de URL die in de link gebruikt wordt.
-        Als gebruiker kun je zo misleid worden, bijvoorbeeld: <br>
-        <code>&lt;a href="https://nepbank.com">Login bij ING &lt/a></code> <br>
-        Dit geeft op het scherm: <a href="https://nepbank.com">Login bij ING </a>
-      </p>
-      <p>
-        Het kan zelfs nog geniepiger: <br>
-        <code>&lt;a href="https://nepbank.com">https://mijn.ing.nl&lt/a></code> <br>
-        met op het scherm: <a href="https://nepbank.com">https://mijn.ing.nl</a>
-        </p>
-        <p> Controleer daarom altijd de URL in het URL-venster van de browser, als je
-          een belangrijke website bezoekt.
-        <p>
-      <hr>
-      <p><em>Opdrachten</em></p>
-      <ol>
-        <li> Verander de tekst van de link (de inhoud van het element) in
-          "Leer tekenen met de linkerkant van je brein". Controleer of aanklikken
-          van de link nog steeds werkt (zoals verwacht?).
-        </li>
-        <li> Sommige browsers geven onderaan het venster de URL die bij een
-          link hoort, als de cursor op deze link staat. Controleer dit bij enkele
-           browsers.
-        </li>
-      </ol>
-    </section>
   </body>
 </html>
