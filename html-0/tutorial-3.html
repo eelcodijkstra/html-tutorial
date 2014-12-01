@@ -28,126 +28,28 @@
     -->
 
     <section>
-      <h1>Hypertekst, plaatjes, iframes</h1>
-      <p>Een html-document staat nooit alleen: het bevat links naar andere
-        documenten (hyperlinks), plaatjes (images), audio, video, of omvat
-        een andere webpagina (iframe).</p>
-      <p>Voor de verwijzingen naar een andere pagina, naar een plaatje, video,
-        of audio, gebruik je een URL (Uniform Resource Locator). Dit is
-        eenzelfde URL als je gebruikt in de browser, om aan te geven welke
-        webpagina je wilt bekijken.
-      </p>
-      <p>Een URL in een verwijzing zie je niet direct in het resultaat op het scherm.
-        De URL is geen onderdeel van de inhoud van een element, maar is een
-        <em>attribuut</em>. Zo'n attribuut is onderdeel van het
-        openingshaakje van het element.
-      </p>
-    </section>
-
-    <section>
-      <h1>Links en URLs</h1>
-      <p>In dit voorbeeld zie je het gebruik van een <em>hyperlink</em>, of gewoon
-        <em>link</em>. Een link bestaat uit de volgende delen:
-      </p>
+      <h1>Plaatjes, iframes</h1>
+      <p>Je kunt op verschillende manieren plaatjes en video's e.d. in een
+        html-document opnemen. </p>
       <ul>
-        <li> een <code>&lt;a&gt;</code>-tag,</li>
-        <li> met als <em>attribuut</em>: <code>href="...een URL...";</code> </li>
-        <li> de tekst (of figuur) die op het scherm de link voorstelt; </li>
-        <li> het afsluitende <code>&lt;/a&gt;</code>-haakje. </li>
-      </ul>
-      <p>
-        Op het scherm zie je de link als een tekst in een speciale kleur,
-        of soms onderstreept.
-        <br>
-        De kleur verandert als je de link al een keer bezocht hebt.
-        (We komen daarop terug bij de CSS-<em>pseudo-classes</em>.)
-      </p>
-      <p>Als je een link toevoegt, moet je altijd controleren of deze klopt.
-        De validator controleert dit niet.
-        Bij voorkeur gebruik je een URL die in de toekomst ook geldig blijft.
-      </p>
-      <hr>
-      <p><em>Opdrachten</em>
-      </p>
-      <ol>
-        <li> Voeg een link toe aan dit voorbeeld, bijvoorbeeld bij één van
-          de genoemde hobbies.
+        <li> een plaatje als direct onderdeel van het document: dit kan met
+          pixel-tekeningen (via een Canvas-element), of met vector-tekeningen
+          (via een SVG-element).
         </li>
-        <li> Bezoek een van deze links door middel van CTRL-click (OS X):
-          selecteer "open in nieuw venster" of "open in nieuw tabblad".
-          Wat gebeurt er met de kleur van de link?
+        <li> een verwijzing naar een plaatje (via het img-element, met een URL).
+          Het plaatje kan afkomstig zijn van dezelfde website, of elders van het web.
         </li>
-      </ol>
-    </section>
-
-    <section>
-      <h1>URL: uniform resource locator</h1>
-      <p> Een URL gebruik je om een object, bijvoorbeeld een document, in het web te vinden
-        ("locator").
-        De term "resource" betekent dat het om allerlei soorten objecten (dingen) kan gaan.
-        Vaak gebruik je een URL ook als <em>identificatie</em> van een object.
-      </p>
-      <p>
-        Voorbeeld: <code>https://thimble.webmaker.org/nl/project/52060/edit</code>
-      </p>
-      <p>
-        Een URL bestaat uit de volgende onderdelen:
-      </p>
-      <ul>
-        <li> het protocol (bijv. <code>http:</code> of <code>https:</code>)</li>
-        <li> de hostnaam (bijv. <code>thimble.webmaker.org</code>)</li>
-        <li> de padnaam (bijv. <code>/nl/project/52060/edit</code>)</li>
-      </ul>
-      <p>Na het http-protocol volgen de scheidingstekents <code>//</code>. <br>
-        Het laatste deel van de hostnaam is de domeinnaam, bijvoorbeeld
-        <code>webmaker.org</code>. <br>
-        Na de padnaam kunnen ook nog parameters volgen; deze komen later aan bod.
-      </p>
-      <hr>
-      <p><em>Opdrachten</em></p>
-      <ol>
-        <li>Als protocol kun je ook <code>mailto:</code>gebruiken, met
-          daarachter een mail-adres. Voeg een link toe zodat bezoekers
-          van de voorbeeld-website je e-mail kunnen sturen.
+        <li> door inbedden (embedding) van een ander html-document, met behulp van
+          een iframe met een URL. Dit gebruik je bijvoorbeeld als je een YouTube-video
+          in je html-document wilt opnemen.
         </li>
-        <li>Je kunt extra gegevens toevoegen aan zo'n URL. In
-          het geval van e-mail bijvoorbeeld: <code>?Subject=Hi%20there</code>.
-          Breid je e-mail link op die manier uit.
-        </li>
-      </ol>
-    </section>
-
-    <section>
-      <h1>Attributen</h1>
-      <p>Een &lt;a&gt;-element heeft een href-attribuut, met de URL als waarde.
-        Elk HTML-element kan attributen hebben. Deze vind je binnen het openingshaakje,
-        na de naam van de tag. Een attribuut noteer je als <code>naam="waarde"</code>,
-        bijvoorbeeld: <code>href="http://infvo.nl"</code>.
-      </p>
-      <p>
-        Bij een link kun je opgeven of de link-pagina de huidige pagina
-        moet overschrijven, of dat deze in een nieuw venster geopend moet worden.
-        Hiervoor gebruik je het attribuut <code>target</code>:
-      </p>
-      <ul>
-        <li> <code>target="_self"</code> -
-          link-pagina overschrijft huidige pagina (default)
-        </li>
-        <li> <code>target="_blank"</code> -
-          open link-pagina in nieuw venster
+        <li> (video, audio: P.M.)
         </li>
       </ul>
-      <hr>
-      <p><em>Opdrachten</em></p>
-      <ol>
-        <li> breid een &lt;a&gt;-tag in je voorbeeld uit met een target-attribuut, om
-          de pagina in een nieuw venster te openen. Controleer of dit werkt.
-        </li>
-      </ol>
     </section>
 
     <section>
-      <h1>Plaatjes</h1>
+      <h1>Plaatjes: img-element</h1>
       <p>Met het &lt;img&gt;-element kun je een plaatje opnemen in een
         html-pagina. De link (URL) naar het plaatje geef je aan in het
         <code>src</code> attribuut. Een img-element heeft alleen attributen,

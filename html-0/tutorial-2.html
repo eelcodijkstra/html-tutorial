@@ -122,43 +122,20 @@
     </section>
 
     <section>
-      <h1>Bijzondere tekens</h1>
-      <p>In deze handleiding zie je soms zoiets: "&lt;p&gt;-element". Hoe kun je
-        een zo'n tekst maken zonder dat de browser in de war komt? Hoe kun je
-        voorkomen dat de browser dit als een openingshaakje ziet?
+      <h1>Verwijzingen (links)</h1>
+      <p>Een html-document staat nooit alleen: het bevat links naar andere
+        documenten (hyperlinks), plaatjes (images), audio, video, of omvat
+        een andere webpagina (iframe).</p>
+      <p>Voor de verwijzingen naar een andere pagina, naar een plaatje, video,
+        of audio, gebruik je een URL (Uniform Resource Locator). Dit is
+        eenzelfde URL als je gebruikt in de browser, om aan te geven welke
+        webpagina je wilt bekijken.
       </p>
-      <p>Als je een bijzonder teken als "&lt;" in het resultaat wilt hebben, dan
-        gebruik je daarvoor een aparte notatie: &amp;lt; (lt staat voor "less than",
-        het wiskundige teken dat hier gebruikt wordt).
+      <p>Een URL in een verwijzing zie je niet direct in het resultaat op het scherm.
+        De URL is geen onderdeel van de inhoud van een element, maar is een
+        <em>attribuut</em>. Zo'n attribuut is onderdeel van het
+        openingshaakje van het element.
       </p>
-      <p>Enkele andere tekens die je op zo'n manier noteert:</p>
-      <ul>
-        <li>&amp; - <code>&amp;</code></li>
-        <li>&copy; - <code>&amp;copy;</code></li>
-        <li>&para; - <code>&amp;para;</code></li>
-        <li>&nbsp; - <code>&amp;nbsp;</code> - non-breaking space</li>
-      </ul>
-      <p>In HTML-terminologie heten dit <em>named character references</em>;
-        soms noemen we dit ook <em>character entities</em>.
-        Voor een overzicht zie bijvoorbeeld:
-        <a href="http://dev.w3.org/html5/html-author/charref">character references</a>.
-      </p>
-      <p>Deze is een voorbeeld van een <em>escape-notatie</em>: je gebruikt speciale
-        tekens, in dit geval de <code>&amp;</code> om aan te geven dat wat volgt niet
-        op de normale manier verwerkt moet worden.
-      </p>
-      <hr>
-       <ul>
-        <li>Hoe kun je de tekst "&amp;lt;" in het resultaat krijgen?</li>
-         <li>Gebruik <em>nooit</em> een enkelvoudige &amp; in je HTML-code.
-           Als in het resultaat, of in een URL, een &amp; nodig is,
-           gebruik dan <em><strong>altijd</strong></em> de vorm <code>&amp;amp;</code>.
-           Hoe schrijf je dan de URL:
-          <code>http://infvo.com/lab/index.php?title=Hoofdpagina&amp;action=history</code>?
-         </li>
-         <li>Geef een voorbeeld van het gebruik van een <em>non-breaking space</em>.
-         </li>
-      </ul>
     </section>
 
     <section>
@@ -249,6 +226,46 @@
         </li>
         <li> </li>
       </ol>
+    </section>
+
+    <section>
+      <h1>Bijzondere tekens</h1>
+      <p>In deze handleiding zie je soms zoiets: "&lt;p&gt;-element". Hoe kun je
+        een zo'n tekst maken zonder dat de browser in de war komt? Hoe kun je
+        voorkomen dat de browser dit als een openingshaakje ziet?
+      </p>
+      <p>Als je een bijzonder teken als "&lt;" in het resultaat wilt hebben, dan
+        gebruik je daarvoor een aparte notatie: &amp;lt; (lt staat voor "less than",
+        het wiskundige teken dat hier gebruikt wordt).
+      </p>
+      <p>Enkele andere tekens die je op zo'n manier noteert:</p>
+      <ul>
+        <li>&amp; - <code>&amp;</code></li>
+        <li>&copy; - <code>&amp;copy;</code></li>
+        <li>&para; - <code>&amp;para;</code></li>
+        <li>&nbsp; - <code>&amp;nbsp;</code> - non-breaking space</li>
+      </ul>
+      <p>In HTML-terminologie heten dit <em>named character references</em>;
+        soms noemen we dit ook <em>character entities</em>.
+        Voor een overzicht zie bijvoorbeeld:
+        <a href="http://dev.w3.org/html5/html-author/charref">character references</a>.
+      </p>
+      <p>Deze is een voorbeeld van een <em>escape-notatie</em>: je gebruikt speciale
+        tekens, in dit geval de <code>&amp;</code> om aan te geven dat wat volgt niet
+        op de normale manier verwerkt moet worden.
+      </p>
+      <hr>
+       <ul>
+        <li>Hoe kun je de tekst "&amp;lt;" in het resultaat krijgen?</li>
+         <li>Gebruik <em>nooit</em> een enkelvoudige &amp; in je HTML-code.
+           Als in het resultaat, of in een URL, een &amp; nodig is,
+           gebruik dan <em><strong>altijd</strong></em> de vorm <code>&amp;amp;</code>.
+           Hoe schrijf je dan de URL:
+          <code>http://infvo.com/lab/index.php?title=Hoofdpagina&amp;action=history</code>?
+         </li>
+         <li>Geef een voorbeeld van het gebruik van een <em>non-breaking space</em>.
+         </li>
+      </ul>
     </section>
 
   </body>
