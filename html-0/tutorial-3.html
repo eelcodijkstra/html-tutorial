@@ -32,12 +32,13 @@
       <p>Je kunt op verschillende manieren plaatjes en video's e.d. in een
         html-document opnemen. </p>
       <ul>
-        <li> een plaatje als direct onderdeel van het document: dit kan met
-          pixel-tekeningen (via een Canvas-element), of met vector-tekeningen
-          (via een SVG-element).
-        </li>
-        <li> een verwijzing naar een plaatje (via het img-element, met een URL).
+        <li> een <em>verwijzing naar een plaatje</em> (via het <code>img</code>-element,
+          met een URL).
           Het plaatje kan afkomstig zijn van dezelfde website, of elders van het web.
+        </li>
+        <li> een plaatje als <em>direct onderdeel</em> van het document: dit kan met
+          pixel-tekeningen (via een Canvas-element), of met vector-tekeningen
+          (via een SVG-element). Je kunt hiermee ook animaties maken.
         </li>
         <li> door inbedden (embedding) van een ander html-document, met behulp van
           een iframe met een URL. Dit gebruik je bijvoorbeeld als je een YouTube-video
@@ -46,6 +47,7 @@
         <li> (video, audio: P.M.)
         </li>
       </ul>
+      <p> In dit tutorial oefenen we met enkele van deze mogelijkheden.</p>
     </section>
 
     <section>
@@ -102,10 +104,10 @@
 &lt;p&gt; Je kunt een smiley-plaatje
 &lt;img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Fb_smiley.jpg" alt="smile"&gt;
 in een lopende tekst gebruiken.
-&lt;\p&gt;
+&lt;/p&gt;
 &lt;img src="http://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Night.jpg" alt="Paris by night" height="100px" &gt;
 &lt;p&gt; Dit is de volgende alinea.
-&lt;\p&gt;
+&lt;/p&gt;
 </pre>
       <hr>
       <p><em>Opdrachten</em></p>
@@ -115,6 +117,33 @@ in een lopende tekst gebruiken.
           Wikipedia).
         </li>
         <li> Voeg een block-level plaatje toe aan de voorbeeld-website.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Kaarten</h1>
+      <p> Ook kaarten kun je eenvoudig toevoegen. Hiervoor heb je verschillende mogelijkheden.</p>
+      <ul>
+        <li>Een statische kaart: dit is een plaatje, dat je via een API ophaalt.
+          De server die de API afhandelt rekent het plaatje uit, en stuurt dit op.
+        </li>
+        <li>Een interactieve kaart: hiervoor heb je JavaScript nodig. Het script bij
+          de kaart haalt de gegevens op van de server, via een API, en plaatst het
+          resultaat in het document.
+        </li>
+      </ul>
+<pre>
+&lt;img src="https://maps.googleapis.com/maps/api/staticmap?center=52.361951,4.918170&amp;zoom=14&amp;size=200x200"&gt;
+</pre>
+      <hr>
+      <p> <em>Opdrachten:</em></p>
+      <ol>
+        <li> Voeg deze kaart toe aan het voorbeeld-document, en bekijk het resultaat. <br>
+          Wat gebeurt er bij aanpassen van de parameters (center, zoom)?
+        </li>
+        <li> Zoek uit hoe je de coordinaten van een voor jou interessant punt kunt vinden,
+          maak een passende kaart.
         </li>
       </ol>
     </section>
@@ -149,21 +178,6 @@ in een lopende tekst gebruiken.
     </section>
 
     <section>
-      <h1>Canvas tekeningen</h1>
-      <p> Je kunt tekeningen maken in een html-document, met behulp van het Canvas-element.
-        Door middel van JavaScript-functies kun je hierop pixel-tekeningen maken.
-      </p>
-      <hr>
-      <p><em>Opdrachten</em></p>
-      <ol>
-        <li> een
-        </li>
-        <li> twee
-        </li>
-      </ol>
-    </section>
-
-    <section>
       <h1>SVG tekeningen</h1>
       <p> Een Scalable Vector Graphics tekening beschrijf je op een vergelijkbare
         manier als een html-document: met elementen met attributen. Zie het voorbeeld hieronder.
@@ -191,22 +205,25 @@ in een lopende tekst gebruiken.
       <hr>
       <p><em>Opdrachten</em></p>
       <ol>
+
+        <li> Voeg bovenstaand plaatje toe aan het voorbeeld-document hiernaast. <br>
+          Verander een paar van de waarden (afmetingen, kleuren), en bekijk het resultaat.
+        </li>
         <li> Voeg een SVG-tekening toe aan je html-document.
         </li>
       </ol>
     </section>
 
-
     <section>
-      <h1>title</h1>
+      <h1>Canvas tekeningen</h1>
+      <p> Je kunt tekeningen maken in een html-document, met behulp van het Canvas-element.
+        Door middel van JavaScript-functies kun je hierop pixel-tekeningen maken.
+      </p>
+      <p> In een volgend tutorial gaan we dieper in op het gebruik van het Canvas.
+        (Javascript voor games.)
+      </p>
       <hr>
-      <p><em>Opdrachten</em></p>
-      <ol>
-        <li> een
-        </li>
-        <li> twee
-        </li>
-      </ol>
     </section>
+
   </body>
 </html>
