@@ -17,118 +17,9 @@
 -->
   </head>
   <body>
-    <section>
-      <h1>Scheiden van html-elementen en opmaak</h1>
-      <p>Het is niet handig om de opmaak (css-declaraties) bij de
-        elementen zelf te plaatsen.
-        Je kunt deze beter apart houden, in het <code>head</code>-gedeelte,
-        of, nog beter, in een apart bestand.
-      </p>
-      <p>We zullen hier zien hoe je de
-        css-declaraties kunt scheiden van de elementen. We plaatsen deze
-        declaraties hier in het head-gedeelte. In een latere module
-        zullen we deze in aparte bestanden onderbrengen.
-      </p>
-      <p>Om de css-declaraties te kunnen koppelen aan de elementen waar deze
-        bij horen, gebruiken we <em>css-selectoren</em>. We zullen hier een
-        paar voorbeelden zien. In een latere module behandelen we deze
-        uitgebreider.
-      </p>
-    </section>
 
     <section>
-      <h1>CSS-selectoren: type</h1>
-      <p>Soms wil je alle elementen van een bepaald type eenzelfde
-        opmaak-eigenschap geven. Bijvoorbeeld: alle kopjes (h1) van eenzelfde
-        lettertype en eenzelfde kleur.
-      </p>
-      <p>Dit kun je doen door de <em>tag</em>-name als css-selector te gebruiken.
-        Voorbeeld:
-      </p>
-      <pre>
-        h1 {
-          font-family: sans-serif;
-          color: lightblue;
-        }
-      </pre>
-      <p>De notatie is: <code> css-selector { css-declaraties }</code>
-      </p>
-      <p>In het eerste deel van het voorbeeld zijn de html-code en
-        de opmaak gescheiden. Dit verbetert de leesbaarheid, en je kunt
-        de vormgeving eenvoudig aanpassen: alles staat bij elkaar.
-      </p>
-      <hr>
-      <p><em>Opdrachten</em></p>
-      <ol>
-        <li> Voeg aan het style-gedeelte in het head-deel css-declaraties toe
-          om (i) alle p-elementen in een bepaald soort lettertype te zetten;
-          (ii) alle em-elementen te onderstrepen.
-        </li>
-        <li> Als je voor meerdere soorten elementen eenzelfde stijl wilt
-          gebruiken, dan kun je de verschillende tags opsommen gescheiden
-          door een comma. Bijvoorbeeld: <code>h1, h2 {...}</code>.<br>
-          Pas het voorbeeld aan zodat de stijl van h1 ook voor h2 en h3 geldt.
-        </li>
-      </ol>
-    </section>
-
-    <section>
-      <h1>CSS-declaraties: property en value</h1>
-      <p>Een css-declaratie is van de vorm: </p>
-      <pre>
-      property: value;
-      </pre>
-      <p> (Denk om de "<code>;</code>".) Sommige eigenschappen (properties)
-        kun je gebruiken voor alle elementen. Andere eigenschappen kun je
-        alleen voor bepaalde elementen gebruiken.
-      </p>
-      <p>Een typische waarde is de <em>grootte</em>, bijvoorbeeld breedte
-      (<code>width</code>) of hoogte (<code>height</code>). Hiervan moet je
-      de eenheden aangeven: <code>px</code> (pixel), <code>%</code>
-      (percentage), <code>em</code> (grootte van letter m in dit lettertype).
-      </p>
-      <p>Een andere waarde die je vaak gebruikt is <em>kleur</em>. Je kunt
-        namen van kleuren gebruiken, of een speciale kleurcodering
-        (bijvoorbeeld RGB).
-      </p>
-    </section>
-
-    <section>
-      <h1>Groepering: het div-element en css id-selector</h1>
-      <p>We hebben eerder gezien hoe je elementen in lopende tekst kunt
-        groeperen met het <code>span</code>-element. Met het
-        <code>div</code>-element kun je andere elementen groeperen.
-      </p>
-      <p>Dit groeperen is vooral handig als je de stijl (opmaak) van een
-        groep elementen wilt aangeven: je groepeert dan de elementen in
-        een div-element, en geeft de stijl aan voor dit div-element.
-      </p>
-      <p>Je kunt een stijl aan een bepaald element koppelen door dit element
-        een naam te geven. Voorbeeld: <code>&lt;div id="mydiv"&gt; ...
-        </code>. Een dergelijke naam moet uniek zijn: je mag een naam
-        maar voor één element gebruiken.
-      </p>
-      <p>De css-selector voor het zo benoemde element is: <code>#mydiv</code>.
-      </p>
-      <hr>
-       <p><em>Opdrachten</em></p>
-      <ol>
-        <li> Bekijk hoe je de css-declaraties van een div-element in het
-          head-deel kunt plaatsen, door dit element een unieke naam
-          (id-attribuut) te geven (vb: <code>mydiv1</code>). Doe dit ook voor
-          de andere elementen, zodat alle css-declaraties in het head-deel
-          komen te staan.
-        </li>
-        <li> Als je voor meerdere soorten elementen eenzelfde stijl wilt
-          gebruiken, dan kun je de verschillende tags opsommen gescheiden
-          door een komma. Bijvoorbeeld: <code>h1, h2 {...}</code>.<br>
-          Pas het voorbeeld aan zodat de stijl van h1 ook voor h2 en h3 geldt.
-        </li>
-      </ol>
-    </section>
-
-    <section>
-      <h1>Pagina-opmaak: het box-model</h1>
+      <h1>Opmaak van elementen: het box-model</h1>
       <p>Voor de opmaak rond een element gebruikt CSS het <em>box-model</em>.
         De box die een element omvat, bestaat van buiten naar binnen uit: </p>
       <ul>
@@ -138,25 +29,16 @@
         <li> de eigenlijke inhoud </li>
       </ul>
       <p>Van de <em>margin, border en padding</em> kun je de grootte
-        aanpassen, eventueel per kant.
-        De kleur of achtergrond van de box of de rand kun je ook bepalen.
+        aanpassen, eventueel per zijde.
+        De kleur en achtergrond van de box en de rand kun je ook bepalen.
         Hiermee kun je de directe omgeving van de inhoud van een element
         vormgeven.
       </p>
       <hr>
       <p><em>Opdrachten</em></p>
       <ol>
-        <li> Verander van het div-element <code>mydiv1</code> de verschillende
+        <li> Verander van het h1-element de verschillende
           waarden voor margin, border, en padding, en bekijk het resultaat.
-        </li>
-        <li> Je kunt de afstand tussen de blauwe div-box en de rode div-box
-          daarbinnen aanpassen door (i) de padding van de blauwe box te
-          vergroten;
-          (ii) de margin van de rode box te vergroten. Maakt dit verschil?
-        </li>
-        <li> Experimenteer met de padding waarden voor de rode box,
-          om iets te kunnen zeggen over de margin van de p-boxen.
-          Wat is je conclusie?
         </li>
       </ol>
     </section>
@@ -165,9 +47,9 @@
       <h1>Kleur en achtergrond</h1>
         <p>We kunnen nog meer eigenschappen van een box aanpassen: </p>
         <ul>
-          <li> <code> border </code> - hiervan kun je de vorm en de kleur
-            aangeven, bijvoorbeeld <code>solid blue</code> of
-            <code>"gestippeld rood"</code>.
+          <li> <code> border </code> - hiervan kun je de vorm, de kleur, en de
+            (lijn)dikte aangeven, bijvoorbeeld <code>1px solid blue</code> of
+            <code>3px dashed red</code>.
           </li>
           <li> <code>background-color</code> - de achtergrondkleur <em>binnen
             de box</em>.
@@ -178,55 +60,142 @@
       <hr>
       <p> <em>Opdracht(en)</em> </p>
       <ul>
-        <li> Geef het element <code>mydiv1</code> de achtergrondkleur
-          <code>lightblue</code>.
-          Wat kun je zeggen over de achtergrondkleur van de elementen waarvan
-          je de kleur niet opgegeven hebt?
+        <li> Geef het element <code>h1</code> de achtergrondkleur
+          <code>lightyellow</code>.
         </li>
-        <li> Geef het div-element met de rode rand de achtergrondkleur
-          <code>lightpink</code>, en het eerste p-element daarin de
-          achtergrondkleur <code>lightyellow.</code>
-          Wat kun je zeggen over de achtergrondkleur van de margin van
-          een element? </li>
+        <li> Geef het element <code>h1</code> een gestippelde ("dotted")
+          rand.
+        </li>
       </ul>
     </section>
 
     <section>
-      <h1>Van blok-level naar inline (v.v.)</h1>
-      <p>Je kunt een block-level element weergeven als een inline-element (of omgekeerd):
+      <h1>Groepering: het div-element</h1>
+      <p>We hebben eerder gezien hoe je elementen in lopende tekst kunt
+        groeperen met het <code>span</code>-element. Met het
+        <code>div</code>-element kun je andere elementen groeperen.
+        Dit is handig als je de stijl van een
+        groep elementen wilt aangeven: je groepeert deze elementen in
+        een div-element, en geeft de stijl aan voor dit div-element.
+      </p>
+      <p>Vaak geef je een div-element een naam (id-attribuut): je kunt dan
+        met een id-selector de stijl van het element aangeven. Voorbeeld:
+        <code>&lt;div id="mydiv"&gt; ... </code>.
+      </p>
+      <p>De stijl van dit element kunnen we apart beschrijven:
+      </p>
+<pre>
+  #mydiv {
+    margin: 20px;
+    border: 1px solid red;
+    padding: 10px;
+  }
+</pre>
+      <hr>
+       <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Verander het lettertype van <code>mydiv1</code>,
+          bijvoorbeeld in <code>font-style: italic;</code>. Wat gebeurt er met
+          de tekst van de elementen binnen <code>mydiv1</code>?
+        </li>
+        <li> Verander de achtergrondkleur van <code>mydiv1</code>,
+          bijvoorbeeld met <code>background-color: lightyellow</code>. Wat gebeurt
+          er met de achtergrondkleur van de elementen binnen <code>mydiv1</code>?
+        </li>
+        <li> Verander nu de achtergrondkleur van de box <code>mydiv2</code>,
+          bijvoorbeeld in <code>lightblue</code>.
+          Wat geheurt er met de achtergrondkleur van de elementen binnen
+          <code>mydiv2</code>?
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Overerving (inheritance)</h1>
+      <p> Zoals we hebben gezien in de vorige voorbeelden, krijgt een element
+        voor sommige properties de stijl van het omvattende element. Dit
+        heet <em>overerving</em> (inheritance).
+      </p>
+      <p> Deze overerving geldt niet voor alle css-properties. Bijvoorbeeld:
       </p>
       <ul>
-        <li><code>display: inline;</code> - geef element inline weer.</li>
-        <li><code>display: block;</code> - geef element als block-level element weer. <br>
-       Dit is de default-waarde voor block-level elementen zoals een
-          &lt;p&gt;-element.
-        </li>
-        <li><code>display: none;</code> - geef het element niet weer.
-        </li>
+        <li><em>wel overerving:</em> tekst-opmaak: font-family, color</li>
+        <li><em>geen overerving:</em> box: margin, border, padding, background-color </li>
       </ul>
-      <p>Deze opmaak-regels veranderen niets aan de html-regels: deze laatste
-        bepalen welke elementen je binnen een ander element kunt plaatsen.
-        Een &lt;p&gt;-element blijft voor html een block-level element.
+      <p> Bij de beschrijving van een css-property staat of deze overerft, of niet.</p>
+      <p> Als je een stijl aangeeft voor een element, gaat deze boven de
+        css-properties die geërfd worden van de omvattende elementen.
       </p>
       <hr>
-      <ul>
-        <li>Voeg aan de css-declaraties van de &lt;p&gt;-elementen binnen de
-          div-elementen toe:
-          <code>display: inline;</code>. Wat is hiervan het effect?
+       <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Verander het lettertype van de <code>mydiv1</code>,
+          bijvoorbeeld in <code>font-style: italic;</code>. Wat gebeurt er met
+          de tekst van de elementen binnen <code>mydiv1</code>?
         </li>
-        <li>Waarom zou je een element niet weer willen geven? <br>
-          (Hint: je kunt een dergelijke eigenschap besturen door middel van
-          Javascript in de betreffende pagina.)
+        <li> Verander het lettertype van de p-elementen, bijvoorbeeld: <br>
+          <code>p {font-style: normal;}</code>. Wat gebeurt er met de teksten van
+          de p-elementen binnen <code>mydiv1</code>?
         </li>
-      </ul>
+      </ol>
     </section>
 
     <section>
-      <h1>Positioneren</h1>
-      <p>Bij de vormgeving van een pagina wil je ook kunnen bepalen
-        waar de verschillende elementen geplaatst worden. Dit is het onderwerp
-        voor de volgende les.
+      <h1>Opmaak van de pagina</h1>
+      <p> Een volgend niveau van opmaak is de layout van de pagina: waar plaats je de
+        verschillende elementen?
+      </p>
+      <p> Dit is een lastig onderwerp, omdat je rekening moet houden met de verschillen
+        tussen scherm-groottes en venster-afmetingen. Voor een mobiel apparaat gebruik je
+        vaak een andere layout dan voor een laptop of een desktop. Een <em>responsive
+        layout</em> gaat soepel om met het verschil tussen een mobiel scherm en een
+        laptop-scherm.
+      </p>
+      <p>
+        We geven hierna enkele voorbeelden van positionering, met een beperkte
+        uitleg. Meer uitleg hierover krijg je in een volgende module.
       </p>
     </section>
+
+    <section>
+      <h1>Positionering: plaatjes </h1>
+      <p> Je kunt een plaatje op verschillende manieren plaatsen:</p>
+      <ul>
+        <li> Als blok dat met de tekst meebeweegt. Hiervoor hoef je verder niets
+          op te geven: dit is het normale gedrag.
+        </li>
+        <li> Als blok dat los van de tekst staat. In dit geval geef je het plaatje
+          de <code>float</code>-property, met als waarden o.a. <code>left</code> of
+          <code>right</code>.
+        </li>
+      </ul>
+      <p> Vaak moet je er voor zorgen dat een "floating" element niet in de war komt
+        met andere elementen. Hiervoor kun je de property <code>clear</code> gebruiken
+        voor die andere elementen. <code>clear: left;</code> betekent dat
+        het element onder <em>left float</em> element(en) geplaatst moet worden.
+      </p>
+      <p> Een ander probleem dat je dan tegen kunt komen is dat het plaatje groter is
+        dan de omvattende box: het plaatje komt er onder uit. Door de
+        <code>overflow</code>-property van de omvattende box te zetten op <code>auto</code>
+        of <code>hidden</code> kun je er voor zorgen dat het plaatje toch binnen de
+        box valt.
+      </p>
+      <hr>
+       <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Zet in het bijgaande voorbeeld de css-property <code>float</code> van
+          het plaatje (img-element), bijvoorbeeld <code>float: right;</code>.
+          Bekijk het effect.
+        </li>
+        <li> Zet vervolgens de css-property <code>clear</code> van het p-element onder
+          het plaatje, bijvoorbeeld: <code>clear: right;</code>. Bekijk het effect.
+        </li>
+        <li> Zet tenslotte de css-property <code>overflow</code> van het div-element
+          <code>mydiv2</code>, bijvoorbeeld: <code>overflow: auto;</code>. Bekijk het
+          resultaat.
+        </li>
+      </ol>
+    </section>
+
   </body>
 </html>
