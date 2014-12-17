@@ -74,64 +74,15 @@ document.getElementById("myElt").style = "";
       <hr>
       <p><em>Opdrachten</em></p>
       <ol>
-        <li>Probeer andere kleuren dan <code>"red"</code> en <code>
-          lightblue</code>in het programma in te vullen.
+        <li>Probeer andere kleuren dan <code>red</code> en <code>
+          lightblue</code> in het programma in te vullen.
           Vergeet de quotes (<code>"..."</code>) niet.
         </li>
       </ol>
     </section>
 
     <section>
-      <h1>Definitie van een functie</h1>
-      <p>Een <em>functie</em> (function) is een beschrijving van een reeks
-        acties of berekeningen. De definitie van een functie in JavaScript
-        heeft de vorm:
-      </p>
-      <pre>
-        function fname (p1, p2, p3) {
-          ... acties of berekening met p1, p2 en p3 ...
-        }
-      </pre>
-      <p>De <em>naam</em> van de functie, hier <code>fname</code>, gebruiken
-        we om in de rest van programma naar deze functie te kunnen verwijzen.
-      </p>
-      <p>De <em>parameters</em> van de functie, hier <code>p1, p2, p3</code>,
-        gebruiken we in de acties of berekeningen. Deze bepalen mede het
-        uiteindelijke resultaat.
-      </p>
-      <p>De lijst met parameters kan leeg zijn, in dat geval schrijven we
-        alleen de haakjes <code>()</code>.
-      </p>
-      <p>Het gedeelte tussen accolades <code>{...}</code> noemen we de
-        <em>body</em> van de functie.
-      </p>
-      <p>Een functie is alleen een <em>beschrijving</em> van acties of
-        berekeningen: deze acties of berekeningen worden nog niet uitgevoerd.
-        Je kunt het vergelijken met een recept: pas als de kok eraan begint,
-        gebeurt er iets.
-      </p>
-      <hr>
-      <p><em>Opdrachten</em></p>
-      <ol>
-        <li>Bekijk de definitie van de functie <code>alert1</code>. Hoeveel
-          parameters heeft deze functie? Wat betekent de actie in de body?
-          (Hint: zoek op het web naar "javascript alert".)
-        </li>
-        <li>Definieer naar analogie van de functie <code>alert1</code> een
-          tweede functie, <code>alert2</code>. Pas de tekst in de body aan,
-          en zorg ervoor dat deze duidelijk verschilt (niet alleen in een
-          enkel cijfer).
-          <br><br>
-          <strong>Let op!</strong> Als je een fout maakt in de notatie, zal
-          Thimble je daar niet op wijzen (anders dan in de HTML-code).
-          Je krijgt geen foutmelding: het werkt alleen niet, of anders dan je
-          denkt. Later zullen we hulpmiddelen gebruiken die meer hulp bieden.
-        </li>
-      </ol>
-    </section>
-
-    <section>
-      <h1>Definiëren van een handler</h1>
+      <h1>JavaScript koppelen aan een element</h1>
       <p>We plaatsen de JavaScript-code aan het <em>eind van de body</em>. Dit zorgt ervoor
         dat alle HTML-elementen die we willen gebruiken, daarvoor gedefinieerd zijn. We
         plaatsen deze code tussen de haken <code>&lt;script&gt; ... &lt;/script&gt;</code>
@@ -144,10 +95,73 @@ document.getElementById("myElt").style = "";
       <p>
         We moeten het HTML-element toegankelijk maken in Javascript. Dit doen we via de
         functie-aanroep: <code>document.getElementById("button1")</code>. Het resultaat
-        daarvan kennen we toe aan de variabele <code>myButton</code>.
+        daarvan kunnen we gebruiken om een handler-functie aan het element te koppelen.
       </p>
       <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Met de opdracht: <br>
+<code>
+document.getElementById("myButton").onclick = myFunction;
+</code> <br>
+          koppel je de functie <code>myFunction</code> aan de onclick-event van het
+           element <code>myButton</code>. Ga in het voorbeeld na welke functies aan
+           welke elementen gekoppeld zijn.
+        </li>
+      </ol>
     </section>
+
+    <section>
+      <h1>Definitie van een functie</h1>
+      <p>Een <em>functie</em> (function) is een beschrijving van een reeks
+        acties of berekeningen. De definitie van een functie in JavaScript
+        heeft de vorm:
+      </p>
+<pre>
+function fname(p1, p2, p3) {
+  ... acties of berekening met p1, p2 en p3 ...
+}
+</pre>
+      <p>De <em>naam</em> van de functie, hier <code>fname</code>, gebruiken
+        we om in de rest van programma naar deze functie te kunnen verwijzen.
+      </p>
+      <p>De <em>parameters</em> van de functie, hier <code>p1, p2, p3</code>,
+        gebruiken we in de acties of berekeningen. Deze bepalen mede het
+        uiteindelijke resultaat.
+      </p>
+      <p>De lijst met parameters kan leeg zijn, in dat geval schrijven we
+        alleen de haakjes <code>()</code>.
+      </p>
+      <p>Het gedeelte tussen accolades <code>{...}</code> noemen we de
+        <em>body</em> van de functie. Dit zijn de acties die uitgevoerd
+        worden als de functie geactiveerd ("aangeroepen") wordt.
+      </p>
+      <p>Een functie is alleen een <em>beschrijving</em> van acties of
+        berekeningen: deze acties of berekeningen worden nog niet uitgevoerd.
+        Je kunt het vergelijken met een recept: pas als de kok eraan begint,
+        gebeurt er iets.
+      </p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li>Bekijk de definitie van de functie <code>setColor</code>. Hoeveel
+          parameters heeft deze functie? Wat betekent de actie in de body?
+        </li>
+         <li> Wanneer wordt deze functie aangeroepen? Aan welk element is
+          deze functie gekoppeld? (<em>Hint: waar kom je de naam <code>setColor</code>
+           </em> in het script tegen?)
+        </li>
+        <li> Verander in de body van deze functie de kleur van <code>red</code>
+          naar een andere kleur, en bekijk het resultaat.
+        </li>
+        <li> Verander in de body van deze functie de string <code>"p1"</code>
+          in <code>"p2"</code>. Wat is het resultaat?
+        </li>
+
+      </ol>
+    </section>
+
+
 
     <section>
       <h1>titel</h1>
@@ -178,6 +192,8 @@ document.getElementById("myElt").style = "";
         </li>
       </ol>
     </section>
+
+
 
     <section>
       <h1>Commentaar in JavaScript</h1>

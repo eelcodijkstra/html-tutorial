@@ -22,61 +22,61 @@
     <script>
       // setting style and changing HTML (via DOM)
 
-      function alert1 () {
+      function setColor() {
         document.getElementById("p1").style.color = "red";
       }
 
-      function alert2 () {
+      function setBgColor() {
         document.getElementById("p1").style.backgroundColor = "lightblue";
       }
 
-      function alert3 () {
+      function clearStyle() {
         document.getElementById("p1").style = "";
       }
 
-      document.getElementById("button1").onclick = alert1;
-      document.getElementById("button2").onclick = alert2;
-      document.getElementById("button3").onclick = alert3;
+      document.getElementById("button1").onclick = setColor;
+      document.getElementById("button2").onclick = setBgColor;
+      document.getElementById("button3").onclick = clearStyle;
 
       // input element
 
-      function alert4 () {
+      function getHtml() {
         document.getElementById("inputA").value =
             document.getElementById("p1").innerHTML;
       }
 
-      function alert5 () {
+      function setHtml() {
         document.getElementById("p1").innerHTML =
             document.getElementById("inputA").value;
       }
 
-      function alert6 () {
+      function defaultHtml() {
         document.getElementById("p1").innerHTML =
           "Maak iets <em>fantastisch</em> met het web";
       }
 
-      document.getElementById("button4").onclick = alert4;
-      document.getElementById("button5").onclick = alert5;
-      document.getElementById("button6").onclick = alert6;
+      document.getElementById("button4").onclick = getHtml;
+      document.getElementById("button5").onclick = setHtml;
+      document.getElementById("button6").onclick = defaultHtml;
 
       // setting style-display attribute
 
-      function alert7 () {
+      function displayNormal() {
         document.getElementById("spanX").style.display = "none";
       }
 
-      function alert8 () {
+      function displayBlock() {
         document.getElementById("spanX").style.display = "block";
       }
 
-      function alert9 () {
+      function displayInline() {
         document.getElementById("spanX").style.display = "inline";
       }
 
-      document.getElementById("spanX").onclick = alert7;
-      document.getElementById("button7").onclick = alert7;
-      document.getElementById("button8").onclick = alert8;
-      document.getElementById("button9").onclick = alert9;
+      document.getElementById("spanX").onclick = displayNormal;
+      document.getElementById("button7").onclick = displayNormal;
+      document.getElementById("button8").onclick = displayBlock;
+      document.getElementById("button9").onclick = displayInline;
     </script>
   </body>
 </html>
