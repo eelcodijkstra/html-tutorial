@@ -27,6 +27,8 @@ It is possible to import a gist directly into JSBin; but, apparently, this does 
 * the tutorial-frame may be used for all lessons, with easy navigation between the lessons.
 * the JSBin framework may be used for all lessons in the same way? (i.e., the same HTML/JavaScript, for all the tutorials)
 * it would be nice if we could communicate the lesson number from the outer page to the JSBin iframe. Normal access is not possible, due to cross site issues.
+* developing the tutorial text in Markdown, instead of in HTML (use of Jekyll?)
+* the tutorial requires the availability of JSBin. This prevents the off-line use of the tutorial.
 
 ## Steps in programming
 
