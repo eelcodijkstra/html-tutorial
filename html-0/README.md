@@ -14,6 +14,7 @@ Werkende versies (oefenbestanden):
 * [html-vb2](https://eelcodijkstra.makes.org/thimble/MTU0MDAzMDQ2NA==/html-vb2)
 * [html0-vb2](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3148)
 * [html-vb3](https://eelcodijkstra.makes.org/thimble/LTI5NTU2NzEwNA==/html-vb3)
+* [html0-vb3](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3157)
 * [html-vb4](https://eelcodijkstra.makes.org/thimble/LTE1MTM0MjI4NDg=/html-vb4)
 * [html-vb5](https://eelcodijkstra.makes.org/thimble/LTIwMDY3Nzc2MDA=/html-vb5)
 
