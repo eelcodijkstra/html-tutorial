@@ -17,7 +17,7 @@ Werkende versies (oefenbestanden met oude versie van Thimble):
 
 Werkende versies met de nieuwe Thimble:
 
-* [html0-vb1](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/2616/)
+* [html0-vb1](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/2616)
 * [html0-vb2](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3148)
 * [html0-vb3](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3157)
 * [html0-vb4](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3159)
