@@ -10,6 +10,7 @@ Het is de bedoeling om het oefenbestand aan te passen via de aanwijzingen en opd
 Werkende versies (oefenbestanden):
 
 * [html-vb1](https://eelcodijkstra.makes.org/thimble/LTI4ODk0ODIyNA==/html-vb1)
+* [html0-vb1](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/2616/)
 * [html-vb2](https://eelcodijkstra.makes.org/thimble/MTU0MDAzMDQ2NA==/html-vb2)
 * [html-vb3](https://eelcodijkstra.makes.org/thimble/LTI5NTU2NzEwNA==/html-vb3)
 * [html-vb4](https://eelcodijkstra.makes.org/thimble/LTE1MTM0MjI4NDg=/html-vb4)
