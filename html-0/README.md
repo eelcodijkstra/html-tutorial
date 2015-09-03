@@ -16,6 +16,7 @@ Werkende versies (oefenbestanden):
 * [html-vb3](https://eelcodijkstra.makes.org/thimble/LTI5NTU2NzEwNA==/html-vb3)
 * [html0-vb3](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3157)
 * [html-vb4](https://eelcodijkstra.makes.org/thimble/LTE1MTM0MjI4NDg=/html-vb4)
+* [html0-vb4](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3159)
 * [html-vb5](https://eelcodijkstra.makes.org/thimble/LTIwMDY3Nzc2MDA=/html-vb5)
 
 Je maakt je eigen versie door middel van de "remix" knop (rechts boven). Dan wordt ook het bijbehorende tutorial geopend (als dat er is).
