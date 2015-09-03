@@ -22,7 +22,7 @@ Werkende versies met de nieuwe Thimble:
 * [html0-vb3](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3157)
 * [html0-vb4](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3159)
 * [html0-vb5](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3165)
-
+* [html0-vb6](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3190)
 
 Je maakt je eigen versie door middel van de "remix" knop (rechts boven). Dan wordt ook het bijbehorende tutorial geopend (als dat er is).
 
