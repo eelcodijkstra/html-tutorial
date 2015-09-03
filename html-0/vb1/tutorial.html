@@ -3,49 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Tutorial 1</title>
-    <!-- this stylesheet provides default styles for tutorials -->
-    <link href="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.css" rel="stylesheet">
-    <!-- these scripts turn your make into a tutorial -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.js"></script>
-<!--
-    <script>
-      jQuery(document).ready(function($){
-        $('body').tutorial();
-      });
-    </script>
--->
+    <style>
+      body {
+        background-color:antiquewhite;
+      }
+    </style>
   </head>
   <body>
-    <!--
-      enclose each tutorial step in its own section tags
-      you can include any sort of markup, including images
-      you can also add more sections
-
-      if you want to attach this tutorial to another make,
-      first publish this make
-      then tag the other make with prefix "tutorial-" followed by the url for this make
-    -->
 
     <section>
       <h1>Hoe werkt dit tutorial?</h1>
 
       <ul>
-        <li> je kunt dit deelvenster groter maken (of kleiner) met de diagonale
-          pijltjes bovenaan dit venster.
+        <li> je kunt omschakelen tussen Preview en Tutorial in de tab hierboven. Om verwarring te voorkomen heeft het tutorial een andere kleur.
         </li>
-        <li> je kunt het venster helemaal wegklikken door op het &lt; teken
-          te klikken. Je krijgt het weer terug via het lampje-teken.
-        </li>
-        <li> je ziet de naam van het tutorial als je op de <code>...</code> bovenin klikt.
-        </li>
-        <li> met de pijltjes bovenin kun je tussen de pagina's van het tutorial
-          navigeren.
+        <li> in de linkerkolom kun je het bestand selecteren dat je bewerkt in de editor. In dit eerste tutorial gebruik je alleen <code>index.html</code>.
         </li>
       </ul>
 
-      <p> Het middelste venster kun je veranderen - en het resultaat daarvan zie
-        je direct in het venster rechts. Hierdoor kun je snel allerlei kleine
+      <p> Het editor-venster in het midden kun je veranderen - en het resultaat daarvan zie
+        je direct in het Preview-venster rechts. Hierdoor kun je snel allerlei kleine
         experimenten uitvoeren. Je kunt het resultaat van een experiment ook opslaan.
       </p>
       <p> Je hoeft niet bang te zijn dat je iets kapot maakt: je kunt altijd weer
@@ -55,7 +32,6 @@
       </p>
 
       <hr>
-      <p> Ga nu naar de volgende pagina. </p>
     </section>
     <section>
       <h1>Een simpele webpagina</h1>
@@ -68,7 +44,7 @@
           <code>&lt;!doctype html&gt;</code>
         </li>
         <li>De html-inhoud, tussen de haken: <br>
-            <code>&lt;html&gt;...&lt;/html&gt;</code>
+          <code>&lt;html&gt;...&lt;/html&gt;</code>
         </li>
         <li> Daarbinnen, eerst de header, tussen <br>
           <code>&lt;head&gt;...&lt;/head&gt;</code>
