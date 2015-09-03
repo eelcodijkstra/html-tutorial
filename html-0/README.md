@@ -7,13 +7,22 @@ Deze tutorials zijn in eerste instantie bedoeld voor gebruik in Thimble, de oefe
 
 Het is de bedoeling om het oefenbestand aan te passen via de aanwijzingen en opdrachten in het tutorial. In Thimble kan het tutorial in hetzelfde webvenster getoond worden. In een andere omgeving, bijvoorbeeld JSBin, is daarvoor een apart web-venster nodig.
 
-Werkende versies (oefenbestanden):
+Werkende versies (oefenbestanden met oude versie van Thimble):
 
 * [html-vb1](https://eelcodijkstra.makes.org/thimble/LTI4ODk0ODIyNA==/html-vb1)
 * [html-vb2](https://eelcodijkstra.makes.org/thimble/MTU0MDAzMDQ2NA==/html-vb2)
 * [html-vb3](https://eelcodijkstra.makes.org/thimble/LTI5NTU2NzEwNA==/html-vb3)
 * [html-vb4](https://eelcodijkstra.makes.org/thimble/LTE1MTM0MjI4NDg=/html-vb4)
 * [html-vb5](https://eelcodijkstra.makes.org/thimble/LTIwMDY3Nzc2MDA=/html-vb5)
+
+Werkende versies met de nieuwe Thimble:
+
+* [html0-vb1](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/2616)
+* [html0-vb2](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3148)
+* [html0-vb3](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3157)
+* [html0-vb4](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3159)
+* [html0-vb5](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3165)
+* [html0-vb6](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3190)
 
 Je maakt je eigen versie door middel van de "remix" knop (rechts boven). Dan wordt ook het bijbehorende tutorial geopend (als dat er is).
 

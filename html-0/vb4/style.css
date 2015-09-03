@@ -1,0 +1,13 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h3 {
+  font-family: sans-serif;
+}
+#welkom-paragraaf {
+  font-style: italic;
+}
+#hobby-list {
+  font-size: 1.2em;
+}

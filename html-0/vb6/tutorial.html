@@ -3,29 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Tutorial 6</title>
-    <!-- this stylesheet provides default styles for tutorials -->
-    <link href="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.css" rel="stylesheet">
-    <!-- these scripts turn your make into a tutorial -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="https://thimble.webmaker.org/learning_projects/tutorial/tutorial.js"></script>
-<!--
-    <script>
-      jQuery(document).ready(function($){
-        $('body').tutorial();
-      });
-    </script>
--->
+    <style>
+      body {
+        background-color:antiquewhite;
+      }
+    </style>
   </head>
   <body>
-    <!--
-      enclose each tutorial step in its own section tags
-      you can include any sort of markup, including images
-      you can also add more sections
-
-      if you want to attach this tutorial to another make,
-      first publish this make
-      then tag the other make with prefix "tutorial-" followed by the url for this make
-    -->
 
     <section>
       <h1>Pagina-opmaak: positioneren van elementen</h1>
@@ -68,15 +52,15 @@
 
     <section>
       <h1>Plaatsen van tekst</h1>
-        <p>We kunnen tekst op verschillende manieren in een omvattend element plaatsen: </p>
-        <ul>
+      <p>We kunnen tekst op verschillende manieren in een omvattend element plaatsen: </p>
+      <ul>
 
-          <li> <code>text-align: left;</code> - links aangesloten; </li>
-          <li> <code>text-align: center;</code> - gecentreerd; </li>
-          <li> <code>text-align: center;</code> - rechts aangesloten. </li>
-        </ul>
-        <p>?
-        </p>
+        <li> <code>text-align: left;</code> - links aangesloten; </li>
+        <li> <code>text-align: center;</code> - gecentreerd; </li>
+        <li> <code>text-align: center;</code> - rechts aangesloten. </li>
+      </ul>
+      <p>?
+      </p>
       <hr>
       <p><em>Opdracht(en)</em></p>
       <ol>
@@ -97,7 +81,7 @@
       <ul>
         <li><code>display: inline;</code> - geef element inline weer.</li>
         <li><code>display: block;</code> - geef element als block-level element weer. <br>
-            Dit is de default-waarde voor block-level elementen zoals een &lt;p&gt;-element.
+          Dit is de default-waarde voor block-level elementen zoals een &lt;p&gt;-element.
         </li>
         <li><code>display: none;</code> - geef het element niet weer.
         </li>
@@ -122,10 +106,10 @@
       <h1>Groottes</h1>
       <p>Je kunt de groottes in CSS op verschillende manieren aangeven:
       </p>
-        <ul>
-          <li>in pixels (<code>20px</code>) - vooral display-gerelateerd;</li>
-          <li>in em (<code>12em</code>) - gerelateerd aan huidige lettergrootte; <br>
-            Dit is de grootte van de letter "m" in het huidige lettertype.
+      <ul>
+        <li>in pixels (<code>20px</code>) - vooral display-gerelateerd;</li>
+        <li>in em (<code>12em</code>) - gerelateerd aan huidige lettergrootte; <br>
+          Dit is de grootte van de letter "m" in het huidige lettertype.
         </li>
         <li>in procenten (<code>80%</code>) - gerelateerd aan omvattende box.
         </li>
