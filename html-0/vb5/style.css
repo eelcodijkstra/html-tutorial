@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 h1 {
@@ -9,14 +9,17 @@ h1 {
   border: solid 1px red;
   padding: 10px;
 }
+
 p {
   border: 1px solid black;
 }
+
 #mydiv1 {
   margin: 20px;
   border: 1px solid blue;
   padding: 10px;
 }
+
 #mydiv2 {
   margin: 10px;
   border: 1px solid red;
