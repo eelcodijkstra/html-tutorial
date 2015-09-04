@@ -10,10 +10,11 @@ body {
 }
 
 #box2 {
-  border: 1px solid blue;
+  border: 1px solid red;
   margin: 10px;
   padding: 10px;
-  background-color:lightblue;
+  background-color: lightpink;
+  overflow: hidden;
 }
 
 #box3 {
