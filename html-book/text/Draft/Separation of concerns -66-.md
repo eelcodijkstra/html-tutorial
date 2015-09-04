@@ -1,0 +1,1 @@
+Een website of een web-app wordt al snel groot: het ontwikkelen en bijhouden kost veel tijd, en kan vaak niet meer door een enkel persoon gedaan worden. Om ervoor te zorgen dat de verschillende personen, of de verschillende rollen, elkaar niet voor de voeten lopen, 

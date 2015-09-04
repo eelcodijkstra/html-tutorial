@@ -3,3 +3,5 @@
 # Example .gitignore files: https://github.com/github/gitignore
 html-0/sandbox.html
 xxx.json
+html-book/_book
+html-book/node_modules
