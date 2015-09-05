@@ -38,23 +38,7 @@ De eerste regel van het html-document geeft aan welke html-standaard gebruikt is
 
 ## Element: naam, inhoud, en attributen
 
-Je kunt een html-element zien als een container (doos) met een speciale betekenis. De *tag* kun je gebruiken als label of etiket waar je van alles op kunt schrijven over de inhoud. Je kunt dit ook gebruiken als handvat, voor acties op het element.
-
-* Het deel `xxx` van een tag `<xxx>` heet de *naam* van de tag (tag name).
-* de naam van de tag zegt iets over de betekenis, zoals de manier waarop de browser de inhoud moet behandelen. Voorbeeld: de inhoud van een `<h1>`-element is een koptitel; de browser geeft deze in grote letters weer.
-* je kunt de tag voorzien van *attributen* die verder beschrijven wat er met de inhoud moet gebeuren. Je kunt met attributen de vormgeving van de inhoud sturen, zoals het lettertype of de kleur van de letters.
-
-De vorm van een attribuut is: `naam="waarde"`. De `waarde` is een string tussen dubbele quotes `"` (ook als de waarde een getal is).
-
-Voorbeelden van tags met attributen:
-
-* `<h1 id="introduction">`
-    * `id`: unieke naam van een element, gebruikt om vormgeving en interactie te koppelen aan het element.
-* `<div class="exercise">`
-    * `class`: manier om gelijksoortige elementen aan te geven, voor bijvoorbeeld een uniforme vormgeving.
-* `<img src="figs/tree.png"  alt="een figuur van een boom">`
-    * een image-tag (plaatje) verwijst naar een bestand met de betreffende figuur, via het `src`-attribuut;
-    * je geeft altijd een alternatief aan voor het plaatje: een tekst die getoond kan worden als het bestand niet gevonden kan worden, of als de tekst voorgelezen wordt.
+Je kunt een html-element zien als een container (doos) met een speciale betekenis. De structuur van een element beschrijven we [verderop](Element naam, inhoud en attributen -69-.html).
 
 ## Nesting en bomen
 
@@ -62,15 +46,7 @@ De haakjes moeten in HTML, net als in andere programmeertalen, netjes "genest" w
 
 > Je mag ze *niet kruislings* gebruiken: `<a>...<b>...</a>...</b>` (**fout**).
 
-Dergelijke geneste haakjes stellen een *hiërarchische structuur* voor. Je kunt deze weergeven door blokken of rechthoeken die binnen elkaar geplaatst zijn. We kunnen het bovenstaande html-elementen dan weergeven als een aantal geneste blokken. 
-
-![Nesting van elementen][fig1]
-
-Een andere manier om naar een dergelijke hiërarchische structuur te kijken is in de vorm van een *boom* (tree). De structuur van een organisatie of van een familie geef je vaak op zo'n manier weer.
-
-![Elementen in boomstructuur][fig2]
-
-In de browser gebruiken we vaak een dergelijke boom van html-elementen. Deze structuur heet het *Document Object Model* of kortweg *DOM*.
+Dergelijke geneste haakjes stellen een *hiërarchische structuur* voor. Deze komen we in allerlei vormen in de informatica tegen: zie [Bomen](Bomen -46-.html).
 
 ## Witruimte
 
@@ -94,6 +70,3 @@ De oplossing hiervoor in html is het gebruik van *benoemde tekens* (named charac
 * `&quot;` voor `"`
 
 *Vraag*: waarom zou je `&amp;` nodig hebben?
-
-[fig1]: figs/html-fig2.png
-[fig2]: figs/html-fig3a.png
