@@ -34,4 +34,5 @@ In het html-document beschrijven we de button zoals deze weergegeven moet worden
 * het id-attribuut gebruik je voor de identificatie van het element;
 * het name-attribuut gebruik je voor invoer-waarden: een invoer-element komt overeen met een name-value paar.
 
+Soms kun je een element wel identificeren aan de hand van het name-attribuut, maar dat is niet de bedoeling van de html-standaard. Gebruik voor identificatie een element altijd het id-attribuut.
 
