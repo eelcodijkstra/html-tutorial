@@ -10,12 +10,13 @@ Het is de bedoeling om het oefenbestand aan te passen via de aanwijzingen en opd
 
 Werkende versies met (de nieuwe) Thimble:
 
-* [html0-vb1](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/2616)
-* [html0-vb2](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3148)
-* [html0-vb3](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3157)
-* [html0-vb4](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3159)
-* [html0-vb5](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3165)
+* [html0-vb1](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/12882)
+* [html0-vb2](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/12884)
+* [html0-vb3](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/12885)
+* [html0-vb4](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/12886)
+* [html0-vb5](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/12887)
 * [html0-vb6](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/3190)
+* [html0-vb7](https://d157rqmxrxj6ey.cloudfront.net/eelcodijkstra/12889)
 
 Je maakt je eigen versie door middel van de "remix" knop (rechts boven). Dan wordt ook het bijbehorende tutorial geopend (als dat er is).
 
