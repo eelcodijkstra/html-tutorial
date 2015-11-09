@@ -5,7 +5,7 @@
     <title>Tutorial 4</title>
     <style>
       body {
-        background-color:antiquewhite;
+        background-color: #FFEC8D;
       }
     </style>
   </head>
@@ -30,12 +30,7 @@
         en te houden. Als je de opmaak wilt veranderen, moet je
         het hele html-bestand doorwerken.
       </p>
-      <p>Een betere manier is om de html-inhoud en de opmaak te scheiden.
-        Je kunt de opmaak in de vorm van CSS-declaraties in het
-        html <code>head</code>-element plaatsen. Dit is de volgende stap die we nemen.
-      </p>
-      <p> Nog beter is het om deze CSS-code in een apart CSS-bestand te zetten.
-        Dit zullen we in een volgende module toepassen: Thimble is daarvoor niet erg handig.
+      <p>Een betere manier is om de html-inhoud en de opmaak te scheiden. Dit kan door de CSS-regels in het head-gedeelte van het bestand te plaatsen. Nog beter is het om de CSS-regels in een apart CSS-bestand te plaatsen. In dit voorbeeld gebruiken we daarvoor <code>style.css</code>.
       </p>
       <hr>
     </section>
@@ -46,19 +41,19 @@
         een element sturen, bijvoorbeeld het lettertype, of
         de positie. Je noteert dit als
       </p>
-<pre>
+      <pre>
   &lt;tag ... style="css-declaraties" ... &gt;
 </pre>
       <p>De waarde van een style-attribuut bestaat uit een reeks
         <em>css-declaraties</em> van de
         vorm:
-        </p>
-<pre>
+      </p>
+      <pre>
   css-property: value;
 </pre>
       <p> Voorbeeld:
       </p>
-<pre>
+      <pre>
   &lt;h1 style="color: blue; font-family: non-serif;"&gt;
     Welkom op mijn pagina
   &lt;/h1&gt;
@@ -88,6 +83,64 @@
         <li> Zoek uit welke namen voor kleuren in het web gedefinieerd zijn.</li>
       </ol>
 
+    </section>
+
+    <section>
+      <h1>Scheiden van html en opmaak</h1>
+      <p>Als we overal in het html-document aanwijzingen moeten plaatsen
+        voor de opmaak, wordt het al snel erg onoverzichtelijk. En als we
+        de opmaak willen aanpassen, bijvoorbeeld aan een nieuwe huisstijl,
+        halen we ons veel werk op de hals, met een groot risico op fouten
+        en inconsistenties.
+      </p>
+      <p>We maken er daarom een gewoonte van om het html-document en de
+        opmaak ervan te scheiden. We plaatsen de CSS-regels voor de opmaak
+        in een apart bestand. In dit voorbeeld gebruiken we daarvoor
+        <code>style.css</code>
+      </p>
+      <p>Door middel van de volgende regel in het head-gedeelte geven we aan
+        dat we de opmaak-regels uit <code>style.css</code> gebruiken:
+      </p>
+      <pre>
+  &lt;link rel="stylesheet" href="style.css"&gt;
+</pre>
+    </section>
+
+    <section>
+      <h1>Vorm van css-regels; selectoren</h1>
+      <p>De css-regels in <code>style.css</code> zijn van de vorm:</p>
+      <p><code>selector { css-property: value; ... } </code>
+      </p>
+      <p>Door middel van de <em>selector</em> koppelen we een css-regel aan
+        één of meer html-elementen. De belangrijkste selectoren zijn:
+      </p>
+      <ul>
+        <li><em>type</em>-selector, bijv. <code>h1 </code>, <code>p </code>,
+          <code>li </code>; de regel geldt voor alle elementen van dat type;
+        </li>
+        <li><em>class</em>-selector, bijv. <code>.example </code>; de
+          regel geldt voor alle elementen met dat class-attribuut,
+          bijv. <code>class="example" </code>;
+        </li>
+        <li><em>id</em>-selector, bijv. <code>#submit</code>; de regel
+          geldt voor het (enige) element met dat id-attribuut,
+          bijv. <code>id="submit" </code>.
+        </li>
+      </ul>
+      <hr>
+      <p><em>Opdrachten (over de bestanden <code>index.html</code> en
+          <code>style.css</code>):</em></p>
+      <ol>
+        <li> Voor welke html-element(en) geldt de regel met selector
+          <code>h3</code>?
+        </li>
+        <li> Voor welke html-elementen geldt de regel met selector
+          <code>.nadruk</code>?
+        </li>
+        <li> Voor welk html-element geldt de regel met selector
+          <code>#hobby-list</code>?
+        </li>
+      </ol>
     </section>
 
     <section>
@@ -126,7 +179,7 @@
         willen gegen, dan kunnen we de stijl beter afzonderlijk beschrijven, in het head-deel
         van het document:
       </p>
-<pre>
+      <pre>
   &lt;style&gt;
     h3 {
       font-family: sans-serif;
@@ -158,7 +211,7 @@
         afzonderlijke stijl-regel. Hiervoor geven we het element een naam, door middel
         van het <code>id</code>-attribuut:
       </p>
-<pre>
+      <pre>
   &lt;p id="welkom-paragraaf"&gt;
     Welkom op mijn web-pagina
   &lt;/p&gt;
@@ -166,7 +219,7 @@
       <p>We kunnen deze naam (identifier) dan gebruiken als <em>selector</em> in een
         stijl-regel. Door een <code>#</code> geven we aan dat het om een <em>id-selector</em> gaat:
       </p>
-<pre>
+      <pre>
   &lt;style&gt;
     #welkom-paragraaf {
       font-style: italic;
@@ -194,7 +247,7 @@
         (-elementen) groeperen en van een handvat voorzien. Je koppelt dan de
         opmaak aan het omvattende span-element:
       </p>
-<pre>
+      <pre>
   Een &lt;span style="text-decoration:underline;"&gt;
   deel van deze tekst &lt;/span&gt; is onderstreept.
 </pre>
