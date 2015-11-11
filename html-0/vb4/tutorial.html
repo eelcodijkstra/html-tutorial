@@ -21,16 +21,28 @@
         <li> opmaak van een <em>element</em>: achtergrond, rand, (wit)ruimte;</li>
         <li> opmaak van de <em>pagina</em> (layout): positioneren van elementen.</li>
       </ul>
-      <p>We plaatsen de aanwijzingen voor de opmaak eerst bij de elementen zelf:
+
+      <p>In dit tutorial behandelen we manier waarop je de opmaak aangeeft
+        (via <em>CSS-regels</em>), en de koppeling tussen deze regels en de
+        html-elementen (via <em>selectors</em>). Daarnaast behandelen we de
+        opmaak van tekst. De opmaak van elementen en van de pagina behandelen
+        we in volgende tutorials.
+      </p>
+
+      <p>We plaatsen in het eerste voorbeeld de aanwijzingen voor de opmaak
+        bij de elementen zelf:
         daarvoor gebruiken we het <code>style</code>-attribuut. Op deze manier
         kun je heel direct zien wat het resultaat is van een aanpassing.
       </p>
       <p>Deze directe aanpak heeft ook nadelen: het wordt al snel
-        onoverzichtelijk, en het is erg lastig om een consistente opmaak te maken
-        en te houden. Als je de opmaak wilt veranderen, moet je
+        onoverzichtelijk, en het is erg lastig om de opmaak consistent
+        te houden. Als je de opmaak wilt veranderen, moet je
         het hele html-bestand doorwerken.
       </p>
-      <p>Een betere manier is om de html-inhoud en de opmaak te scheiden. Dit kan door de CSS-regels in het head-gedeelte van het bestand te plaatsen. Nog beter is het om de CSS-regels in een apart CSS-bestand te plaatsen. In dit voorbeeld gebruiken we daarvoor <code>style.css</code>.
+      <p>Een betere manier is om de html-inhoud en de opmaak te scheiden. Dit
+        kan door de CSS-regels in het head-gedeelte van het bestand te plaatsen.
+        Nog beter is het om de CSS-regels in een apart CSS-bestand te plaatsen.
+        In dit voorbeeld gebruiken we daarvoor <code>style.css</code>.
       </p>
       <hr>
     </section>
@@ -91,7 +103,7 @@
         voor de opmaak, wordt het al snel erg onoverzichtelijk. En als we
         de opmaak willen aanpassen, bijvoorbeeld aan een nieuwe huisstijl,
         halen we ons veel werk op de hals, met een groot risico op fouten
-        en inconsistenties.
+        en een niet-gelijkvormige opmaak.
       </p>
       <p>We maken er daarom een gewoonte van om het html-document en de
         opmaak ervan te scheiden. We plaatsen de CSS-regels voor de opmaak
@@ -129,7 +141,7 @@
       </ul>
       <hr>
       <p><em>Opdrachten (over de bestanden <code>index.html</code> en
-          <code>style.css</code>):</em></p>
+        <code>style.css</code>):</em></p>
       <ol>
         <li> Voor welke html-element(en) geldt de regel met selector
           <code>h3</code>?
@@ -174,38 +186,119 @@
     </section>
 
     <section>
-      <h1> Meerdere elementen met dezelfde opmaak</h1>
-      <p> Als we beide kopjes, de h3-elementen "Mijn hobbies" en "Tekenen", eenzelfde stijl
-        willen gegen, dan kunnen we de stijl beter afzonderlijk beschrijven, in het head-deel
-        van het document:
+      <h1> Opmaak van elementen met hetzelfde type (tag)</h1>
+      <p> Als we beide kopjes, de h3-elementen "Mijn hobbies" en "Tekenen",
+        eenzelfde stijl willen gegen, dan kunnen we de stijl beter
+        afzonderlijk beschrijven. We doen dit in het css-bestand, met de
+        volgende regel:
       </p>
       <pre>
-  &lt;style&gt;
     h3 {
       font-family: sans-serif;
     }
-  &lt;/style&gt;
 </pre>
-      <p>
-        We vermelden dan geen stijl-attribuut bij de elementen in het body-deel: we scheiden
-        de inhoud en de opmaak.
+      <p> We gebruiken hier het type-tag als selector.</p>
+      <p> Je ziet hier al direct een voordeel van het scheiden van de inhoud
+        (html elementen) en de opmaak: met één regel kunnen we de opmaak van
+        alle elementen van eenzelfde type veranderen.
       </p>
       <hr>
       <p><em>Opdrachten</em></p>
       <ol>
-        <li> Voeg een css-property toe aan de regels voor het h3-element, en bekijk hoe beide
+        <li> Voeg een css-property toe aan de regels voor het h3-element,
+          en bekijk hoe beide elementen daardoor veranderen.
+        </li>
+        <li> Je kunt eenzelfde regel voor meerdere soorten elementen
+          gebruiken door een lijst van type-tags op te geven, bijvoorbeeld:
+          <code>h1, h2, h3 {...}</code>.
+          Gebruik dit voor de opmaak van de verschillende soorten kop-elementen
+          aan te passen, bijvoorbeeld de kleur of het lettertype.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1> Meerdere elementen met dezelfde opmaak</h1>
+      <p> Soms willen we de opmaak van een beperkt aantal elementen aanpassen,
+        waarbij die elementen niet beslist van hetzelfde type zijn. Dit kunnen
+        elementen zijn die in het document een bepaalde betekenis hebben,
+        bijvoorbeeld onderdeel van voorbeelden of opdrachten in een les.
+      </p>
+      <p> We gebruiken hiervoor de <em>class-selector</em>. We geven in de
+        html-elementen aan van welke class(es) deze zijn, door middel van het
+        class-attribuut:
+      </p>
+<pre>
+  &lt;p class="example"&gt; Dit is een voorbeeld.&lt;/p&gt;
+</pre>
+      <p> De opmaak geven we dan in het css-bestand aan met de
+        <em>class-selector</em>: een punt (".") gevolgd door de naam van
+        de class. Voorbeeld:
+      </p>
+<pre>
+  .example {
+    font-style: italic;
+  }
+</pre>
+
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Voeg een css-property toe aan de regels voor de
+          <code>.nadruk</code>-selector, en bekijk hoe de
           elementen daardoor veranderen.
         </li>
-        <li> Je kunt dezelfde regels voor meerdere soorten elementen gebruiken door een
-          lijst van tags op te geven, bijvoorbeeld: <code>h1, h2, h3 {...}</code>. Gebruik dit
-          om de opmaak van de verschillende soorten kop-elementen gelijk te maken.
+        <li> De waarde van een class-attribuut is een opsomming van
+          class-namen, bijvoorbeeld: <code>class="classX classY"</code>.
+          Gebruik dit om voor een element verschillende
+          opmaak-regels te combineren.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1> Het &lt;span&gt;-element </h1>
+      <p> Soms willen we een stuk tekst opmaken dat niet overeenkomt met
+        een html-element. In de lopende tekst willen we bijvoorbeeld een
+        reeks woorden onderstrepen. We lossen dit op door van dit
+        stuk tekst een &lt;span&gt;-element te maken. Dit span-element
+        voorzien we van een class-attribuut. De opmaak voor die
+        class beschrijven we in het css-bestand.
+      </p>
+<pre>
+  In deze tekst willen we de &lt;span class="nadruk"&gt; aandacht
+  vestigen &lt;/span&gt; op een serie woorden.
+</pre>
+      <p>Dit combineren we met de volgende regel in het css-bestand:</p>
+<pre>
+  .nadruk {
+    text-decoration: underline;
+  }
+</pre>
+      <p>De html-elementen moeten wel netjes in elkaar geplaatst (genest)
+        blijven: je kunt met een span-element niet halverwege het ene element
+        beginnen en halverwege het andere element eindigen.
+      </p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li> Gebruik het span-element om een groter deel van de tekst van
+          een speciale opmaak te voorzien (cursief, onderstrepen, enz.)
+        </li>
+        <li> Wat gebeurt er als je een span-element niet netjes plaatst,
+          bijvoorbeeld beginnen halverwege een h1-element  en eindigen
+          in het volgende p-element eindigen?
         </li>
       </ol>
     </section>
 
     <section>
       <h1>Benoemde elementen: id</h1>
-      <p> In het vorige voorbeeld hebben we gezien hoe je alle elementen van een bepaald
+      <p> Soms willen we de opmaak van een enkel element beschrijven.
+        We kunnen een element een naam geven, door middel van het
+        <code>id</code>-attribuut. Deze naam moet uniek zijn in het hele
+        html-document.
+        , In het vorige voorbeeld hebben we gezien hoe je alle elementen van een bepaald
         type dezelfde stijl kunt geven. Soms wil je een element een afwijkende stijl geven.
         We willen deze afwijkende stijl niet bij het element zelf vermelden, maar in een
         afzonderlijke stijl-regel. Hiervoor geven we het element een naam, door middel
@@ -216,16 +309,21 @@
     Welkom op mijn web-pagina
   &lt;/p&gt;
 </pre>
-      <p>We kunnen deze naam (identifier) dan gebruiken als <em>selector</em> in een
-        stijl-regel. Door een <code>#</code> geven we aan dat het om een <em>id-selector</em> gaat:
+      <p>We kunnen deze naam (identifier) dan gebruiken als <em>selector</em>
+        in een css-regel. Door een <code>#</code> geven we aan dat het om een
+        <em>id-selector</em> gaat:
       </p>
       <pre>
-  &lt;style&gt;
     #welkom-paragraaf {
       font-style: italic;
     }
-  &lt;/style&gt;
 </pre>
+      <p><em>Opmerking:</em> In de praktijk gebruiken we de id-selector
+        bijna nooit voor de opmaak van elementen. Sommigen raden het gebruik
+        van de id-selector in een css-bestand zelfs helemaal af. De id-selector
+        speelt wel een belangrijke rol voor het koppelen van html-elememten
+        aan JavaScript-acties.
+      </p>
       <hr>
       <p><em>Opdrachten</em></p>
       <ol>
@@ -238,38 +336,7 @@
 
     </section>
 
-    <section>
-      <h1> Het &lt;span&gt;-element </h1>
-      <p> Om de opmaak van een <em>deel van een tekst</em> te kunnen sturen,
-        moet je hiervan een omvattend element kunnen maken.
-      </p>
-      <p>Hiervoor kun je het &lt;span&gt;-element gebruiken. Daarmee kun je tekst
-        (-elementen) groeperen en van een handvat voorzien. Je koppelt dan de
-        opmaak aan het omvattende span-element:
-      </p>
-      <pre>
-  Een &lt;span style="text-decoration:underline;"&gt;
-  deel van deze tekst &lt;/span&gt; is onderstreept.
-</pre>
-      <p>De html-elementen moeten wel netjes in elkaar geplaatst blijven:
-        je kunt met een span-element niet halverwege het ene element beginnen
-        en halverwege het andere element eindigen.
-      </p>
-      <hr>
-      <p><em>Opdrachten</em></p>
-      <ol>
-        <li> Gebruik het span-element om een groter deel van de tekst van
-          een speciale opmaak te voorzien (cursief, onderstrepen, enz.)
-        </li>
-        <li> Wat gebeurt er als je een span-element niet netjes plaatst,
-          bijvoorbeeld beginnen halverwege een h1-element  en eindigen
-          in het volgende p-element eindigen?
-        </li>
-        <li> Geef het span-element in het voorbeeld een naam (id), en
-          plaats de css-declaraties hiervoor in het head-element.
-        </li>
-      </ol>
-    </section>
+
 
   </body>
 </html>
