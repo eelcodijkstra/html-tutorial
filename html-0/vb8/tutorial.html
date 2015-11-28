@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial 8</title>
+    <style>
+      body {
+        background-color: #FFEC8D;
+      }
+    </style>
+  </head>
+  <body>
+
+    <section>
+      <h1>Tabellen in HTML</h1>
+      <p>In dit tutorial maken we kennis met tabbelen in HTML.</p>
+
+      <p>Een tabel gebruik je voor gegevens die je in een regelmatige
+      structuur van rijen en kolommen wilt weergeven. Enkele voorbeelden:
+      </p>
+
+      <ul>
+        <li>een agenda of rooster</li>
+        <li>een budget, overzicht van kosten</li>
+      </ul>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li>Geef een aantal voorbeelden uit je eigen omgeving
+          van gegevens die je in tabelvorm zou kunnen weergeven.
+        </li>
+        <li>Geef een aantal voorbeelden van webpagina's waarin
+          een tabel gebruikt wordt.
+        </li>
+      </ol>
+
+    </section>
+
+    <section>
+      <h1>Tabellen, rijen, cellen</h1>
+      <p>Een tabel bestaat uit <em>cellen</em> die geplaatst zijn in
+        rijen en kolommen.
+
+        Preciezer gezegd: een tabel (<code>&lt;table&gt;</code>) bestaat uit
+        een reeks rijen.
+        Elke rij (<code>&lt;tr&gt;</code>) bestaat uit een reeks cellen.
+        De cellen (<code>&lt;td&gt;</code> van de rijen worden onder
+        elkaar geplaatst, in kolommen.
+      </p>
+  <pre>
+    &lt;table&gt;
+      &lt;tr&gt;
+        &lt;td&gt; rij 1 kol 1 &lt;/td&gt;
+        &lt;td&gt; rij 1 kol 2 &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt; rij 2 kol 1 &lt;/td&gt;
+        &lt;td&gt; rij 2 kol 2 &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  </pre>
+
+      <p>We zullen later zien dat je nog meer elementen aan een
+        tabel kunt toevoegen, bijvoordeeld een kopje voor elke kolom.
+      </p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li>Pas het voorbeeld in de html-pagina aan: voeg een rij
+          en een kolom toe.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Opmaak van tabellen: randen</h1>
+
+      <p>De opmaak van een tabel doen we, zoals gebruikelijk, met CSS.</p>
+
+      <p>Een eerste vraag is: wil je een tabel met randen? Als je verder
+        niets opgeeft, krijg je wel netjes de cellen in rijen en kolommen
+        op het scherm, maar zonder randen.
+      </p>
+      <p>
+        Om randen toe te voegen, moet je de "border" property van de cellen
+        zetten, bijvoorbeeld: <code>border: 1px solid black;</code>.
+      </p>
+      <p>
+        Hiermee krijg je waarschijnlijk nog niet de tabel zoals je die
+        bedoelde: de cellen staan los van elkaar. Je kunt de cellen laten
+        aansluiten door middel van de css-regel:
+      </p>
+<pre>
+table {
+    border-collapse: collapse;
+}
+</pre>
+
+      <p>Een precieze beschrijving van de manier waarop je de randen
+      van een tabel kunt weergeven vind je in:
+        <a href="http://www.w3.org/TR/CSS2/tables.html#borders">
+          http://www.w3.org/TR/CSS2/tables.html#borders
+        </a>
+      </p>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li>Pas het voorbeeld in de html-pagina aan: voeg aan de regels in
+          <code>style.css</code> regels toe voor de randen van de cellen,
+          en voor het samenvoegen van de cellen.
+        </li>
+        <li>Maak een rand voor de hele tabel, in een andere kleur.
+        </li>
+        <li>Maak randen om de tabel, om de rijen, en om de cellen, met
+          ruimte tussen de randen ("border-collapse: separate;").
+          Krijg je in dit geval ook een rand om de rij?
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Tabellen met kopjes</h1>
+      <p> Vaak heeft de eerste rij van een tabel een speciale betekenis:
+        dit zijn de kopjes van de kolommen. Je kunt dit in HTML
+        aangeven door een speciale "kop" cel te gebruiken: <code>
+        &lt;th&gt;</code> (voor <em>head</em>) in plaats van
+        <code>&lt;td&gt;</code>. Een rij met kop-elementen ziet er
+        dan zo uit:
+      </p>
+<pre>
+      &lt;tr&gt;
+        &lt;td&gt; Kopje 1 &lt;/td&gt;
+        &lt;td&gt; Kopje 2 &lt;/td&gt;
+      &lt;/tr&gt;
+</pre>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li>Voeg aan de tabel in de voorbeeld-pagina een rij toe
+          met kop-cellen.
+        </li>
+        <li>Kun je kop-cellen alleen gebruiken in de eerste kolom?
+          Probeer dit uit.
+        </li>
+        <li> Zoek in de documentatie uit hoe je een cel kunt
+          gebruiken als header van een rij. (Hint: zoek naar "scope".)
+        </li>
+      </ol>
+
+    </section>
+
+    <section>
+      <h1>Opmaak: uitlijnen van de cel-tekst</h1>
+      <p>De tekst in een cel staat, als je niets opgeeft,
+        helemaal links in de cel. Je kunt de positie van deze tekst
+        aanpassen. Dit noemen we uitlijnen of alignment.
+      </p>
+      <p>We kunnen alle cel-teksten in het midden van de cel krijgen, door
+        de volgende regel:
+      </p>
+<pre>
+table {
+  text-align: center;
+}
+</pre>
+      <p>Als we de inhoud van bepaalde cellen, bijvoorbeeld met getallen,
+        rechts willen uitlijnen, dan gebruiken we daarvoor een aparte
+        <em>class</em>, bijvoorbeeld:
+      </p>
+<pre>
+td.number {
+  text-align: right;
+}
+</pre>
+      <hr>
+      <p><em>Opdrachten</em></p>
+      <ol>
+        <li>Voeg een kolom toe met (gehele) getallen. Zorg ervoor dat deze
+          getallen rechts uitgelijnd staan, zodat je ze eenvoudig kunt
+          optellen.
+        </li>
+        <li>Maak een aparte class voor de rij met totalen. Geef deze weer
+          met een vet lettertype (<code>text-weight: bold;</code>).
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h1>Nog meer mogelijkheden</h1>
+      <p>Er zijn nog veel meer mogelijkheden met tabellen. Je kunt de eerste
+        rijen organiseren als een <em>header</em>, of de laatste rijen als
+        een <em>footer</em>. Je kunt een <em>caption</em> (titel) toevoegen.
+        En je hebt heel veel mogelijkheden om tabellen op te maken.
+        De onderstaande documenten kunnen je verder helpen.
+      </p>
+
+      <p> Table tips:
+        <a href="https://css-tricks.com/complete-guide-table-element/">
+          https://css-tricks.com/complete-guide-table-element/
+        </a>
+
+      </p>
+
+      <p> HTML op W3C wiki:
+        <a href="http://www.w3.org/community/webed/wiki/HTML_tables">
+          http://www.w3.org/community/webed/wiki/HTML_tables
+        </a>
+      </p>
+
+
+      <p> CSS:
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Tables">
+          https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Tables
+        </a>
+        <br>
+        CSS op W3C wiki:
+        <a href="http://www.w3.org/community/webed/wiki/Styling_tables">
+          http://www.w3.org/community/webed/wiki/Styling_tables
+        </a>
+        <br>
+         De W3C CSS2 beschrijving:
+        <a href="http://www.w3.org/TR/CSS2/tables.html">
+          http://www.w3.org/TR/CSS2/tables.html
+        </a>
+      </p>
+
+      <p>Een simpele tip: afwisselende achtergrondkleuren voor
+        even en oneven rijen (of kolommen):
+        <a href="http://www.w3.org/Style/Examples/007/evenodd.en.html">
+          http://www.w3.org/Style/Examples/007/evenodd.en.html
+        </a>
+      </p>
+    </section>
+  </body>
+</html>

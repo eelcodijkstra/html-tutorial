@@ -1,0 +1,26 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+h3 {
+  font-family: sans-serif;
+}
+
+#welkom-paragraaf {
+  font-style: italic;
+}
+
+#hobby-list {
+  font-size: 1.2em;
+}
+
+.nadruk {
+  text-decoration: underline;
+}
+
+th {
+  background-color: aqua;
+}
+
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
