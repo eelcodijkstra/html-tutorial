@@ -74,7 +74,7 @@ Hierboven zie je een plaatje als een block-level element.
 
 Ook kaarten kun je eenvoudig toevoegen. Hiervoor heb je verschillende mogelijkheden:
 
-* Een statische kaart: dit is een plaatje dat je via een API (Application Programmers Interface) ophaalt. De server die de API afhandelt rekent het plaatje uit en stuurt dit op.
+* Een statische kaart: dit is een plaatje dat je via een API (Application Programming Interface) ophaalt. De server die de API afhandelt rekent het plaatje uit en stuurt dit op.
 * Een interactieve kaart: hiervoor heb je JavaScript nodig. Het script bij de kaart haalt de gegevens op van de server, via een API, en plaatst het resultaat in het document.
 
 ```
