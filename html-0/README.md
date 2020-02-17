@@ -1,5 +1,7 @@
 # Gebruik van deze tutorials
 
+**Helaas is Thimble niet meer beschikbaar, de links hieronder werken niet meer. De voorbeelden zijn wel bruikbaar in glitch.com of in repl.it**
+
 Deze tutorials zijn in eerste instantie bedoeld voor gebruik in Thimble, de oefenomgeving van Mozilla. Een voorbeeld bestaat uit een map met een reeks bestanden:tutorial bestaan uit twee of meer bestanden:
 
 * een html-oefenbestand (index.html)
